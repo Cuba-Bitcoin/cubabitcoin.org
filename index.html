@@ -46,7 +46,10 @@
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
+
             <div class="carousel-inner">
                 <div class="carousel-item active drk">
                 <img src="img/MyFirstBitcoin03.jpg" class="d-block w-100" alt="...">
@@ -69,6 +72,26 @@
                     <p class="lead">Comunidad enfocada en el debate y aprendizaje sobre Bitcoin, de forma online y a través de cursos y encuentros presenciales en Cuba, para ayudar a que más personas conozcan y utilicen bitcoin e incentivar el logro de una economía circular.</p>
                 </div>
                 </div>
+                
+                <div class="carousel-item drk">
+                <img src="img/blockstream-local-cuba-bitcoin-3.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="display-6 fw-bolder text-uppercase">Cuba Bitcoin</h5>
+                    <p class="lead">Comunidad enfocada en el debate y aprendizaje sobre Bitcoin, de forma online y a través de cursos y encuentros presenciales en Cuba, para ayudar a que más personas conozcan y utilicen bitcoin e incentivar el logro de una economía circular.</p>
+                </div>
+                </div>
+                
+                
+                <div class="carousel-item drk">
+                <img src="img/cubabitcoincashu3.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="display-6 fw-bolder text-uppercase">Cuba Bitcoin</h5>
+                    <p class="lead">Comunidad enfocada en el debate y aprendizaje sobre Bitcoin, de forma online y a través de cursos y encuentros presenciales en Cuba, para ayudar a que más personas conozcan y utilicen bitcoin e incentivar el logro de una economía circular.</p>
+                </div>
+                </div>
+
+
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -818,25 +841,68 @@
         </section>
         <!-- end section -->
 
-
         <!-- Multimedia section -->
         <section class="py-5 bg-dark text-light" id="scrollspymedia">
-            <div class="container-xl px-5 my-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-7">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="100%" height="450" class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?si=1LldNIkycvdKlky6&amp;list=PLUwwW7RQ2X7ZnFA5DHfb76khLtvzBmx3A" allowfullscreen></iframe>
-                            </div>
-                            
+        <div class="container-xl px-5 my-5">
+            <div class="row gx-5 align-items-center">
+
+            <!-- Carrusel de YouTube playlists -->
+            <div class="col-lg-7">
+                <div id="playlistCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+
+                    <!-- Playlist 1: Curso Bitcoin Fácil -->
+                    <div class="carousel-item active">
+                    <iframe width="100%" height="400"
+                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0pJoPBcj1TxswS8X_4oZ2NQ"
+                        title="Curso Bitcoin Fácil - Primera Edición" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <div class="col-lg-5">
-                        <h2 class="fw-bolder display-6">MULTIMEDIA</h2>
-                        <p class="fw-normal mb-0">Encontrará un gran número de Documentales y Entrevistas realizados a miembros del equipo de Cuba Bitcoin.</p>
+
+                    <!-- Playlist 2: Run With Bitcoin -->
+                    <div class="carousel-item">
+                    <iframe width="100%" height="400"
+                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0qpjQ_fkWaE3E1t3qyrOrU-"
+                        title="Run With Bitcoin" frameborder="0" allowfullscreen></iframe>
                     </div>
+
+                    <!-- Playlist 3: Joe Nakamoto Cuba -->
+                    <div class="carousel-item">
+                    <iframe width="100%" height="400"
+                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0qaSoBYmCecDhRksF6rgMNi"
+                        title="The Truth Behind Cuba's Bitcoin Revolution" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Playlist 4: Charlas y Entrevistas -->
+                    <div class="carousel-item">
+                    <iframe width="100%" height="400"
+                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0o05bchDVWpyNPt7VosX7Vv"
+                        title="Charlas y Entrevistas con Cuba Bitcoin" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Playlist 5: Cuba Bitcoin en Eventos -->
+                    <div class="carousel-item">
+                    <iframe width="100%" height="400"
+                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0owPB3hh_-UHE438o6TvoSB"
+                        title="Cuba Bitcoin en Eventos" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                </div>
                 </div>
             </div>
+
+            <!-- Descripción -->
+            <div class="col-lg-5">
+                <h2 class="fw-bolder display-6">MULTIMEDIA</h2>
+                <p class="fw-normal mb-0">
+                En nuestro canal de YouTube encontrará una variedad de contenidos producidos por el equipo de Cuba Bitcoin:
+                documentales, entrevistas, cursos educativos y podcasts que promueven la adopción y el conocimiento de Bitcoin.
+                </p>
+            </div>
+
+            </div>
+        </div>
         </section>
-        <!-- end section -->
+
         
 
         <!-- Jade Wallet section-->
@@ -1038,7 +1104,7 @@
                         <p>Únete a nuestra comunidades</p>
                         <a class="fs-1 px-2 link-light" href="https://x.com/Cuba_BTC" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
                         <a class="fs-1 px-2 link-light" href="https://t.me/Cuba_Bitcoin" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                        <a class="fs-1 px-2 link-light" href="https://www.youtube.com/watch?v=vgFhIK59Adg&list=PLUwwW7RQ2X7ZnFA5DHfb76khLtvzBmx3A&t=1s" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a class="fs-1 px-2 link-light" href="https://www.youtube.com/@CubaBitcoin21" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                         <a class="fs-1 px-2 link-light" href="https://github.com/Cuba-Bitcoin" target="_blank"><i class="fa-brands fa-github"></i></a>
                         <a class="fs-1 px-2 link-light" href="https://primal.net/p/npub1huyn6ru55pv6l7p0sxvlu3vfpq7pan958sl4weft0kte6lvdvvksd5s34t" target="_blank">
                             <img src="img/nostr_logo_blk.svg" alt="Nostr Logo" id="nostr-social" class="bg-white rounded-circle">
