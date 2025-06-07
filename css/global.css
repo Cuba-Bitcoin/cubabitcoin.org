@@ -11,10 +11,49 @@
   margin-top: 4rem !important;
 }
 
+/* Glassmorphism Navbar */
 .navbar-dark {
-  --bs-navbar-color: rgba(255, 255, 255, 1);
+  --bs-navbar-color: rgba(255, 255, 255, 0.9);
   --bs-navbar-hover-color: #ff4e16;
   --bs-navbar-active-color: #ff4e16;
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-dark.scrolled {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff4e16 !important;
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(45deg, #ff4e16, #ffa500);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 80%;
 }
 
 .carousel-caption {
@@ -35,6 +74,116 @@ img#nostr-social {
   height: auto;
 }
 
+/* Hero Section Improvements */
+.hero-carousel {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero-slide {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero-slide img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(255, 78, 22, 0.2) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+.hero-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  width: 90%;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 
+               1px 1px 3px rgba(0, 0, 0, 0.8);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hero-title:hover {
+  color: #ff4e16;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 
+               0 0 20px rgba(255, 78, 22, 0.6);
+  transition: all 0.3s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #f8f9fa;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 78, 22, 0.4);
+}
+
+.btn-warning.hero-btn:hover {
+  background: linear-gradient(45deg, #ff4e16, #ffa500);
+  border-color: #ff4e16;
+}
+
+/* Carousel Indicators Styling */
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #ff4e16;
+  border-color: #ff4e16;
+  transform: scale(1.2);
+}
+
+/* Old dark overlay - keeping for compatibility */
 .drk:after {
     content:"";
     display:block;
@@ -45,6 +194,176 @@ img#nostr-social {
     right:0;
     background:#000;
     opacity:0.65;
+}
+
+/* Bitcoin Cards Styling */
+.bitcoin-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.bitcoin-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 78, 22, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.bitcoin-card:hover::before {
+  left: 100%;
+}
+
+.bitcoin-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(255, 78, 22, 0.2),
+    0 15px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 78, 22, 0.3);
+}
+
+.bitcoin-card .card-body {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Service Logo Standardization */
+.service-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+  padding: 10px;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 78, 22, 0.1);
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  margin: 0 auto;
+  display: block;
+}
+
+.bitcoin-card:hover .service-logo {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 8px 16px rgba(255, 78, 22, 0.4));
+  border-color: rgba(255, 78, 22, 0.6);
+  background: linear-gradient(145deg, #ff4e16, #ffa500);
+  box-shadow: 0 0 20px rgba(255, 78, 22, 0.3);
+}
+
+.bitcoin-card h5 {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.bitcoin-card:hover h5 {
+  color: #ff4e16 !important;
+  transform: translateY(-2px);
+}
+
+.bitcoin-card .badge {
+  transition: all 0.3s ease;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0 0.25rem 0.5rem 0;
+}
+
+.bitcoin-card:hover .badge {
+  transform: scale(1.05);
+}
+
+.bitcoin-card .badge.bg-warning {
+  background: linear-gradient(45deg, #ffc107, #ff8c00) !important;
+  box-shadow: 0 2px 4px rgba(255, 193, 7, 0.3);
+}
+
+.bitcoin-card .badge.bg-success {
+  background: linear-gradient(45deg, #28a745, #20c997) !important;
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.bitcoin-card .badge.bg-primary {
+  background: linear-gradient(45deg, #007bff, #0056b3) !important;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.bitcoin-card .badge.bg-info {
+  background: linear-gradient(45deg, #17a2b8, #138496) !important;
+  box-shadow: 0 2px 4px rgba(23, 162, 184, 0.3);
+}
+
+.bitcoin-card .badge.bg-secondary {
+  background: linear-gradient(45deg, #6c757d, #545b62) !important;
+  box-shadow: 0 2px 4px rgba(108, 117, 125, 0.3);
+}
+
+.bitcoin-card .badge.bg-danger {
+  background: linear-gradient(45deg, #dc3545, #c82333) !important;
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+}
+
+/* Custom Badge Colors */
+.bitcoin-card .badge.badge-lightning {
+  background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+  color: #000 !important;
+  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.4);
+  font-weight: 700;
+}
+
+.bitcoin-card .badge.badge-telegram {
+  background: linear-gradient(45deg, #0088cc, #229ed9) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 4px rgba(0, 136, 204, 0.4);
+}
+
+.bitcoin-card .badge.badge-nostr {
+  background: linear-gradient(45deg, #8b5cf6, #a855f7) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 4px rgba(139, 92, 246, 0.4);
+}
+
+/* Loading Animation - Simplified */
+.bitcoin-card.loading {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.bitcoin-card.loading img {
+  opacity: 0.5;
+}
+
+/* Simplified Animation - No delays */
+.bitcoin-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+/* Optional: Only animate on scroll if intersection observer is working */
+.bitcoin-card.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.bitcoin-card.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -126,6 +445,64 @@ img#nostr-social {
     left: -12px;
   }
   
+/* Hero Section Responsive */
+@media (max-width: 768px) {
+  .hero-carousel,
+  .hero-slide {
+    min-height: 100vh;
+  }
+  
+  .hero-slide img {
+    height: 100vh;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-btn {
+    width: 250px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-caption {
+    width: 95%;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  /* Service Logo Responsive */
+  .service-logo {
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+  }
+}
+
 /* Responsive improvements for mobile devices */
 @media (max-width: 768px) {
   /* Servicios comunitarios - mejor espaciado en móviles */
