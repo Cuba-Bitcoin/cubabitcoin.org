@@ -28,8 +28,27 @@
     <meta name="twitter:description" content="Comunidad enfocada en la educación sobre Bitcoin en Cuba. Cursos gratuitos, servicios comunitarios y herramientas para promover la adopción de Bitcoin.">
     <meta name="twitter:image" content="https://cubabitcoin.org/img/Cuba-Bitcoin-LogoMarca-Blanco.png">
     
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="CU">
+    <meta name="geo.country" content="Cuba">
+    <meta name="language" content="Spanish">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#ff4e16">
+    <meta name="msapplication-TileColor" content="#ff4e16">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/global.css" as="style">
+    <link rel="preload" href="img/CubaBitcoin-Hztal-BLANCO-transp.png" as="image">
+    <link rel="preload" href="img/MyFirstBitcoin03.jpg" as="image">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//kit.fontawesome.com">
+    
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/9379559305.js" crossorigin="anonymous"></script>
@@ -37,19 +56,77 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS-->
     <link href="css/global.css" rel="stylesheet" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cuba Bitcoin",
+      "description": "Comunidad enfocada en la educación sobre Bitcoin en Cuba. Ofrecemos cursos gratuitos, servicios comunitarios y promovemos la adopción de Bitcoin mediante herramientas soberanas y accesibles.",
+      "url": "https://cubabitcoin.org",
+      "logo": "https://cubabitcoin.org/img/Cuba-Bitcoin-LogoMarca-Blanco.png",
+      "image": "https://cubabitcoin.org/img/cuba-bitcoin-580x330.jpg",
+      "foundingDate": "2021",
+      "sameAs": [
+        "https://x.com/Cuba_BTC",
+        "https://t.me/Cuba_Bitcoin",
+        "https://www.youtube.com/@CubaBitcoin21",
+        "https://github.com/Cuba-Bitcoin",
+        "https://primal.net/p/npub1huyn6ru55pv6l7p0sxvlu3vfpq7pan958sl4weft0kte6lvdvvksd5s34t"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CU"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Cuba"
+      },
+      "knowsAbout": [
+        "Bitcoin",
+        "Lightning Network",
+        "Autocustodia",
+        "Soberanía Financiera",
+        "Educación Financiera",
+        "Criptomonedas",
+        "BTCPay Server",
+        "LNbits",
+        "Cashu"
+      ],
+      "offers": [
+        {
+          "@type": "Service",
+          "name": "Educación Bitcoin",
+          "description": "Cursos gratuitos y tutoriales sobre Bitcoin en español"
+        },
+        {
+          "@type": "Service", 
+          "name": "Servicios Comunitarios",
+          "description": "LNbits, BTCPay Server, Mint de Cashu y herramientas Bitcoin"
+        },
+        {
+          "@type": "Service",
+          "name": "Intercambio P2P",
+          "description": "Plataformas para comprar Bitcoin sin KYC"
+        }
+      ]
+    }
+    </script>
+    
     <title>Cuba Bitcoin - Educación y Soberanía Financiera en Cuba</title>
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0" class="mt-6">
+  <body id="top" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0" class="mt-6">
 
         <!-- Responsive navbar-->
         <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark text-light">
             <div class="container-xl px-5">
-                <a class="navbar-brand" href="#"><img src="img/CubaBitcoin-Hztal-BLANCO-transp.png" alt="" id="navbar-logo"></a>
+                <a class="navbar-brand" href="#"><img src="img/CubaBitcoin-Hztal-BLANCO-transp.png" alt="Cuba Bitcoin - Comunidad de educación Bitcoin en Cuba" id="navbar-logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold text-uppercase">
-                        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#top">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#scrollspytools">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link" href="#scrollspybuy">Compra BTC</a></li>
                         <li class="nav-item"><a class="nav-link" href="#scrollspynevents">POW</a></li>
@@ -64,6 +141,7 @@
             </div>
         </nav>
       
+        <main role="main">
         <!-- Hero Carousel-->
         <div id="carouselExampleCaptions" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-indicators">
@@ -91,7 +169,7 @@
                 <img src="img/MyFirstBitcoin01.jpg" class="d-block w-100" alt="Grupo de participantes en el programa educativo My First Bitcoin Cuba">
                 <div class="hero-overlay"></div>
                 <div class="carousel-caption hero-caption">
-                    <h1 class="hero-title display-4 fw-bolder text-uppercase mb-3">Educación Bitcoin</h1>
+                    <h2 class="hero-title display-4 fw-bolder text-uppercase mb-3">Educación Bitcoin</h2>
                     <p class="hero-subtitle lead mb-4">Cursos gratuitos y encuentros presenciales para aprender sobre Bitcoin desde cero. Únete a nuestra comunidad educativa.</p>
                     <div class="hero-actions">
                         <a href="https://cuba-bitcoin.github.io/tutoriales/" target="_blank" class="btn btn-warning btn-lg px-4 py-2 me-3 hero-btn">Ver Tutoriales</a>
@@ -103,7 +181,7 @@
                 <img src="img/MyFirstBitcoin02.jpg" class="d-block w-100" alt="Sesión educativa presencial sobre Bitcoin en Cuba">
                 <div class="hero-overlay"></div>
                 <div class="carousel-caption hero-caption">
-                    <h1 class="hero-title display-4 fw-bolder text-uppercase mb-3">Bitcoin Fácil</h1>
+                    <h2 class="hero-title display-4 fw-bolder text-uppercase mb-3">Bitcoin Fácil</h2>
                     <p class="hero-subtitle lead mb-4">Nuestro programa educativo propio diseñado por Cuba Bitcoin. Contenido exclusivo en nuestro canal de YouTube con videos educativos paso a paso para aprender Bitcoin desde cero.</p>
                     <div class="hero-actions">
                         <a href="https://www.youtube.com/@CubaBitcoin21" target="_blank" class="btn btn-warning btn-lg px-4 py-2 me-3 hero-btn">Ver Videos</a>
@@ -116,7 +194,7 @@
                 <img src="img/blockstream-local-cuba-bitcoin-3.jpeg" class="d-block w-100" alt="Evento Blockstream Local Meetup organizado por Cuba Bitcoin">
                 <div class="hero-overlay"></div>
                 <div class="carousel-caption hero-caption">
-                    <h1 class="hero-title display-4 fw-bolder text-uppercase mb-3">Eventos Locales</h1>
+                    <h2 class="hero-title display-4 fw-bolder text-uppercase mb-3">Eventos Locales</h2>
                     <p class="hero-subtitle lead mb-4">Organizamos meetups, conferencias y eventos educativos sobre Bitcoin en diferentes provincias de Cuba.</p>
                     <div class="hero-actions">
                         <a href="#scrollspynevents" class="btn btn-warning btn-lg px-4 py-2 me-3 hero-btn">Ver Eventos</a>
@@ -129,7 +207,7 @@
                 <img src="img/cubabitcoincashu3.jpeg" class="d-block w-100" alt="Demostración del uso de Cashu ecash en Cuba Bitcoin">
                 <div class="hero-overlay"></div>
                 <div class="carousel-caption hero-caption">
-                    <h1 class="hero-title display-4 fw-bolder text-uppercase mb-3">Herramientas Soberanas</h1>
+                    <h2 class="hero-title display-4 fw-bolder text-uppercase mb-3">Herramientas Soberanas</h2>
                     <p class="hero-subtitle lead mb-4">Ofrecemos servicios como LNbits, BTCPay Server y Cashu Mint para facilitar el uso de Bitcoin en Cuba.</p>
                     <div class="hero-actions">
                         <a href="#scrollspytools" class="btn btn-warning btn-lg px-4 py-2 me-3 hero-btn">Usar Servicios</a>
@@ -157,7 +235,7 @@
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="img/cuba-bitcoin-580x330.jpg" alt="..." />
+                            <img class="card-img-top" src="img/cuba-bitcoin-580x330.jpg" alt="Comunidad Cuba Bitcoin promoviendo educación sobre Bitcoin y Lightning Network en Cuba" />
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-3">Noticias</div>
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-3">Legislación</div>
@@ -167,7 +245,7 @@
                             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                 <div class="d-flex align-items-end justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle me-3" src="img/cubabitcoin.jpg" alt="..." />
+                                        <img class="rounded-circle me-3" src="img/cubabitcoin.jpg" alt="Avatar del equipo Cuba Bitcoin" />
                                         <div class="small">
                                             <div class="fw-bold">CubaBitcoin</div>
                                             <div class="text-muted">March 12, 2023 &middot; 6 min read</div>
@@ -179,7 +257,7 @@
                     </div>
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="img/genialrz.jpg" alt="..." />
+                            <img class="card-img-top" src="img/genialrz.jpg" alt="Participantes del programa educativo My First Bitcoin 4ta edición en Cuba" />
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-3">Noticias</div>
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-3">My First Bitcoin</div>
@@ -191,7 +269,7 @@
                             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                 <div class="d-flex align-items-end justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle me-3" src="img/cubabitcoin.jpg" alt="..." />
+                                        <img class="rounded-circle me-3" src="img/cubabitcoin.jpg" alt="Avatar del equipo Cuba Bitcoin" />
                                         <div class="small">
                                             <div class="fw-bold">CubaBitcoin</div>
                                             <div class="text-muted">March 12, 2023 &middot; 6 min read</div>
@@ -203,7 +281,7 @@
                     </div>
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="img/trezoraca.jpg" alt="..." />
+                            <img class="card-img-top" src="img/trezoraca.jpg" alt="Primera edición de Trezor Academy en Sancti Spíritus, Cuba - Educación sobre custodia de Bitcoin" />
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-3">Noticias</div>
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-3">Trezor Academy Cuba</div>
@@ -214,7 +292,7 @@
                             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                 <div class="d-flex align-items-end justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle me-3" src="img/cubabitcoin.jpg" alt="..." />
+                                        <img class="rounded-circle me-3" src="img/cubabitcoin.jpg" alt="Avatar del equipo Cuba Bitcoin" />
                                         <div class="small">
                                             <div class="fw-bold">CubaBitcoin</div>
                                             <div class="text-muted">March 12, 2023 &middot; 6 min read</div>
@@ -232,12 +310,13 @@
 
 
         <!-- Servicios comunitarios -->
-        <section class="py-5 bg-light" id="scrollspytools">
+        <section class="py-5 services-section" id="scrollspytools">
             <div class="container-xl px-5 my-5">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bolder display-6 text-uppercase">Servicios comunitarios</h2>
-                    <p class="text-muted">Herramientas al servicio de la comunidad para facilitar el uso de Bitcoin en Cuba mediante soluciones libres, soberanas y accesibles para todos.</p>
-                </div>
+                <div class="services-content">
+                    <div class="services-header text-center">
+                        <h2 class="services-title text-uppercase">Servicios comunitarios</h2>
+                        <p class="services-subtitle">Herramientas al servicio de la comunidad para facilitar el uso de Bitcoin en Cuba mediante soluciones libres, soberanas y accesibles para todos.</p>
+                    </div>
 
                 <div class="row gx-5 row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-center text-center" id="servicios-cards">
 
@@ -249,8 +328,8 @@
                                     <h5 class="fw-bolder link-dark">LNbits</h5>
                                     <p class="text-muted">Billetera Lightning extensible para aceptar pagos y crear subcuentas.</p>
                                     <div class="mt-auto">
-                                        <span class="badge bg-success text-white mb-2">Billetera</span>
-                                        <span class="badge badge-lightning text-dark mb-2">Lightning</span>
+                                        <span class="badge badge-success mb-2">Billetera</span>
+                                        <span class="badge badge-lightning mb-2">Lightning</span>
                                     </div>
                                 </div>
                             </div>
@@ -265,8 +344,8 @@
                                     <h5 class="fw-bolder link-dark">BTCPay Server</h5>
                                     <p class="text-muted">Crea tu tienda, acepta pagos en Bitcoin y crea tus campañas de recaudación.</p>
                                     <div class="mt-auto">
-                                        <span class="badge bg-primary text-white mb-2">Pasarela</span>
-                                        <span class="badge bg-info text-white mb-2">Comercio</span>
+                                        <span class="badge badge-telegram mb-2">Pasarela</span>
+                                        <span class="badge badge-success mb-2">Comercio</span>
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +360,7 @@
                                     <h5 class="fw-bolder link-dark">Tutoriales</h5>
                                     <p class="text-muted">Guías prácticas para aprender sobre Bitcoin y usar estas herramientas.</p>
                                     <div class="mt-auto">
-                                        <span class="badge bg-warning text-dark mb-2">Educación</span>
+                                        <span class="badge badge-lightning mb-2">Educación</span>
                                     </div>
                                 </div>
                             </div>
@@ -296,14 +375,15 @@
                                     <h5 class="fw-bolder link-dark">Mint de Cashu</h5>
                                     <p class="text-muted">Envía y recibe ecash privado, incluso sin conexión a internet.</p>
                                     <div class="mt-auto">
-                                        <span class="badge bg-secondary text-white mb-2">Ecash</span>
-                                        <span class="badge bg-danger text-white mb-2">Sin Conexión</span>
+                                        <span class="badge badge-nostr mb-2">Ecash</span>
+                                        <span class="badge badge-secondary mb-2">Sin Conexión</span>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
 
+                </div>
                 </div>
             </div>
         </section>
@@ -313,13 +393,14 @@
 
         <!-- Compra BTC sin KYC section-->
 
-        <section class="py-5 bg-light">
+        <section class="py-5 services-section">
             <div id="scrollspybuy" style="position: relative; top: -100px;"></div>
             <div class="container-xl px-5 my-5">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bolder display-6 text-uppercase">Compra Bitcoin sin KYC</h2>
-                    <p class="text-muted">Plataformas peer-to-peer para comprar Bitcoin de forma privada y sin verificación de identidad.</p>
-                </div>
+                <div class="services-content">
+                    <div class="services-header text-center">
+                        <h2 class="services-title text-uppercase">Compra Bitcoin sin KYC</h2>
+                        <p class="services-subtitle">Plataformas peer-to-peer para comprar Bitcoin de forma privada y sin verificación de identidad.</p>
+                    </div>
                 <div class="row gx-5 row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-center text-center" id="compra-btc-cards">
                     
                 <!-- Cuba LNp2p primero -->
@@ -331,8 +412,8 @@
                                 <h5 class="fw-bolder link-dark">Cuba LNp2p</h5>
                                 <p class="text-muted">Comunidad cubana del bot LNp2p en Telegram para intercambios Lightning.</p>
                                 <div class="mt-auto">
-                                    <span class="badge badge-telegram text-white mb-2">Telegram</span>
-                                    <span class="badge badge-lightning text-dark mb-2">Lightning</span>
+                                    <span class="badge badge-telegram mb-2">Telegram</span>
+                                    <span class="badge badge-lightning mb-2">Lightning</span>
                                 </div>
                             </div>
                         </div>
@@ -348,8 +429,8 @@
                                 <h5 class="fw-bolder link-dark">Mostro</h5>
                                 <p class="text-muted">Plataforma de intercambio entre pares sobre Nostr usando Lightning Network.</p>
                                 <div class="mt-auto">
-                                    <span class="badge badge-nostr text-white mb-2">Nostr</span>
-                                    <span class="badge badge-lightning text-dark mb-2">Lightning</span>
+                                    <span class="badge badge-nostr mb-2">Nostr</span>
+                                    <span class="badge badge-lightning mb-2">Lightning</span>
                                 </div>
                             </div>
                         </div>
@@ -360,7 +441,7 @@
                     <div class="col mb-5 mb-5 mb-sm-0">
                         <div class="text-center">
                             <a href="https://learn.robosats.com/" target="_blank" class="text-decoration-none">
-                                <img class="img-fluid rounded-circle mb-4 border shadow" src="img/robosats.jpg" alt="..." />
+                                <img class="img-fluid rounded-circle mb-4 border shadow" src="img/robosats.jpg" alt="RoboSats - Plataforma descentralizada para intercambio privado de Bitcoin" />
                                 <h5 class="fw-bolder link-dark">Robosats</h5>
                                 <div class="fst-italic text-muted">Una forma sencilla y privada de intercambiar bitcoins por monedas nacionales</div>
                             </a>
@@ -370,7 +451,7 @@
                     <div class="col mb-5">
                         <div class="text-center">
                             <a href="https://hodlhodl.com/" target="_blank" class="text-decoration-none">
-                                <img class="img-fluid rounded-circle mb-4 border shadow" src="img/hodl-hodl.jpg" alt="..." />
+                                <img class="img-fluid rounded-circle mb-4 border shadow" src="img/hodl-hodl.jpg" alt="Hodl Hodl - Plataforma global de comercio P2P de Bitcoin sin KYC" />
                                 <h5 class="fw-bolder link-dark">Hodl Hodl</h5>
                                 <div class="fst-italic text-muted">Plataforma global de comercio P2P de Bitcoin</div>
                             </a>
@@ -380,19 +461,20 @@
                     -->
 
                 </div>
+                </div>
             </div>
         </section>
         <!-- end section -->
 
         
         <!-- POW section -->
-        <section class="py-5 bg-light" id="scrollspynevents">
+        <section class="py-5 pow-section" id="scrollspynevents">
             <div class="container-xl px-5 my-5">
 
                 <div class="row justify-content-center">
 
-                    <h2 class="fw-bolder display-6 mb-5 text-center">Proof of Work</h2>
-                    <h3 class="fw-bold text-uppercase text-center mt-2 mb-4">Impacto de la Comunidad</h3>
+                    <h2 class="services-title text-center text-uppercase">Proof of Work</h2>
+                    <h3 class="services-title text-center text-uppercase" style="font-size: 1.8rem; margin-top: 2rem;">Impacto de la Comunidad</h3>
 
                     <p class="lead text-center mb-4" style="color: #3a3a3a;">
                         Nuestro trabajo no se mide en palabras, sino en acciones. Este es el resultado del esfuerzo colectivo.
@@ -400,62 +482,97 @@
 
                     <section class="py-5 bg-white">
                         <div class="container-xl px-5 my-5">
-                        <div class="row text-center g-4">
+                        <div class="row g-4 justify-content-center">
                     
-                            <div class="col-md-4 col-lg-4">
-                                <i class="bi bi-mortarboard fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">+120</h4>
-                                <p class="text-muted small fst-italic">Graduados de cursos de Bitcoin en Cuba y el mundo</p>
-                              </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-mortarboard"></i>
+                                    </div>
+                                    <div class="stat-number" data-target="120">+0</div>
+                                    <div class="stat-label">Graduados de cursos de Bitcoin en Cuba y el mundo</div>
+                                </div>
+                            </div>
 
-                              <div class="col-md-4 col-lg-4">
-                                <i class="bi bi-globe fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">+1000</h4>
-                                <p class="text-muted small fst-italic">Personas alcanzadas a través de la educación y redes</p>
-                              </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-globe"></i>
+                                    </div>
+                                    <div class="stat-number" data-target="1000">+0</div>
+                                    <div class="stat-label">Personas alcanzadas a través de la educación y redes</div>
+                                </div>
+                            </div>
                               
-                              <div class="col-md-4 col-lg-4">
-                                <i class="bi bi-people fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">+20</h4>
-                                <p class="text-muted small fst-italic">Encuentros educativos organizados por la comunidad</p>
-                              </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="stat-number" data-target="20">+0</div>
+                                    <div class="stat-label">Encuentros educativos organizados por la comunidad</div>
+                                </div>
+                            </div>
                               
-                              <div class="col-md-4 col-lg-4">
-                                <i class="bi bi-shop fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">+50</h4>
-                                <p class="text-muted small fst-italic">Negocios que aceptan Bitcoin en Cuba</p>
-                              </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-shop"></i>
+                                    </div>
+                                    <div class="stat-number" data-target="50">+0</div>
+                                    <div class="stat-label">Negocios que aceptan Bitcoin en Cuba</div>
+                                </div>
+                            </div>
 
-                              <div class="col-md-4 col-lg-4">
-                                <i class="bi bi-hammer fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">6</h4>
-                                <p class="text-muted small fst-italic">Herramientas soberanas activas para el uso de Bitcoin</p>
-                              </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-hammer"></i>
+                                    </div>
+                                    <div class="stat-number" data-target="6">0</div>
+                                    <div class="stat-label">Herramientas soberanas activas para el uso de Bitcoin</div>
+                                </div>
+                            </div>
                               
-                              <div class="col-md-4 col-lg-4">
-                                <i class="bi bi-pc-display-horizontal fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">+5</h4>
-                                <p class="text-muted small fst-italic">Negocios usando BTCPay Server en Cuba</p>
-                              </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-pc-display-horizontal"></i>
+                                    </div>
+                                    <div class="stat-number" data-target="5">+0</div>
+                                    <div class="stat-label">Negocios usando BTCPay Server en Cuba</div>
+                                </div>
+                            </div>
                               
-                              <div class="col-md-4 col-lg-4">
-                                <i class="bi bi-person-video3 fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">9</h4>
-                                <p class="text-muted small fst-italic">Profesores cubanos formados en educación sobre Bitcoin</p>
-                              </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-person-video3"></i>
+                                    </div>
+                                    <div class="stat-number" data-target="9">0</div>
+                                    <div class="stat-label">Profesores cubanos formados en educación sobre Bitcoin</div>
+                                </div>
+                            </div>
                               
-                              <div class="col-md-4 col-lg-4">
-                                <i class="bi bi-geo-alt fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">4</h4>
-                                <p class="text-muted small fst-italic">Provincias con eventos presenciales realizados</p>
-                              </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <div class="stat-number" data-target="4">0</div>
+                                    <div class="stat-label">Provincias con eventos presenciales realizados</div>
+                                </div>
+                            </div>
                               
-                              <div class="col-md-4 col-lg-4">
-                                <i class="bi bi-calendar3 fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">3</h4>
-                                <p class="text-muted small fst-italic">Años promoviendo el uso de Bitcoin en Cuba y el mundo</p>
-                              </div>
-                                                           
+                            <div class="col-md-6 col-lg-4">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-calendar3"></i>
+                                    </div>
+                                    <div class="stat-number" data-target="3">0</div>
+                                    <div class="stat-label">Años promoviendo el uso de Bitcoin en Cuba y el mundo</div>
+                                </div>
+                            </div>
                     
                         </div>
                         </div>
@@ -867,248 +984,776 @@
           </section>
         <!-- end section -->
 
-        <!-- Donaciones / Apoya la comunidad -->
-        <section class="py-5 bg-dark text-light" id="scrollspydonaciones">
+        <!-- Lightning Node Section -->
+        <section class="py-5 lightning-section">
             <div class="container-xl px-5 my-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                <h2 class="fw-bolder display-6 text-uppercase text-center">Apoya la comunidad</h2>
-                <p class="lead text-center mt-3">
-                    Si valoras nuestro trabajo educativo y comunitario, puedes contribuir con una donación.
-                    Todo se gestiona a través de nuestro <strong>BTCPay Server</strong>, sin intermediarios.
-                </p>
-        
-                <div class="d-flex justify-content-center mt-4 mb-4">
-                    <a class="btn btn-warning btn-lg px-5 py-3 fw-bold fs-5" href="https://btcpay.cubabitcoin.org/apps/4GhTBzgnBEQGMhi633L6arsAunXG/crowdfund" target="_blank">
-                        Donar
-                    </a>
+                <div class="text-center mb-5">
+                    <div class="lightning-icon mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h2 class="fw-bolder display-5 text-uppercase lightning-title">Únete con Cuba Bitcoin a través de Lightning</h2>
+                    <p class="lead lightning-subtitle">¿Tienes un nodo Lightning? Únete a nuestra red abriendo un canal directo con el nodo de Cuba Bitcoin. Al conectarte, contribuyes a fortalecer la infraestructura de Bitcoin en Cuba y mejoras la conectividad de la Lightning Network.</p>
                 </div>
-        
-                <div class="text-light fs-5">
-                    <p>Tu donación nos ayuda a:</p>
-                    <ul>
-                      <li>Organizar eventos y espacios de formación gratuitos.</li>
-                      <li>Mantener nuestros servicios: LNbits, BTCPay Server, Cashu Mint y nodo Lightning.</li>
-                      <li>Desarrollar herramientas para la comunidad.</li>
-                      <li>Crear tutoriales y guías educativas.</li>
-                      <li>Llevar Bitcoin a toda Cuba.</li>
-                    </ul>
-                    <p class="mt-3">Con tu apoyo, seguimos sembrando libertad financiera y empoderando a más personas.</p>
-                    <p class="fst-italic text-light">¡Gracias por ser parte de este movimiento!</p>
-                </div>
-                </div>
+
+                    <div class="row gx-5 justify-content-center">
+                        <!-- Imagen del nodo -->
+                        <div class="col-lg-6 mb-5">
+                            <div class="lightning-image-wrapper">
+                                <img src="img/open-lightning-channel-cuba-bitcoin.png" alt="Conecta con el nodo Lightning de Cuba Bitcoin" class="lightning-node-image img-fluid">
+                            </div>
+                        </div>
+
+                        <!-- Información del nodo -->
+                        <div class="col-lg-6 mb-5">
+                            <div class="lightning-info-card">
+                                <h3 class="lightning-card-title mb-4">Beneficios de abrir un canal:</h3>
+                                <ul class="lightning-benefits">
+                                    <li><i class="fas fa-exchange-alt me-3"></i>Mejora la liquidez y rutas de pago</li>
+                                    <li><i class="fas fa-flag me-3"></i>Apoya el crecimiento de Bitcoin en Cuba</li>
+                                    <li><i class="fas fa-network-wired me-3"></i>Forma parte de una red descentralizada y resistente</li>
+                                    <li><i class="fas fa-bolt me-3"></i>Facilita transacciones rápidas y económicas</li>
+                                </ul>
+
+                                <div class="node-info mt-4">
+                                    <h4 class="node-info-title mb-3">Información del nodo:</h4>
+                                    <div class="node-detail mb-3">
+                                        <strong>ID:</strong>
+                                        <code class="node-id" id="node-id">03736eabf99d772903d72bfc8b2e9792e9f408f3c0456a05267737fec607a9d3e4</code>
+                                        <button class="btn btn-sm btn-outline-light copy-btn ms-2" onclick="copyNodeId()">
+                                            <i class="fas fa-copy"></i> Copiar
+                                        </button>
+                                    </div>
+                                    <div class="node-detail mb-4">
+                                        <strong>Alias:</strong> <span class="node-alias">Cuba Bitcoin ⚡</span>
+                                    </div>
+                                    
+                                    <div class="lightning-actions">
+                                        <a href="https://amboss.space/es/node/03736eabf99d772903d72bfc8b2e9792e9f408f3c0456a05267737fec607a9d3e4" target="_blank" class="btn multimedia-btn">
+                                            <i class="fas fa-external-link-alt me-2"></i>Ver detalles en Amboss
+                                        </a>
+                                        <a href="https://t.me/Cuba_Bitcoin" target="_blank" class="btn multimedia-btn-white">
+                                            <i class="fab fa-telegram me-2"></i>¿Necesitas ayuda?
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
+        </section>
+
+        <!-- Donaciones / Apoya la comunidad -->
+        <section class="py-5 donation-section" id="scrollspydonaciones">
+            <div class="container-xl px-5 my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        
+                        <!-- Header -->
+                        <div class="text-center mb-5">
+                            <div class="donation-icon mb-4">
+                                <i class="bi bi-heart-fill"></i>
+                            </div>
+                            <h2 class="fw-bolder display-5 text-uppercase mb-3 donation-title">Apoya la comunidad</h2>
+                            <p class="lead donation-subtitle">
+                                Si valoras nuestro trabajo educativo y comunitario, puedes contribuir con una donación.
+                                Todo se gestiona a través de nuestro <strong>BTCPay Server</strong>, sin intermediarios.
+                            </p>
+                        </div>
+                        
+                        <!-- Main Content Card -->
+                        <div class="donation-card">
+                            <div class="row g-5 align-items-center">
+                                
+                                <!-- Left: Donation Button -->
+                                <div class="col-lg-5 text-center">
+                                    <div class="donation-button-container">
+                                        <div class="bitcoin-logo mb-4">
+                                            <i class="fa-brands fa-bitcoin"></i>
+                                        </div>
+                                        <a class="btn donation-btn" href="https://btcpay.cubabitcoin.org/apps/4GhTBzgnBEQGMhi633L6arsAunXG/crowdfund" target="_blank">
+                                            <i class="bi bi-lightning-charge-fill me-2"></i>
+                                            Donar Bitcoin
+                                        </a>
+                                        <p class="donation-note mt-3">
+                                            <i class="bi bi-shield-check text-success me-2"></i>
+                                            Transacción segura y transparente
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Right: Impact List -->
+                                <div class="col-lg-7">
+                                    <h4 class="mb-4 impact-title">Tu donación nos ayuda a:</h4>
+                                    <div class="impact-list">
+                                        <div class="impact-item">
+                                            <div class="impact-icon">
+                                                <i class="bi bi-people-fill"></i>
+                                            </div>
+                                            <div class="impact-text">
+                                                <strong>Organizar eventos</strong> y espacios de formación gratuitos
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="impact-item">
+                                            <div class="impact-icon">
+                                                <i class="bi bi-gear-fill"></i>
+                                            </div>
+                                            <div class="impact-text">
+                                                <strong>Mantener servicios:</strong> LNbits, BTCPay Server, Cashu Mint y nodo Lightning
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="impact-item">
+                                            <div class="impact-icon">
+                                                <i class="bi bi-code-slash"></i>
+                                            </div>
+                                            <div class="impact-text">
+                                                <strong>Desarrollar herramientas</strong> para la comunidad
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="impact-item">
+                                            <div class="impact-icon">
+                                                <i class="bi bi-book-fill"></i>
+                                            </div>
+                                            <div class="impact-text">
+                                                <strong>Crear tutoriales</strong> y guías educativas
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="impact-item">
+                                            <div class="impact-icon">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                            </div>
+                                            <div class="impact-text">
+                                                <strong>Llevar Bitcoin</strong> a toda Cuba
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Bottom Message -->
+                            <div class="donation-footer">
+                                <div class="text-center">
+                                    <p class="gratitude-text">
+                                        Con tu apoyo, seguimos <strong>sembrando libertad financiera</strong> y empoderando a más personas.
+                                    </p>
+                                    <p class="thank-you-text">
+                                        <i class="bi bi-star-fill text-warning me-2"></i>
+                                        ¡Gracias por ser parte de este movimiento!
+                                        <i class="bi bi-star-fill text-warning ms-2"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </section>
         <!-- end section -->
 
         <!-- Multimedia section -->
-        <section class="py-5 bg-dark text-light" id="scrollspymedia">
-        <div class="container-xl px-5 my-5">
-            <div class="row gx-5 align-items-center">
+        <section class="py-5 multimedia-section" id="scrollspymedia">
+            <div class="container-xl px-5 my-5">
+                
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <div class="multimedia-icon mb-4">
+                        <i class="bi bi-play-circle-fill"></i>
+                    </div>
+                    <h2 class="fw-bolder display-5 text-uppercase multimedia-title">Multimedia</h2>
+                    <p class="lead multimedia-subtitle">
+                        Contenido educativo exclusivo producido por Cuba Bitcoin para promover la adopción de Bitcoin
+                    </p>
+                </div>
 
-            <!-- Carrusel de YouTube playlists -->
-            <div class="col-lg-7">
-                <div id="playlistCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                <div class="carousel-inner">
+                <div class="row gx-5 align-items-center">
 
-                    <!-- Playlist 1: Curso Bitcoin Fácil -->
-                    <div class="carousel-item active">
-                    <iframe width="100%" height="400"
-                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0pJoPBcj1TxswS8X_4oZ2NQ"
-                        title="Curso Bitcoin Fácil - Primera Edición" frameborder="0" allowfullscreen></iframe>
+                    <!-- Video Player Section -->
+                    <div class="col-lg-8">
+                        <div class="video-container">
+                            <div class="video-header">
+                                <div class="video-indicator active" data-playlist="0">
+                                    <span class="indicator-dot"></span>
+                                    <span class="indicator-title">Bitcoin Fácil</span>
+                                </div>
+                                <div class="video-indicator" data-playlist="1">
+                                    <span class="indicator-dot"></span>
+                                    <span class="indicator-title">Run With Bitcoin</span>
+                                </div>
+                                <div class="video-indicator" data-playlist="2">
+                                    <span class="indicator-dot"></span>
+                                    <span class="indicator-title">Documentales</span>
+                                </div>
+                                <div class="video-indicator" data-playlist="3">
+                                    <span class="indicator-dot"></span>
+                                    <span class="indicator-title">Entrevistas</span>
+                                </div>
+                                <div class="video-indicator" data-playlist="4">
+                                    <span class="indicator-dot"></span>
+                                    <span class="indicator-title">Eventos</span>
+                                </div>
+                            </div>
+                            
+                            <div class="video-player">
+                                <iframe id="youtubePlayer" width="100%" height="450"
+                                    src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0pJoPBcj1TxswS8X_4oZ2NQ"
+                                    title="Curso Bitcoin Fácil - Primera Edición" frameborder="0" allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Playlist 2: Run With Bitcoin -->
-                    <div class="carousel-item">
-                    <iframe width="100%" height="400"
-                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0qpjQ_fkWaE3E1t3qyrOrU-"
-                        title="Run With Bitcoin" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    <!-- Playlist 3: Joe Nakamoto Cuba -->
-                    <div class="carousel-item">
-                    <iframe width="100%" height="400"
-                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0qaSoBYmCecDhRksF6rgMNi"
-                        title="The Truth Behind Cuba's Bitcoin Revolution" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    <!-- Playlist 4: Charlas y Entrevistas -->
-                    <div class="carousel-item">
-                    <iframe width="100%" height="400"
-                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0o05bchDVWpyNPt7VosX7Vv"
-                        title="Charlas y Entrevistas con Cuba Bitcoin" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    <!-- Playlist 5: Cuba Bitcoin en Eventos -->
-                    <div class="carousel-item">
-                    <iframe width="100%" height="400"
-                        src="https://www.youtube.com/embed/videoseries?list=PLTMA6_pNID0owPB3hh_-UHE438o6TvoSB"
-                        title="Cuba Bitcoin en Eventos" frameborder="0" allowfullscreen></iframe>
+                    <!-- Content Info -->
+                    <div class="col-lg-4">
+                        <div class="content-info">
+                            <h3 class="content-title mb-4">Nuestro Canal de YouTube</h3>
+                            
+                            <div class="content-stats">
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-camera-video-fill"></i>
+                                    </div>
+                                    <div class="stat-details">
+                                        <span class="stat-number">5+</span>
+                                        <span class="stat-label">Playlists</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-play-fill"></i>
+                                    </div>
+                                    <div class="stat-details">
+                                        <span class="stat-number">25+</span>
+                                        <span class="stat-label">Videos</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-mortarboard-fill"></i>
+                                    </div>
+                                    <div class="stat-details">
+                                        <span class="stat-number">100%</span>
+                                        <span class="stat-label">Gratuito</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="content-description">
+                                <p>
+                                    Documentales, entrevistas, cursos educativos y podcasts que promueven 
+                                    la adopción y el conocimiento de Bitcoin en Cuba y el mundo.
+                                </p>
+                            </div>
+                            
+                            <div class="content-actions">
+                                <a href="https://www.youtube.com/@CubaBitcoin21" target="_blank" class="btn multimedia-btn">
+                                    <i class="bi bi-youtube me-2"></i>
+                                    Ver Canal de Yotube
+                                </a>
+                                
+                                <div class="subscribe-note mt-3">
+                                    <i class="bi bi-bell-fill text-warning me-2"></i>
+                                    ¡Suscríbete y activa las notificaciones!
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-                </div>
             </div>
-
-            <!-- Descripción -->
-            <div class="col-lg-5">
-                <h2 class="fw-bolder display-6">MULTIMEDIA</h2>
-                <p class="fw-normal mb-0">
-                En nuestro canal de YouTube encontrará una variedad de contenidos producidos por el equipo de Cuba Bitcoin:
-                documentales, entrevistas, cursos educativos y podcasts que promueven la adopción y el conocimiento de Bitcoin.
-                </p>
-            </div>
-
-            </div>
-        </div>
         </section>
 
         
 
         <!-- Jade Wallet section-->
-        <section class="py-5 bg-dark text-light">
+        <section class="py-5 jade-section">
             <div class="container-xl px-5 my-5">
+                
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <div class="jade-icon mb-4">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h2 class="fw-bolder display-5 text-uppercase jade-title">Blockstream Jade</h2>
+                    <p class="lead jade-subtitle">
+                        Hardware wallet de código abierto para máxima seguridad y autocustodia de Bitcoin
+                    </p>
+                </div>
+
                 <div class="row gx-5 align-items-center">
+                    <!-- Product Images -->
                     <div class="col-lg-6 order-first order-lg-last">
-                        <div id="jadeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="img-fluid mb-5 mb-lg-0" src="img/Blockstream_Jade_Plus_Bitcoin_Wallet_Angled_Back_Grey-removebg-preview.png" alt="Blockstream Jade Plus Bitcoin Wallet - vista trasera angular" />
+                        <div class="jade-product-container">
+                            <div id="jadeCarousel" class="carousel slide jade-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+                                <div class="carousel-indicators jade-indicators">
+                                    <button type="button" data-bs-target="#jadeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#jadeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#jadeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
-                                <div class="carousel-item">
-                                    <img class="img-fluid mb-5 mb-lg-0" src="img/Green_JadeSquare_copy_2-removebg-preview.png" alt="Blockstream Jade con Green Wallet - vista cuadrada" />
+                                <div class="carousel-inner jade-carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="jade-image-wrapper">
+                                            <img class="img-fluid jade-product-image" src="img/Blockstream_Jade_Plus_Bitcoin_Wallet_Angled_Back_Grey-removebg-preview.png" alt="Blockstream Jade Plus Bitcoin Wallet - vista trasera angular" />
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="jade-image-wrapper">
+                                            <img class="img-fluid jade-product-image" src="img/Green_JadeSquare_copy_2-removebg-preview.png" alt="Blockstream Jade con Green Wallet - vista cuadrada" />
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="jade-image-wrapper">
+                                            <img class="img-fluid jade-product-image" src="img/JadePlusLinkBundleGrey-removebg-preview.png" alt="Blockstream Jade Plus Link Bundle - paquete completo gris" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img class="img-fluid mb-5 mb-lg-0" src="img/JadePlusLinkBundleGrey-removebg-preview.png" alt="Blockstream Jade Plus Link Bundle - paquete completo gris" />
-                                </div>
+                                <button class="carousel-control-prev jade-control" type="button" data-bs-target="#jadeCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next jade-control" type="button" data-bs-target="#jadeCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#jadeCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#jadeCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
                         </div>
                     </div>
+                    
+                    <!-- Product Info -->
                     <div class="col-lg-6">
-                        <h4 class="fw-bolder mb-0 text-uppercase">Distribuidor oficial </h4>
-                        <p class="fw-normal display-6 mb-4 text-success">Blockstream Jade.</p>
-                        <p class="mb-5">
-                            <span class="fw-bolder fs-5 text-success">01</span> LANZAMIENTO: 2025 <br>
-                            <span class="fw-bolder fs-5 text-success">02</span> INTERFACES: QR Code, USB-C, Bluetooth <br>
-                            <span class="fw-bolder fs-5 text-success">03</span> BATERÍA: SÍ <br>
-                            <span class="fw-bolder fs-5 text-success">04</span> ELEMENTO SEGURO: Virtual Secure Element <br>
-                            <span class="fw-bolder fs-5 text-success">05</span> OPEN SOURCE: Hardware & Software <br>
-                            <span class="fw-bolder fs-5 text-success">06</span> APP: GREEN (DESKTOP, IOS, ANDROID) <br>
-                            <span class="fw-bolder fs-5 text-success">07</span> CERTIFICACIÓN: CC EAL5+ <br>
-                            <span class="fw-bolder fs-5 text-success">08</span> FEATURES: Air-gapped <br>
-                        </p>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                            <a class="btn btn-success btn px-2 me-sm-2" href="https://t.me/Forte11" target="_blank">Compra desde Cuba</a>
-                            <a class="btn btn-outline-light btn px-2" href="https://store.blockstream.com/?code=cubabitcoin" target="_blank">Compra desde cualquier parte del mundo</a>
+                        <div class="jade-info-card">
+                            
+                            <!-- Product Header -->
+                            <div class="jade-header mb-4">
+                                <div class="jade-badge">
+                                    <i class="bi bi-patch-check-fill me-2"></i>
+                                    Distribuidor Oficial
+                                </div>
+                                <h3 class="jade-product-title">Blockstream Jade</h3>
+                                <p class="jade-product-subtitle">Hardware Wallet de Nueva Generación</p>
+                            </div>
+                            
+                            <!-- Features List -->
+                            <div class="jade-features mb-4">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-calendar-check"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Lanzamiento:</strong> 2025
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-diagram-3"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Interfaces:</strong> QR Code, USB-C, Bluetooth
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-battery-charging"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Batería:</strong> Incluida
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-shield-lock"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Seguridad:</strong> Virtual Secure Element
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-code-slash"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Open Source:</strong> Hardware & Software
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-phone"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>App:</strong> Green (Desktop, iOS, Android)
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-award"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Certificación:</strong> CC EAL5+
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-wifi-off"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Features:</strong> Air-gapped
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Purchase Buttons -->
+                            <div class="jade-actions">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <a class="btn jade-btn-primary" href="https://t.me/Forte11" target="_blank">
+                                            <i class="bi bi-geo-alt-fill me-2"></i>
+                                            Compra desde Cuba
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn jade-btn-secondary" href="https://store.blockstream.com/?code=cubabitcoin" target="_blank">
+                                            <i class="bi bi-globe me-2"></i>
+                                            Compra Internacional
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="jade-note mt-3">
+                                    <i class="bi bi-info-circle text-warning me-2"></i>
+                                    Usa el código <strong>cubabitcoin</strong> para apoyar a la comunidad
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-            </section>
+        </section>
 
         <!-- Nostr Directory Section -->
         <div id="scrollspynostr-anchor" style="position: relative; top: -100px;"></div>
-        <section class="py-5 bg-light" id="scrollspynostr">
-
-            <div class="container-xl px-5">
-              <div class="row align-items-center">
+        <section class="py-5 nostr-section">
+            <div class="container-xl px-5 my-5">
                 
-                <!-- Texto a la izquierda -->
-                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                    <h2 class="fw-bolder display-6 text-uppercase text-center mb-5">Conecta con Cuba Bitcoin en Nostr</h2>
-                    <p class="lead text-muted mb-4 text-md-center">
-                        Sigue a los miembros de la comunidad en Nostr.
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <div class="nostr-icon mb-4">
+                        <i class="bi bi-broadcast"></i>
+                    </div>
+                    <h2 class="fw-bolder display-5 text-uppercase nostr-title">Conecta con Cuba Bitcoin en Nostr</h2>
+                    <p class="lead nostr-subtitle">
+                        Únete al protocolo descentralizado de comunicación y síguenos en la red social del futuro
                     </p>
-                    <p class="lead text-muted mb-4 text-md-center">
-
-                  <a href="https://following.space/d/sk342g0nwqbt" class="btn btn-dark btn-lg mb-3" target="_blank" rel="noopener noreferrer">
-                    Ver directorio
-                  </a>
-                  <p class="text-muted mt-3 text-md-center">
-                    ¿Quieres apoyar aún más? Obtén tu identidad <code>nip05</code> con el dominio <strong><em>@cubabitcoin.org</em></strong> y forma parte de la red.
-                    <br>
-                    <p class="lead text-muted mb-4 text-md-center">
-
-                    <a href="https://btcpay.cubabitcoin.org/apps/qKjT8z9PqKfpyi8bjjxeP4VmAnT/pos" class="btn btn-outline-dark btn-sm mt-2" target="_blank" rel="noopener noreferrer">
-                      Obtener NIP05 personalizado
-                    </a>
-                  </p>
                 </div>
-          
-                <!-- Imagen a la derecha -->
-                <div class="col-md-6 text-center">
-                  <img src="img/Designer.png" alt="Comunidad Cuba Bitcoin en Nostr - protocolo descentralizado de comunicación" class="img-fluid rounded shadow-sm" style="max-width: 300px;">
+
+                <div class="row gx-5 align-items-center">
+                    
+                    <!-- Content Info -->
+                    <div class="col-lg-6">
+                        <div class="nostr-info-card">
+                            
+                            <!-- What is Nostr -->
+                            <div class="nostr-header mb-4">
+                                <div class="nostr-badge">
+                                    <i class="bi bi-lightning-charge-fill me-2"></i>
+                                    Protocolo Descentralizado
+                                </div>
+                                <h3 class="nostr-card-title">¿Qué es Nostr?</h3>
+                                <p class="nostr-description">
+                                    Nostr es un protocolo simple y abierto que permite crear redes sociales 
+                                    verdaderamente descentralizadas, resistentes a la censura y controladas por los usuarios.
+                                </p>
+                            </div>
+                            
+                            <!-- Features List -->
+                            <div class="nostr-features mb-4">
+                                <div class="nostr-feature-item">
+                                    <div class="nostr-feature-icon">
+                                        <i class="bi bi-shield-lock"></i>
+                                    </div>
+                                    <div class="nostr-feature-text">
+                                        <strong>Sin Censura:</strong> Nadie puede bloquear tu contenido
+                                    </div>
+                                </div>
+                                
+                                <div class="nostr-feature-item">
+                                    <div class="nostr-feature-icon">
+                                        <i class="bi bi-key"></i>
+                                    </div>
+                                    <div class="nostr-feature-text">
+                                        <strong>Tú Controlas:</strong> Tu identidad, tus datos, tus conexiones
+                                    </div>
+                                </div>
+                                
+                                <div class="nostr-feature-item">
+                                    <div class="nostr-feature-icon">
+                                        <i class="bi bi-globe"></i>
+                                    </div>
+                                    <div class="nostr-feature-text">
+                                        <strong>Descentralizado:</strong> Sin servidores centrales
+                                    </div>
+                                </div>
+                                
+                                <div class="nostr-feature-item">
+                                    <div class="nostr-feature-icon">
+                                        <i class="bi bi-currency-bitcoin"></i>
+                                    </div>
+                                    <div class="nostr-feature-text">
+                                        <strong>Bitcoin Native:</strong> Pagos integrados con Lightning
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Actions -->
+                            <div class="nostr-actions">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <a class="btn nostr-btn-primary" href="https://following.space/d/sk342g0nwqbt" target="_blank" rel="noopener noreferrer">
+                                            <i class="bi bi-people-fill me-2"></i>
+                                            Ver Directorio de la Comunidad
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="nostr-nip05-section mt-4">
+                                    <div class="nip05-info">
+                                        <div class="nip05-icon">
+                                            <i class="bi bi-patch-check-fill"></i>
+                                        </div>
+                                        <div class="nip05-text">
+                                            <h5>Obtén tu identidad verificada</h5>
+                                            <p class="mb-2">
+                                                Consigue tu NIP05 personalizado con el dominio 
+                                                <code class="nip05-domain">@cubabitcoin.org</code> 
+                                                y forma parte oficial de la comunidad.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <a class="btn nostr-btn-secondary" href="https://btcpay.cubabitcoin.org/apps/qKjT8z9PqKfpyi8bjjxeP4VmAnT/pos" target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-person-check me-2"></i>
+                                        Obtener NIP05 Personalizado
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Visual Section -->
+                    <div class="col-lg-6 order-first order-lg-last">
+                        <div class="nostr-visual-container">
+                            
+                            <!-- Main Nostr Logo -->
+                            <div class="nostr-logo-container">
+                                <div class="nostr-logo-wrapper">
+                                    <img src="img/Designer.png" alt="Comunidad Cuba Bitcoin en Nostr - protocolo descentralizado de comunicación" class="nostr-main-image" />
+                                    <div class="nostr-logo-overlay">
+                                        <div class="nostr-floating-icon nostr-icon-1">
+                                            <i class="bi bi-lightning-charge-fill"></i>
+                                        </div>
+                                        <div class="nostr-floating-icon nostr-icon-2">
+                                            <i class="bi bi-shield-check"></i>
+                                        </div>
+                                        <div class="nostr-floating-icon nostr-icon-3">
+                                            <i class="bi bi-globe"></i>
+                                        </div>
+                                        <div class="nostr-floating-icon nostr-icon-4">
+                                            <i class="bi bi-key"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Stats Cards -->
+                            <div class="nostr-stats">
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <div class="nostr-stat-card">
+                                            <div class="stat-number">30+</div>
+                                            <div class="stat-label">Miembros Activos</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="nostr-stat-card">
+                                            <div class="stat-number">100%</div>
+                                            <div class="stat-label">Descentralizado</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
                 </div>
-          
-              </div>
             </div>
-          </section>
+        </section>
           
 
         <!-- end section -->
           
           
         <!-- Sección Bitrefill -->
-        <section class="py-5 bg-dark text-light" id="bitrefill">
-            <style>
-                .bitrefill-logo {
-                max-width: 220px;
-                height: auto;
-                display: block;
-                margin: 0 auto 1.5rem;
-                }
+        <section class="py-5 bitrefill-section">
+            <div class="container-xl px-5 my-5">
+                
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <div class="bitrefill-icon mb-4">
+                        <i class="bi bi-credit-card"></i>
+                    </div>
+                    <h2 class="fw-bolder display-5 text-uppercase bitrefill-title">Compra en Bitrefill</h2>
+                    <p class="lead bitrefill-subtitle">
+                        Usa Bitcoin para comprar recargas móviles, tarjetas de regalo y servicios en todo el mundo
+                    </p>
+                </div>
 
-                .bitrefill-banner {
-                max-width: 100%;
-                border-radius: 1rem;
-                margin-top: 2rem;
-                }
-
-                .bitrefill-btn {
-                    background-color: #f7ba00; /* Amarillo Bitrefill (igual a btn-warning) */
-                    color: black;
-                    border: none;
-                    padding: 12px 28px;
-                    font-weight: bold;
-                    border-radius: 8px;
-                    text-decoration: none;
-                    display: inline-block;
-                    margin-top: 1.5rem;
-                    transition: background-color 0.3s ease, transform 0.2s ease;
-                }
-
-                .bitrefill-btn:hover {
-                    background-color: #e0a800; /* Más intenso */
-                    text-decoration: none;
-                    transform: scale(1.03);
-                }
-            </style>
-
-            <div class="container-xl text-center">
-                <!-- Logo de Bitrefill -->
-                <img src="img/Bitrefill-Brand-Kit/Logo/SVG/04-LOGOTYPE-BITREFILL-WHITE-RGB.svg"
-                    alt="Bitrefill Logo"
-                    class="bitrefill-logo">
-
-                <!-- Texto descriptivo -->
-                <h2 class="mb-3">Compra en Bitrefill con Cuba Bitcoin</h2>
-                <p class="lead">
-                Bitrefill te permite comprar recargas móviles, tarjetas de regalo y más, usando Bitcoin y sin necesidad de bancos.
-                </p>
-
-                <!-- Botón de referido -->
-                <a href="https://bitrefill.com/invite/cubabitcoin" class="btn btn-warning btn-lg fw-bold px-5 py-3" target="_blank">
-                    Ir a Bitrefill
-                </a>
+                <div class="row gx-5 align-items-center">
+                    
+                    <!-- Content Info -->
+                    <div class="col-lg-6">
+                        <div class="bitrefill-info-card">
+                            
+                            <!-- Partnership Header -->
+                            <div class="bitrefill-header mb-4">
+                                <h3 class="bitrefill-card-title">¿Qué es Bitrefill?</h3>
+                                <p class="bitrefill-description">
+                                    Bitrefill es la plataforma líder mundial que te permite vivir únicamente con Bitcoin. 
+                                    Compra recargas móviles, tarjetas de regalo y paga servicios usando solo criptomonedas.
+                                </p>
+                            </div>
+                            
+                            <!-- Features List -->
+                            <div class="bitrefill-features mb-4">
+                                <div class="bitrefill-feature-item">
+                                    <div class="bitrefill-feature-icon">
+                                        <i class="bi bi-phone"></i>
+                                    </div>
+                                    <div class="bitrefill-feature-text">
+                                        <strong>Recargas Móviles:</strong> Recarga instantánea en 170+ países
+                                    </div>
+                                </div>
+                                
+                                <div class="bitrefill-feature-item">
+                                    <div class="bitrefill-feature-icon">
+                                        <i class="bi bi-gift"></i>
+                                    </div>
+                                    <div class="bitrefill-feature-text">
+                                        <strong>Tarjetas de Regalo:</strong> +1,500 marcas globales disponibles
+                                    </div>
+                                </div>
+                                
+                                <div class="bitrefill-feature-item">
+                                    <div class="bitrefill-feature-icon">
+                                        <i class="bi bi-lightning-charge"></i>
+                                    </div>
+                                    <div class="bitrefill-feature-text">
+                                        <strong>Pagos Instantáneos:</strong> Lightning Network y Bitcoin on-chain
+                                    </div>
+                                </div>
+                                
+                                <div class="bitrefill-feature-item">
+                                    <div class="bitrefill-feature-icon">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <div class="bitrefill-feature-text">
+                                        <strong>Sin KYC:</strong> No requiere verificación de identidad
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Actions -->
+                            <div class="bitrefill-actions">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <a class="btn bitrefill-btn-primary" href="https://bitrefill.com/invite/cubabitcoin" target="_blank">
+                                            <i class="bi bi-arrow-right-circle me-2"></i>
+                                            Ir a Bitrefill
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="bitrefill-referral-section mt-4">
+                                    <div class="referral-info">
+                                        <div class="referral-icon">
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="referral-text">
+                                            <h5>Apoya a Cuba Bitcoin</h5>
+                                            <p class="mb-0">
+                                                Al usar nuestro enlace de referido, contribuyes al crecimiento 
+                                                y sostenibilidad de nuestra comunidad educativa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Visual Section -->
+                    <div class="col-lg-6 order-first order-lg-last">
+                        <div class="bitrefill-visual-container">
+                            
+                            <!-- Main Bitrefill Logo -->
+                            <div class="bitrefill-logo-container">
+                                <div class="bitrefill-logo-wrapper">
+                                    <img src="img/Bitrefill-Brand-Kit/Logo/SVG/04-LOGOTYPE-BITREFILL-WHITE-RGB.svg" alt="Bitrefill Logo" class="bitrefill-main-logo" />
+                                    <div class="bitrefill-logo-overlay">
+                                        <div class="bitrefill-floating-icon bitrefill-icon-1">
+                                            <i class="bi bi-phone"></i>
+                                        </div>
+                                        <div class="bitrefill-floating-icon bitrefill-icon-2">
+                                            <i class="bi bi-gift"></i>
+                                        </div>
+                                        <div class="bitrefill-floating-icon bitrefill-icon-3">
+                                            <i class="bi bi-lightning-charge"></i>
+                                        </div>
+                                        <div class="bitrefill-floating-icon bitrefill-icon-4">
+                                            <i class="bi bi-credit-card"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Stats Cards -->
+                            <div class="bitrefill-stats">
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <div class="bitrefill-stat-card">
+                                            <div class="stat-number">170+</div>
+                                            <div class="stat-label">Países</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="bitrefill-stat-card">
+                                            <div class="stat-number">1500+</div>
+                                            <div class="stat-label">Marcas</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </section>
 
@@ -1116,12 +1761,21 @@
 
 
 
-        <!-- Frases section-->
-        <div class="py-5 bg-light text-muted">
+        <!-- Quote section-->
+        <section class="py-5 quote-section">
             <div class="container-xl px-5 my-5">
+                
+                <!-- Background Elements -->
+                <div class="quote-background">
+                    <div class="quote-bg-element quote-bg-1"></div>
+                    <div class="quote-bg-element quote-bg-2"></div>
+                    <div class="quote-bg-element quote-bg-3"></div>
+                </div>
+                
                 <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-10 col-xl-7">
-                        <div class="text-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <!-- Quote Card -->
+                        <div class="quote-card">
                             <div class="fs-4 mb-4 fst-italic">“Con dinero electrónico basado en evidencia criptográfica, sin la necesidad de depender de intermediarios externos, el dinero puede estar seguro y las transacciones sin esfuerzo”</div>
                             <div class="d-flex align-items-center justify-content-center">
         
@@ -1136,64 +1790,54 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
+        </main>
 
         
         <!-- Footer section-->
-        <footer class="py-5 bg-dark" id="scrollspycontact">
-            <style>
-                .footer-logo {
-                    max-width: 220px;
-                    height: auto;
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-
-                #nostr-social {
-                    width: 42px;
-                    height: 42px;
-                    object-fit: contain;
-                    padding: 4px;
-                }
-
-                @media (max-width: 576px) {
-                    .footer-logo {
-                        max-width: 180px;
-                    }
-
-                    #nostr-social {
-                        width: 36px;
-                        height: 36px;
-                    }
-                }
-            </style>
-
+        <footer class="py-5 footer-social-section" id="scrollspycontact">
             <div class="container-xl py-5">
-                <div class="text-center mb-5 mb-xl-0">
-                    <div class="mb-2 text-light">
+                <div class="footer-content">
+                    <div class="text-center mb-5 mb-xl-0">
                         <!-- Logo -->
-                        <img src="img/Cuba-Bitcoin-LogoMarca-Blanco.png" alt="Logo Cuba Bitcoin" class="footer-logo mb-3">
+                        <img src="img/Cuba-Bitcoin-LogoMarca-Blanco.png" alt="Logo Cuba Bitcoin" class="footer-logo mb-4">
 
                         <!-- Lema -->
-                        <p>Comunidad comprometida con la educación sobre Bitcoin en Cuba.</p>
+                        <p class="footer-tagline">Comunidad comprometida con la educación sobre Bitcoin en Cuba.</p>
 
-                        <hr class="hr my-5" />
+                        <hr class="footer-divider" />
 
-                        <!-- Redes -->
-                        <p class="mb-0">Accede a contenido 100% gratuito.</p>
-                        <p>Únete a nuestra comunidades</p>
-                        <a class="fs-1 px-2 link-light" href="https://x.com/Cuba_BTC" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
-                        <a class="fs-1 px-2 link-light" href="https://t.me/Cuba_Bitcoin" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                        <a class="fs-1 px-2 link-light" href="https://www.youtube.com/@CubaBitcoin21" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        <a class="fs-1 px-2 link-light" href="https://github.com/Cuba-Bitcoin" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a class="fs-1 px-2 link-light" href="https://primal.net/p/npub1huyn6ru55pv6l7p0sxvlu3vfpq7pan958sl4weft0kte6lvdvvksd5s34t" target="_blank">
-                            <img src="img/nostr_logo_blk.svg" alt="Nostr Logo" id="nostr-social" class="bg-white rounded-circle">
-                        </a>
+                        <!-- Invitación a redes sociales -->
+                        <div class="social-invitation">
+                            <h3>Accede a contenido 100% gratuito</h3>
+                            <p>Únete a nuestras comunidades</p>
+                        </div>
+
+                        <!-- Enlaces sociales modernos -->
+                        <div class="social-links-container">
+                            <a class="social-link twitter" href="https://x.com/Cuba_BTC" target="_blank" title="Síguenos en X (Twitter)">
+                                <i class="fa-brands fa-square-x-twitter"></i>
+                            </a>
+                            <a class="social-link telegram" href="https://t.me/Cuba_Bitcoin" target="_blank" title="Únete a nuestro Telegram">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                            <a class="social-link youtube" href="https://www.youtube.com/@CubaBitcoin21" target="_blank" title="Suscríbete a nuestro canal">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                            <a class="social-link github" href="https://github.com/Cuba-Bitcoin" target="_blank" title="Contribuye en GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a class="social-link nostr" href="https://primal.net/p/npub1huyn6ru55pv6l7p0sxvlu3vfpq7pan958sl4weft0kte6lvdvvksd5s34t" target="_blank" title="Síguenos en Nostr">
+                                <img src="img/nostr_logo_blk.svg" alt="Nostr Logo" id="nostr-social">
+                            </a>
+                        </div>
 
                         <!-- Mensaje final -->
-                        <p class="mt-5">© 2025 cubabitcoin.org. Promoviendo la educación y el uso de Bitcoin en nuestra Patria</p>
+                        <div class="footer-copyright">
+                            <strong>© 2025 cubabitcoin.org</strong><br>
+                            Promoviendo la educación y el uso de Bitcoin en nuestra Patria
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1295,6 +1939,162 @@
                     }, 100);
                 }
             });
+
+            // Animated Counters for Statistics
+            function animateCounter(element, target, duration = 2000) {
+                const start = 0;
+                const increment = target / (duration / 16); // 60fps
+                let current = start;
+                const prefix = element.textContent.includes('+') ? '+' : '';
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = prefix + Math.floor(current);
+                }, 16);
+            }
+
+            // Intersection Observer for Stats Animation
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const numberElement = entry.target.querySelector('.stat-number');
+                        const target = parseInt(numberElement.getAttribute('data-target'));
+                        
+                        // Start counter animation
+                        setTimeout(() => {
+                            animateCounter(numberElement, target);
+                        }, 300);
+                        
+                        // Add icon animation
+                        const icon = entry.target.querySelector('.stat-icon');
+                        setTimeout(() => {
+                            icon.style.transform = 'scale(1.1) rotate(360deg)';
+                            setTimeout(() => {
+                                icon.style.transform = 'scale(1) rotate(0deg)';
+                            }, 600);
+                        }, 500);
+                        
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            // Observe all stat cards
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(() => {
+                    document.querySelectorAll('.stat-card').forEach(card => {
+                        statsObserver.observe(card);
+                    });
+                }, 500);
+            });
+
+            // Interactive Multimedia Player
+            document.addEventListener('DOMContentLoaded', function() {
+                const playlists = [
+                    'PLTMA6_pNID0pJoPBcj1TxswS8X_4oZ2NQ', // Bitcoin Fácil
+                    'PLTMA6_pNID0qpjQ_fkWaE3E1t3qyrOrU-', // Run With Bitcoin
+                    'PLTMA6_pNID0qaSoBYmCecDhRksF6rgMNi', // Joe Nakamoto Cuba
+                    'PLTMA6_pNID0o05bchDVWpyNPt7VosX7Vv', // Charlas y Entrevistas
+                    'PLTMA6_pNID0owPB3hh_-UHE438o6TvoSB'  // Cuba Bitcoin en Eventos
+                ];
+                
+                const playlistTitles = [
+                    'Curso Bitcoin Fácil - Primera Edición',
+                    'Run With Bitcoin',
+                    'The Truth Behind Cuba\'s Bitcoin Revolution',
+                    'Charlas y Entrevistas con Cuba Bitcoin',
+                    'Cuba Bitcoin en Eventos'
+                ];
+
+                const indicators = document.querySelectorAll('.video-indicator');
+                const iframe = document.getElementById('youtubePlayer');
+
+                indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', function() {
+                        // Remove active class from all indicators
+                        indicators.forEach(ind => ind.classList.remove('active'));
+                        
+                        // Add active class to clicked indicator
+                        this.classList.add('active');
+                        
+                        // Update iframe source
+                        iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlists[index]}`;
+                        iframe.title = playlistTitles[index];
+                        
+                        // Add loading effect
+                        iframe.style.opacity = '0.7';
+                        setTimeout(() => {
+                            iframe.style.opacity = '1';
+                        }, 500);
+                    });
+                });
+            });
+
+            // Lightning Node ID Copy Function
+            function copyNodeId() {
+                const nodeId = document.getElementById('node-id').textContent;
+                const copyBtn = document.querySelector('.copy-btn');
+                
+                // Use the modern Clipboard API if available
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(nodeId).then(function() {
+                        // Success feedback
+                        copyBtn.innerHTML = '<i class="fas fa-check"></i> ¡Copiado!';
+                        copyBtn.classList.remove('btn-outline-light');
+                        copyBtn.classList.add('btn-success');
+                        
+                        // Reset button after 2 seconds
+                        setTimeout(function() {
+                            copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar';
+                            copyBtn.classList.remove('btn-success');
+                            copyBtn.classList.add('btn-outline-light');
+                        }, 2000);
+                    }).catch(function(err) {
+                        console.error('Error copying to clipboard:', err);
+                        fallbackCopyTextToClipboard(nodeId, copyBtn);
+                    });
+                } else {
+                    // Fallback for older browsers
+                    fallbackCopyTextToClipboard(nodeId, copyBtn);
+                }
+            }
+
+            // Fallback copy function for older browsers
+            function fallbackCopyTextToClipboard(text, copyBtn) {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                textArea.style.top = "-999999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) {
+                        copyBtn.innerHTML = '<i class="fas fa-check"></i> ¡Copiado!';
+                        copyBtn.classList.remove('btn-outline-light');
+                        copyBtn.classList.add('btn-success');
+                        
+                        setTimeout(function() {
+                            copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar';
+                            copyBtn.classList.remove('btn-success');
+                            copyBtn.classList.add('btn-outline-light');
+                        }, 2000);
+                    } else {
+                        console.error('Fallback: Copy command was unsuccessful');
+                    }
+                } catch (err) {
+                    console.error('Fallback: Unable to copy', err);
+                }
+                
+                document.body.removeChild(textArea);
+            }
         </script>
 
   </body>
