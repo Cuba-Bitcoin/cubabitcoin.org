@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cubabitcoin.org/sitemap.xml
+
+# Optimización para motores de búsqueda específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Evitar indexación de archivos innecesarios
+Disallow: /css/
+Disallow: /js/
+Disallow: /*.css$
+Disallow: /*.js$
+
+# Permitir acceso a archivos importantes para SEO
+Allow: /img/
+Allow: /assets/
+
+# Crawl-delay para evitar sobrecarga del servidor
+Crawl-delay: 1
