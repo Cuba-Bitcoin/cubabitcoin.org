@@ -9,7 +9,7 @@
     <meta name="description" content="Cuba Bitcoin es una comunidad enfocada en la educación sobre Bitcoin en Cuba. Ofrecemos cursos gratuitos, servicios comunitarios como LNbits y BTCPay Server, y promovemos la adopción de Bitcoin mediante herramientas soberanas y accesibles.">
     <meta name="keywords" content="Bitcoin Cuba, educación Bitcoin, Lightning Network, BTCPay Server, LNbits, Cashu, autocustodia, criptomonedas Cuba, soberanía financiera">
     <meta name="author" content="Cuba Bitcoin">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://cubabitcoin.org">
     
     <!-- Open Graph Meta Tags -->
@@ -52,6 +52,8 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/9379559305.js" crossorigin="anonymous"></script>
+    <!-- Rive Runtime -->
+    <script src="https://unpkg.com/@rive-app/canvas@latest/rive.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS-->
@@ -191,7 +193,7 @@
                 </div>
                 
                 <div class="carousel-item hero-slide">
-                <img src="img/blockstream-local-cuba-bitcoin-3.jpeg" class="d-block w-100" alt="Evento Blockstream Local Meetup organizado por Cuba Bitcoin">
+                <img src="img/blockstream-local-cuba-bitcoin2.png" class="d-block w-100" alt="Evento Blockstream Local Meetup organizado por Cuba Bitcoin">
                 <div class="hero-overlay"></div>
                 <div class="carousel-caption hero-caption">
                     <h2 class="hero-title display-4 fw-bolder text-uppercase mb-3">Eventos Locales</h2>
@@ -204,7 +206,7 @@
                 </div>
                 
                 <div class="carousel-item hero-slide">
-                <img src="img/cubabitcoincashu3.jpeg" class="d-block w-100" alt="Demostración del uso de Cashu ecash en Cuba Bitcoin">
+                <img src="img/cubabitcoincashu.jpeg" class="d-block w-100" alt="Demostración del uso de Cashu ecash en Cuba Bitcoin">
                 <div class="hero-overlay"></div>
                 <div class="carousel-caption hero-caption">
                     <h2 class="hero-title display-4 fw-bolder text-uppercase mb-3">Herramientas Soberanas</h2>
@@ -231,7 +233,7 @@
         <!-- Noticias
         <section id="scrollspynews" class="py-5">
             <div class="container-xl px-5">
-                <h1 class="text-center fw-bolder display-6 mb-5">NOTICIAS</h1>
+                <h2 class="text-center fw-bolder display-6 mb-5">NOTICIAS</h2>
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
@@ -325,7 +327,7 @@
                             <div class="card h-100 shadow border-0 bitcoin-card">
                                 <div class="card-body">
                                     <img src="img/lnbits_logo_letters_black.svg" alt="LNbits logo" class="service-logo mb-3" loading="lazy">
-                                    <h5 class="fw-bolder link-dark">LNbits</h5>
+                                    <h3 class="fw-bolder link-dark">LNbits</h3>
                                     <p class="text-muted">Billetera Lightning extensible para aceptar pagos y crear subcuentas.</p>
                                     <div class="mt-auto">
                                         <span class="badge badge-success mb-2">Billetera</span>
@@ -341,7 +343,7 @@
                             <div class="card h-100 shadow border-0 bitcoin-card">
                                 <div class="card-body">
                                     <img src="img/btcpay_logo_transparente.png" alt="BTCPay logo" class="service-logo mb-3" loading="lazy">
-                                    <h5 class="fw-bolder link-dark">BTCPay Server</h5>
+                                    <h3 class="fw-bolder link-dark">BTCPay Server</h3>
                                     <p class="text-muted">Crea tu tienda, acepta pagos en Bitcoin y crea tus campañas de recaudación.</p>
                                     <div class="mt-auto">
                                         <span class="badge badge-telegram mb-2">Pasarela</span>
@@ -357,7 +359,7 @@
                             <div class="card h-100 shadow border-0 bitcoin-card">
                                 <div class="card-body">
                                     <img src="img/tutoriales_transparente.png" alt="Tutoriales logo" class="service-logo mb-3" loading="lazy">
-                                    <h5 class="fw-bolder link-dark">Tutoriales</h5>
+                                    <h3 class="fw-bolder link-dark">Tutoriales</h3>
                                     <p class="text-muted">Guías prácticas para aprender sobre Bitcoin y usar estas herramientas.</p>
                                     <div class="mt-auto">
                                         <span class="badge badge-lightning mb-2">Educación</span>
@@ -372,7 +374,7 @@
                             <div class="card h-100 shadow border-0 bitcoin-card">
                                 <div class="card-body">
                                     <img src="img/cashu_pixel_cuba_cleaned.png" alt="Cashu logo" class="service-logo mb-3" loading="lazy">
-                                    <h5 class="fw-bolder link-dark">Mint de Cashu</h5>
+                                    <h3 class="fw-bolder link-dark">Mint de Cashu</h3>
                                     <p class="text-muted">Envía y recibe ecash privado, incluso sin conexión a internet.</p>
                                     <div class="mt-auto">
                                         <span class="badge badge-nostr mb-2">Ecash</span>
@@ -409,7 +411,7 @@
                         <div class="card h-100 shadow border-0 bitcoin-card">
                             <div class="card-body">
                                 <img src="img/cuba_lnp2p.png" alt="Logo de Cuba LNp2p - bot de Lightning Network peer to peer" class="service-logo mb-3" loading="lazy">
-                                <h5 class="fw-bolder link-dark">Cuba LNp2p</h5>
+                                <h3 class="fw-bolder link-dark">Cuba LNp2p</h3>
                                 <p class="text-muted">Comunidad cubana del bot LNp2p en Telegram para intercambios Lightning.</p>
                                 <div class="mt-auto">
                                     <span class="badge badge-telegram mb-2">Telegram</span>
@@ -426,7 +428,7 @@
                         <div class="card h-100 shadow border-0 bitcoin-card">
                             <div class="card-body">
                                 <img src="img/mostro.png" alt="Logo de Mostro - intercambio Bitcoin peer to peer en Nostr" class="service-logo mb-3" loading="lazy">
-                                <h5 class="fw-bolder link-dark">Mostro</h5>
+                                <h3 class="fw-bolder link-dark">Mostro</h3>
                                 <p class="text-muted">Plataforma de intercambio entre pares sobre Nostr usando Lightning Network.</p>
                                 <div class="mt-auto">
                                     <span class="badge badge-nostr mb-2">Nostr</span>
@@ -442,7 +444,7 @@
                         <div class="text-center">
                             <a href="https://learn.robosats.com/" target="_blank" class="text-decoration-none">
                                 <img class="img-fluid rounded-circle mb-4 border shadow" src="img/robosats.jpg" alt="RoboSats - Plataforma descentralizada para intercambio privado de Bitcoin" />
-                                <h5 class="fw-bolder link-dark">Robosats</h5>
+                                <h3 class="fw-bolder link-dark">Robosats</h3>
                                 <div class="fst-italic text-muted">Una forma sencilla y privada de intercambiar bitcoins por monedas nacionales</div>
                             </a>
                         </div>
@@ -452,7 +454,7 @@
                         <div class="text-center">
                             <a href="https://hodlhodl.com/" target="_blank" class="text-decoration-none">
                                 <img class="img-fluid rounded-circle mb-4 border shadow" src="img/hodl-hodl.jpg" alt="Hodl Hodl - Plataforma global de comercio P2P de Bitcoin sin KYC" />
-                                <h5 class="fw-bolder link-dark">Hodl Hodl</h5>
+                                <h3 class="fw-bolder link-dark">Hodl Hodl</h3>
                                 <div class="fst-italic text-muted">Plataforma global de comercio P2P de Bitcoin</div>
                             </a>
 
@@ -588,7 +590,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2025 - 27 DE ABRIL</h3>
+                                    <h4>2025 - 27 DE ABRIL</h4>
                                     <p class="text-uppercase">Blockstream Local Meetup en La Isla de la Juventud</p>
                                     <p class="text-muted">
                                         Se llevó a cabo el segundo <strong>Blockstream Local Meetup</strong> en <strong>Cuba, en La Isla de la Juventud</strong>, realizado por <strong>Bitalion</strong> y organizado conjuntamente por <strong>Cuba Bitcoin</strong> y <strong>La Isla BTC</strong>.
@@ -606,7 +608,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2025 - 25, 26 Y 27 DE ABRIL</h3>
+                                    <h4>2025 - 25, 26 Y 27 DE ABRIL</h4>
                                     <p class="text-uppercase">Segunda edición de la Trezor Academy en Cuba</p>
                                     <p class="text-muted">
                                         Se celebró la <strong>segunda edición de la Trezor Academy</strong> en La Isla de la Juventud con la comunidad de La Isla BTC
@@ -627,7 +629,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2025 - 20 DE ABRIL</h3>
+                                    <h4>2025 - 20 DE ABRIL</h4>
                                     <p class="text-uppercase">Lanzamiento del Mint de Cashu de Cuba Bitcoin</p>
                                     <p class="text-muted">
                                         Se lanzó el <strong>Mint de Cashu</strong> de <strong>Cuba Bitcoin</strong>, disponible en <a href="https://mint.cubabitcoin.org" target="_blank">mint.cubabitcoin.org</a>, como solución frente a los <strong>constantes cortes eléctricos y de internet</strong> que enfrenta el país, 
@@ -643,7 +645,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2025 - 5 DE ABRIL</h3>
+                                    <h4>2025 - 5 DE ABRIL</h4>
                                     <p class="text-uppercase">Graduación de la primera edición del curso Bitcoin Fácil</p>
                                     <p class="text-muted">
                                         Se celebró la <strong>graduación de la primera edición</strong> del curso <strong>Bitcoin Fácil</strong>
@@ -658,7 +660,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2025 - 29 DE MARZO</h3>
+                                    <h4>2025 - 29 DE MARZO</h4>
                                     <p class="text-uppercase">Lanzamiento del BTCPay Server de Cuba Bitcoin</p>
                                     <p class="text-muted">
                                         Se lanzó la instancia cubana de <strong>BTCPay Server</strong> en <a href="https://btcpay.cubabitcoin.org" target="_blank">btcpay.cubabitcoin.org</a>, brindando a negocios y usuarios la posibilidad de aceptar pagos en Bitcoin de forma <strong>gratuita y soberana</strong>, permitiendo la integración sencilla tanto en tiendas físicas como virtuales.
@@ -671,7 +673,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2025 - 12 DE MARZO</h3>
+                                    <h4>2025 - 12 DE MARZO</h4>
                                     <p class="text-uppercase">Primera clase del curso Bitcoin Fácil en Bitcoin Berlin</p>
                                     <p class="text-muted">
                                         Se impartió la primera clase del curso <strong>Bitcoin Fácil</strong> en la sede de <strong>Bitcoin Berlin</strong>, en El Salvador, marcando un hito en la expansión internacional del programa educativo creado por <strong>Cuba Bitcoin</strong>.
@@ -683,7 +685,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2025 - 2 DE MARZO</h3>
+                                    <h4>2025 - 2 DE MARZO</h4>
                                     <p class="text-uppercase">Lanzamiento de la instancia LNbits de Cuba Bitcoin</p>
                                     <p class="text-muted">
                                         Se lanzó oficialmente la instancia pública de <strong>LNbits</strong> en <a href="https://lnbits.cubabitcoin.org" target="_blank">lnbits.cubabitcoin.org</a>, operada sobre el <strong>nodo propio de Cuba Bitcoin</strong>.
@@ -701,7 +703,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2025 - 1 DE MARZO</h3>
+                                    <h4>2025 - 1 DE MARZO</h4>
                                     <p class="text-uppercase">Inicio del curso “Bitcoin Fácil”</p>
                                     <p class="text-muted">
                                         Se lanzó oficialmente el programa educativo <strong>Bitcoin Fácil</strong>, diseñado por el equipo de <strong>Cuba Bitcoin</strong> para enseñar los fundamentos de Bitcoin de forma clara y accesible.
@@ -718,7 +720,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2025 - 30 Y 31 DE ENERO</h3>
+                                    <h4>2025 - 30 Y 31 DE ENERO</h4>
                                     <p class="text-uppercase">Participación de Cuba Bitcoin en Plan B, El Salvador</p>
                                     <p class="text-muted">
                                         Los representantes <strong>Catrya</strong> y <strong>Forte11</strong> compartieron la experiencia cubana como ponentes en talleres y charlas.
@@ -732,7 +734,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2024 - 21 DE DICIEMBRE</h3>
+                                    <h4>2024 - 21 DE DICIEMBRE</h4>
                                     <p class="text-uppercase">Primer Blocktream Local en Cuba y último meetup del año</p>
 
                                     <p class="text-muted">
@@ -754,7 +756,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2024 - 21 DE DICIEMBRE</h3>
+                                    <h4>2024 - 21 DE DICIEMBRE</h4>
                                     <p class="text-uppercase">Primer Meetup Bitcoin Only en La Isla de la Juventud y graduación del Primer Curso Cubano de Bitcoin</p>
                                     <p class="text-muted">
                                         Durante el encuentro, los <strong>8 graduados</strong> del Primer Curso Cubano de Bitcoin participaron en un panel compartiendo reflexiones inspiradas en el tweet de <strong>@BTCAndres</strong>: <em>“Cosas que Bitcoin me enseñó”</em>.
@@ -770,7 +772,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                        <h3>2024 - 18 DE NOVIEMBRE</h3>
+                                        <h4>2024 - 18 DE NOVIEMBRE</h4>
                                         <p class="text-uppercase">Primer Curso Básico Cubano de Bitcoin</p>
 
                                         <p class="text-muted">
@@ -795,7 +797,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                     <div class="card-body p-4">
-                                    <h3>2024 - 16 DE DICIEMBRE</h3>
+                                    <h4>2024 - 16 DE DICIEMBRE</h4>
                                     <p class="text-uppercase">Nacimiento de la comunidad La IslaBTC (Bloque 870629)</p>
                                     <p class="text-muted">
                                         La comunidad <strong>La Isla BTC</strong> fue creada con el propósito de impulsar la educación presencial sobre Bitcoin en <strong>La Isla de la Juventud</strong>.
@@ -811,7 +813,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2024 - NOVIEMBRE </h3>
+                                    <h4>2024 - NOVIEMBRE </h4>
                                     <p class="text-uppercase">Evento Trezor Academy en la proviencia de Sancti Spiritus </p>
                                     <p class="text-muted">El evento se realizó los días 16, 23 y 30 de noviembre, en donde se graduaron 12 estudiantes de diversas edades.</p>
 
@@ -822,7 +824,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2024 - SEPTIEMBRE</h3>
+                                    <h4>2024 - SEPTIEMBRE</h4>
                                     <p class="text-uppercase">Participación en Watch Out, Bitcoin! en Madrid </p>
                                     <p class="text-muted"><strong>Panel:</strong> ECONOMÍAS EMERGENTES: BITCOIN, INFLACIÓN, REMESAS, ACCESO GLOBAL.</p>
                                     <p class="text-muted"><strong>Ponentes:</strong> <br>
@@ -841,7 +843,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2024 - AGOSTO </h3>
+                                    <h4>2024 - AGOSTO </h4>
                                     <p class="text-uppercase">Cuarta Graduación en Cuba del Diplomado My First Bitcoin </p>
                                     <p class="text-muted">Se graduaron un total de 19 estudiantes.</p>
 
@@ -852,7 +854,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2024 - JULIO</h3>
+                                    <h4>2024 - JULIO</h4>
                                     <p class="text-uppercase">Cuarta Edición del Diplomado de My First Bitcoin en Cuba </p>
                                     <p class="text-muted">Por primera vez se realizó el diplomado en la modalidad online y se contó con estudiantes cubanos y de otros países cómo Estados Unidos, Nicaragua, Venezuela y México.</p>
                                     <p class="text-muted">Se invitó a impartir clases a graduados de ediciones anteriores del Diplomado.</p>
@@ -864,7 +866,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2023 - MARZO </h3>
+                                    <h4>2023 - MARZO </h4>
                                     <p class="text-uppercase">Tercera Graduación en Cuba del Diplomado My First Bitcoin </p>
                                     <p class="text-muted">Se graduaron un total de 21 estudiantes. En Sancti Spíritus, 9 y en La Habana, 13.</p>
 
@@ -877,7 +879,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2024 - 3 DE FEBRERO</h3>
+                                    <h4>2024 - 3 DE FEBRERO</h4>
                                     <p class="text-uppercase">Tercera Edición del Diplomado de My First Bitcoin en Cuba </p>
                                     <p class="text-muted">Desarrollado en dos provincias del país simultaneamente: La Habana y Sancti Spíritus.</p>
                                     <p class="text-muted">Constó con 7 clases presenciales desarrollada los sábados </p>
@@ -890,7 +892,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2023 - 26 DE DICIEMBRE</h3>
+                                    <h4>2023 - 26 DE DICIEMBRE</h4>
                                     <p class="text-uppercase">Segunda Graduación en Cuba del Diplomado My First Bitcoin </p>
                                     <p class="text-muted">Un total de 21 graduados entre 14 y 18 años.</p>
 
@@ -902,7 +904,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2023 - 20 DE DICIEMBRE</h3>
+                                    <h4>2023 - 20 DE DICIEMBRE</h4>
                                     <p class="text-uppercase">Segunda Edición del Diplomado de My First Bitcoin en Cuba </p>
                                     <p class="text-muted">Desarrollado en el IPVCE "Luis Urquiza Jorge" en la provincia de Las Tunas para estudiantes entre 14 y 18 años.</p>
                                     <p class="text-muted">Constó con 5 clases, por 1era vez se imparte este curso en una escuela cubana.</p>
@@ -915,7 +917,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2023 - 28 DE OCTUBRE</h3>
+                                    <h4>2023 - 28 DE OCTUBRE</h4>
                                     <p class="text-uppercase">Primera Graduación en Cuba del curso My First Bitcoin</p>
                                     <p class="text-muted">Primera graduación en Cuba del curso My First Bitcoin, con 19 graduados. </p>
                                 </div>
@@ -926,7 +928,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2023 - SEPTIEMBRE</h3>
+                                    <h4>2023 - SEPTIEMBRE</h4>
                                     <p class="text-uppercase">Primera edición en Cuba del curso My First Bitcoin</p>
                                     <p class="text-muted">My First Bitcoin es un programa educativo que se está llevando a cabo exitosamente en El Salvador, y otros países </p>
                                     <p class="text-muted">Curso totalmente gratis que contó con 7 encuentros, los sábados de 10:00 AM a 1:00 PM, en el bar Too Much (Esquina 19 y L, Vedado, La Habana)</p>
@@ -937,7 +939,7 @@
                             <div class="timeline left">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2023 - MAYO</h3>
+                                    <h4>2023 - MAYO</h4>
                                     <p class="text-uppercase">¡Primer Meetup Bitcoin Only Presencial!</p>
                                     <p class="text-muted">Este fue el primer evento Bitcoin Only en Cuba. Como invitados estuvieron Joe Nakamoto de Cointelegraph y Bitcoin Magazine, y Paco de la India.</p>
                                     <p class="text-muted">¡Un hito y una prueba más de que la transferencia de conocimiento no puede detenerse!</p>
@@ -949,7 +951,7 @@
                             <div class="timeline right">
                                 <div class="card">
                                 <div class="card-body p-4">
-                                    <h3>2023 - ENERO</h3>
+                                    <h4>2023 - ENERO</h4>
                                     <p class="text-uppercase">Primer meetup Cuba Bitcoin: Introducción a Bitcoin</p>
                                     <p class="text-muted"><strong>Ponentes:</strong> @Catry_a @Forte11 @Bitalion </p>
                                     <p class="text-muted"><strong>Temas tratados:</strong><br>
@@ -969,7 +971,7 @@
                         <div class="timeline left">
                             <div class="card">
                             <div class="card-body p-4">
-                                <h3>2022 - 7 DE DICIEMBRE</h3>
+                                <h4>2022 - 7 DE DICIEMBRE</h4>
                                 <p class="text-uppercase">Creación de la comunidad Cuba Bitcoin</p>
                                 <p class="text-muted"><strong>Grupo en Telegram enfocado en el debate y aprendizaje</strong></p>
                                 <p class="text-muted"><br>
@@ -1016,9 +1018,11 @@
 
                                 <div class="node-info mt-4">
                                     <h4 class="node-info-title mb-3">Información del nodo:</h4>
-                                    <div class="node-detail mb-3">
-                                        <strong>ID:</strong>
-                                        <code class="node-id" id="node-id">03736eabf99d772903d72bfc8b2e9792e9f408f3c0456a05267737fec607a9d3e4</code>
+                                    <div class="node-detail mb-3" style="display: flex; align-items: center; flex-wrap: wrap;">
+                                        <strong style="width: 100%;">Node URI:</strong>
+                                        <code class="node-id" id="node-id" style="flex: 1 1 auto;">
+                                            03736eabf99d772903d72bfc8b2e9792e9f408f3c0456a05267737fec607a9d3e4@7jd46lewcsdxm6zxwpjzrmdtjd6otliustozyjkwv6amx5ajzx53tmqd.onion:9735
+                                        </code>
                                         <button class="btn btn-sm btn-outline-light copy-btn ms-2" onclick="copyNodeId()">
                                             <i class="fas fa-copy"></i> Copiar
                                         </button>
@@ -1281,7 +1285,7 @@
                     <div class="jade-icon mb-4">
                         <i class="bi bi-shield-check"></i>
                     </div>
-                    <h2 class="fw-bolder display-5 text-uppercase jade-title">Blockstream Jade</h2>
+                    <h2 class="fw-bolder display-5 text-uppercase jade-title">Blockstream Jade Plus</h2>
                     <p class="lead jade-subtitle">
                         Hardware wallet de código abierto para máxima seguridad y autocustodia de Bitcoin
                     </p>
@@ -1289,7 +1293,7 @@
 
                 <div class="row gx-5 align-items-center">
                     <!-- Product Images -->
-                    <div class="col-lg-6 order-first order-lg-last">
+                    <div class="col-lg-7 order-first order-lg-last">
                         <div class="jade-product-container">
                             <div id="jadeCarousel" class="carousel slide jade-carousel" data-bs-ride="carousel" data-bs-interval="4000">
                                 <div class="carousel-indicators jade-indicators">
@@ -1297,20 +1301,21 @@
                                     <button type="button" data-bs-target="#jadeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                     <button type="button" data-bs-target="#jadeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
+
                                 <div class="carousel-inner jade-carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="jade-image-wrapper">
-                                            <img class="img-fluid jade-product-image" src="img/Blockstream_Jade_Plus_Bitcoin_Wallet_Angled_Back_Grey-removebg-preview.png" alt="Blockstream Jade Plus Bitcoin Wallet - vista trasera angular" />
+                                            <canvas id="riveCanvas1" class="img-fluid jade-product-image" width="600" height="600"></canvas>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="jade-image-wrapper">
-                                            <img class="img-fluid jade-product-image" src="img/Green_JadeSquare_copy_2-removebg-preview.png" alt="Blockstream Jade con Green Wallet - vista cuadrada" />
+                                            <canvas id="riveCanvas2" class="img-fluid jade-product-image" width="600" height="600"></canvas>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="jade-image-wrapper">
-                                            <img class="img-fluid jade-product-image" src="img/JadePlusLinkBundleGrey-removebg-preview.png" alt="Blockstream Jade Plus Link Bundle - paquete completo gris" />
+                                            <canvas id="riveCanvas3" class="img-fluid jade-product-image" width="600" height="600"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -1327,7 +1332,7 @@
                     </div>
                     
                     <!-- Product Info -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-5">
                         <div class="jade-info-card">
                             
                             <!-- Product Header -->
@@ -1336,7 +1341,7 @@
                                     <i class="bi bi-patch-check-fill me-2"></i>
                                     Distribuidor Oficial
                                 </div>
-                                <h3 class="jade-product-title">Blockstream Jade</h3>
+                                <h3 class="jade-product-title">Blockstream Jade Plus</h3>
                                 <p class="jade-product-subtitle">Hardware Wallet de Nueva Generación</p>
                             </div>
                             
@@ -2095,7 +2100,93 @@
                 
                 document.body.removeChild(textArea);
             }
-        </script>
 
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('DOM cargado'); // Para debug
+                
+                // Inicializar las 3 animaciones Rive del carrusel Jade
+                const riveAnimations = [
+                    {
+                        canvasId: 'riveCanvas1',
+                        src: 'https://public.rive.app/hosted/113763/215935/qSxq9PN5l02UuMeboD4r3A.riv'
+                    },
+                    {
+                        canvasId: 'riveCanvas2', 
+                        src: 'https://public.rive.app/hosted/113763/204494/x_p3SWr0pkinJa9cB2U2cg.riv'
+                    },
+                    {
+                        canvasId: 'riveCanvas3',
+                        src: 'https://cdn.rive.app/hosted/113763/207459/t8nsRYRIYEWUUhkZ__chfQ.riv'
+                    }
+                ];
+                
+                riveAnimations.forEach(animation => {
+                    const canvas = document.getElementById(animation.canvasId);
+                    if (canvas) {
+                        console.log('Inicializando canvas:', animation.canvasId);
+                        
+                        // Configurar canvas más grande
+                        canvas.width = 600;
+                        canvas.height = 600;
+                        
+                        console.log('Intentando cargar:', animation.src);
+                        
+                        const riveInstance = new rive.Rive({
+                            src: animation.src,
+                            canvas: canvas,
+                            autoplay: true,
+                            fit: rive.Fit.Contain,
+                            alignment: rive.Alignment.Center,
+                            onLoad: () => {
+                                console.log('✅ Rive cargado y visible:', animation.canvasId);
+                                // NO llamar resizeDrawingSurfaceToCanvas() aquí
+                            },
+                            onLoadError: (error) => {
+                                console.error('❌ Error cargando Rive:', animation.canvasId, error);
+                                
+                                // Si es la tercera animación, intentar URL alternativa
+                                if (animation.canvasId === 'riveCanvas3') {
+                                    console.log('🔄 Intentando URL alternativa para riveCanvas3...');
+                                    const alternativeUrl = 'https://public.rive.app/hosted/113763/207459/t8nsRYRIYEWUUhkZ__chfQ.riv';
+                                    
+                                    const retryInstance = new rive.Rive({
+                                        src: alternativeUrl,
+                                        canvas: canvas,
+                                        autoplay: true,
+                                        fit: rive.Fit.Contain,
+                                        alignment: rive.Alignment.Center,
+                                        onLoad: () => {
+                                            console.log('✅ Rive alternativo cargado y visible:', animation.canvasId);
+                                        },
+                                        onLoadError: (retryError) => {
+                                            console.error('❌ URL alternativa también falló:', retryError);
+                                            const ctx = canvas.getContext('2d');
+                                            ctx.fillStyle = '#f0f0f0';
+                                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+                                            ctx.fillStyle = '#666';
+                                            ctx.font = '16px Arial';
+                                            ctx.textAlign = 'center';
+                                            ctx.fillText('Animation unavailable', canvas.width/2, canvas.height/2);
+                                        }
+                                    });
+                                } else {
+                                    const ctx = canvas.getContext('2d');
+                                    ctx.fillStyle = '#f0f0f0';
+                                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                                    ctx.fillStyle = '#666';
+                                    ctx.font = '16px Arial';
+                                    ctx.textAlign = 'center';
+                                    ctx.fillText('Error loading animation', canvas.width/2, canvas.height/2);
+                                }
+                            }
+                        });
+                    } else {
+                        console.error('Canvas no encontrado:', animation.canvasId);
+                    }
+                });
+            });
+        
+        </script>
   </body>
 </html>
