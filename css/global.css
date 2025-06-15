@@ -1122,6 +1122,98 @@ img#nostr-social {
   }
 }
 
+/* Multimedia Section - YouTube Stats with Left-aligned Icons */
+.multimedia-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(145deg, #f8f9fa, #ffffff);
+  border-radius: 15px;
+  border-left: 4px solid var(--cuba-gold);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.multimedia-stat-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(244, 147, 28, 0.15);
+}
+
+.multimedia-stat-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(145deg, var(--cuba-gold), var(--cuba-gold));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(244, 147, 28, 0.3);
+  transition: all 0.3s ease;
+}
+
+.multimedia-stat-item:hover .multimedia-stat-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.multimedia-stat-icon i {
+  font-size: 1.3rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.multimedia-stat-text {
+  display: flex;
+  flex-direction: column;
+  color: #374151;
+}
+
+.multimedia-stat-text .stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cuba-gold);
+  line-height: 1.2;
+}
+
+.multimedia-stat-text .stat-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Responsive adjustments for multimedia stats */
+@media (max-width: 768px) {
+  .multimedia-stat-item {
+    padding: 0.8rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .multimedia-stat-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .multimedia-stat-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .multimedia-stat-icon i {
+    font-size: 1.1rem;
+  }
+  
+  .multimedia-stat-text .stat-number {
+    font-size: 1.3rem;
+  }
+  
+  .multimedia-stat-text .stat-label {
+    font-size: 0.8rem;
+  }
+}
+
 /* Jade Section Styling */
 .jade-section {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
@@ -3245,8 +3337,9 @@ img#nostr-social {
     font-size: 0.8rem;
     word-break: break-all;
     display: inline-block;
-    max-width: 300px;
+    max-width: 400px;
     margin: 0.5rem 0;
+    width: 100%;
 }
 
 .node-alias {
@@ -3387,7 +3480,8 @@ img#nostr-social {
     
     .node-id {
         font-size: 0.7rem;
-        max-width: 250px;
+        max-width: 300px;
+        width: 100%;
     }
     
     .lightning-actions .btn {
@@ -3429,7 +3523,8 @@ img#nostr-social {
     
     .node-id {
         font-size: 0.65rem;
-        max-width: 200px;
+        max-width: 250px;
+        width: 100%;
     }
     
     .lightning-actions {
