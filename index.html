@@ -129,6 +129,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold text-uppercase">
                         <li class="nav-item"><a class="nav-link" href="#top">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#scrollspycotizacion">CUP/Sats</a></li>
                         <li class="nav-item"><a class="nav-link" href="#scrollspytools">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link" href="#scrollspybuy">Compra BTC</a></li>
                         <li class="nav-item"><a class="nav-link" href="#scrollspynevents">POW</a></li>
@@ -310,6 +311,41 @@
 
         -->
 
+        <!-- Cotización CUP/Sats en vivo -->
+        <section class="py-5 cotizacion-section" id="scrollspycotizacion">
+            <div class="container-xl px-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="cotizacion-card text-center">
+                            <div class="cotizacion-header mb-4">
+                                <h2 class="cotizacion-title text-uppercase mb-3">Cotización en Vivo</h2>
+                                <p class="cotizacion-subtitle">Precio actual del Peso Cubano en Sats</p>
+                            </div>
+                            
+                            <div class="cotizacion-display">
+                                <div class="cotizacion-main">
+                                    <div class="rate-display">
+                                        <div id="cotizacion-loader" class="spinner-border text-warning" role="status">
+                                            <span class="visually-hidden">Cargando...</span>
+                                        </div>
+                                        <div id="cotizacion-rate" class="rate-equation" style="display: none;">
+                                            <span class="cup-label">1 CUP</span>
+                                            <span class="equals-sign">=</span>
+                                            <span id="sats-amount">--</span>
+                                            <small class="rate-unit">sats</small>
+                                        </div>
+                                        <div id="cotizacion-error" class="rate-error text-danger" style="display: none;">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            <span>Error al cargar cotización</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Servicios comunitarios -->
         <section class="py-5 services-section" id="scrollspytools">
@@ -1854,6 +1890,197 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+        <!-- Cotización CUP/Sats Script -->
+        <script>
+        // Cotización CUP/Sats functionality
+        class CotizacionCUPSats {
+            constructor() {
+                this.API_URL = 'https://api.yadio.io/exrates/CUP';
+                this.SATOSHI_PER_BTC = 100000000;
+                this.updateInterval = 60000; // 1 minuto
+                this.retryDelay = 5000; // 5 segundos
+                this.maxRetries = 3;
+                this.retryCount = 0;
+                
+                this.elements = {
+                    loader: document.getElementById('cotizacion-loader'),
+                    rateDisplay: document.getElementById('cotizacion-rate'),
+                    satsAmount: document.getElementById('sats-amount'),
+                    errorDisplay: document.getElementById('cotizacion-error')
+                };
+                
+                this.init();
+            }
+            
+            init() {
+                // Iniciar la primera carga
+                this.fetchRate();
+                
+                // Configurar actualizaciones automáticas
+                setInterval(() => {
+                    this.fetchRate();
+                }, this.updateInterval);
+            }
+            
+            async fetchRate() {
+                try {
+                    this.showLoader();
+                    
+                    const response = await fetch(this.API_URL, {
+                        method: 'GET',
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    
+                    const data = await response.json();
+                    
+                    // Validar que tengamos datos de BTC
+                    // La API puede devolver data.BTC directamente o data.CUP.BTC
+                    let btcPerCup;
+                    if (data.BTC) {
+                        btcPerCup = data.BTC;
+                    } else if (data.CUP && data.CUP.BTC) {
+                        btcPerCup = data.CUP.BTC;
+                    } else {
+                        throw new Error('No se encontraron datos de BTC para CUP');
+                    }
+                    
+                    // Verificar que el valor sea un número válido y positivo
+                    if (!btcPerCup || typeof btcPerCup !== 'number' || btcPerCup <= 0) {
+                        throw new Error('Valor de BTC inválido: ' + btcPerCup);
+                    }
+                    
+                    // Calcular satoshis por CUP
+                    // La API devuelve CUP por BTC, necesitamos invertir para obtener BTC por CUP
+                    const btcPerCupCorrect = 1 / btcPerCup;
+                    const satsPerCup = btcPerCupCorrect * this.SATOSHI_PER_BTC;
+                    
+                    
+                    this.displayRate(satsPerCup, btcPerCupCorrect, data.timestamp);
+                    this.retryCount = 0; // Reset retry count on success
+                    
+                } catch (error) {
+                    console.error('Error fetching CUP/BTC rate:', error);
+                    this.handleError(error);
+                }
+            }
+            
+            displayRate(satsPerCup, btcPerCup, timestamp) {
+                // Formatear el número de satoshis con más precisión decimal
+                let formattedSats;
+                if (satsPerCup < 1) {
+                    // Para valores menores a 1, mostrar hasta 6 decimales
+                    formattedSats = satsPerCup.toFixed(6);
+                } else if (satsPerCup < 1000) {
+                    // Para valores pequeños, mostrar 4 decimales
+                    formattedSats = satsPerCup.toFixed(4);
+                } else {
+                    // Para valores grandes, usar formateo con comas y 2 decimales
+                    formattedSats = this.formatNumber(satsPerCup.toFixed(2));
+                }
+                
+                // Determinar singular o plural para 'sat/sats'
+                const roundedValue = Math.round(satsPerCup * 10000) / 10000; // Redondear a 4 decimales para comparar
+                const unit = (roundedValue === 1) ? 'sat' : 'sats';
+                
+                // Actualizar elementos DOM
+                this.elements.satsAmount.textContent = formattedSats;
+                document.querySelector('.rate-unit').textContent = unit;
+                
+                
+                // Mostrar la cotización
+                this.hideLoader();
+                this.hideError();
+                this.elements.rateDisplay.style.display = 'flex';
+                
+                // Animación de actualización
+                this.elements.satsAmount.classList.add('rate-updated');
+                setTimeout(() => {
+                    this.elements.satsAmount.classList.remove('rate-updated');
+                }, 1000);
+            }
+            
+            handleError(error) {
+                this.hideLoader();
+                this.elements.rateDisplay.style.display = 'none';
+                
+                if (this.retryCount < this.maxRetries) {
+                    this.retryCount++;
+                    console.log(`Reintentando en ${this.retryDelay/1000} segundos... (${this.retryCount}/${this.maxRetries})`);
+                    
+                    setTimeout(() => {
+                        this.fetchRate();
+                    }, this.retryDelay);
+                } else {
+                    this.showError();
+                    this.retryCount = 0;
+                }
+            }
+            
+            formatNumber(number) {
+                return number.toLocaleString('es-ES');
+            }
+            
+            formatTimestamp(timestamp) {
+                const date = new Date(timestamp);
+                return date.toLocaleTimeString('es-ES', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                });
+            }
+            
+            showLoader() {
+                this.elements.loader.style.display = 'block';
+                this.elements.rateDisplay.style.display = 'none';
+                this.elements.errorDisplay.style.display = 'none';
+            }
+            
+            hideLoader() {
+                this.elements.loader.style.display = 'none';
+            }
+            
+            showError() {
+                this.elements.errorDisplay.style.display = 'flex';
+                this.elements.rateDisplay.style.display = 'none';
+            }
+            
+            hideError() {
+                this.elements.errorDisplay.style.display = 'none';
+            }
+        }
+        
+        // Inicializar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            const cotizacion = new CotizacionCUPSats();
+            
+            // Añadir CSS para la animación de actualización
+            const style = document.createElement('style');
+            style.textContent = `
+                .rate-updated {
+                    animation: rateUpdate 1s ease-out;
+                }
+                
+                @keyframes rateUpdate {
+                    0% { 
+                        transform: scale(1.1);
+                        filter: brightness(1.2);
+                    }
+                    100% { 
+                        transform: scale(1);
+                        filter: brightness(1);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+        </script>
         
         <script>
             // Navbar scroll effect
