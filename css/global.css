@@ -189,6 +189,69 @@ img#nostr-social {
   border-color: var(--cuba-gold);
 }
 
+/* Botón de Donación Llamativo */
+.hero-btn-donate {
+  background: linear-gradient(135deg, #f7931a 0%, #ffb347 50%, #f7931a 100%);
+  border: 2px solid #ffd700 !important;
+  color: #1a1a2e !important;
+  font-weight: 700 !important;
+  position: relative;
+  overflow: hidden;
+  animation: pulse-glow 2s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(247, 147, 26, 0.6), 0 0 40px rgba(247, 147, 26, 0.3);
+}
+
+.hero-btn-donate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 2.5s infinite;
+}
+
+.hero-btn-donate:hover {
+  background: linear-gradient(135deg, #ffb347 0%, #f7931a 50%, #ffb347 100%);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 30px rgba(247, 147, 26, 0.8), 0 0 60px rgba(247, 147, 26, 0.5), 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: #1a1a2e !important;
+}
+
+.hero-btn-donate i {
+  animation: lightning-flash 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(247, 147, 26, 0.6), 0 0 40px rgba(247, 147, 26, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(247, 147, 26, 0.8), 0 0 60px rgba(247, 147, 26, 0.5);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes lightning-flash {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
 /* Carousel Indicators Styling */
 .carousel-indicators {
   bottom: 60px; /* Subir los indicadores */
@@ -232,32 +295,13 @@ img#nostr-social {
   cursor: pointer;
 }
 
-.bitcoin-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(244, 147, 28, 0.1),
-    transparent
-  );
-  transition: left 0.5s;
-}
-
-.bitcoin-card:hover::before {
-  left: 100%;
+ .bitcoin-card::before {
+  display: none;
 }
 
 .bitcoin-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 
-    0 20px 40px rgba(244, 147, 28, 0.2),
-    0 15px 25px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(244, 147, 28, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .bitcoin-card .card-body {
@@ -298,10 +342,9 @@ img#nostr-social {
   position: relative;
 }
 
-.bitcoin-card:hover h5 {
-  color: var(--cuba-gold) !important;
-  transform: translateY(-2px);
-}
+ .bitcoin-card:hover h5 {
+   transform: translateY(-2px);
+ }
 
 .bitcoin-card .badge {
   transition: all 0.3s ease;
@@ -356,12 +399,6 @@ img#nostr-social {
   background: linear-gradient(45deg, #0088cc, #229ed9) !important;
   color: #fff !important;
   box-shadow: 0 2px 4px rgba(0, 136, 204, 0.4);
-}
-
-.bitcoin-card .badge.badge-nostr {
-  background: linear-gradient(45deg, #8b5cf6, #a855f7) !important;
-  color: #fff !important;
-  box-shadow: 0 2px 4px rgba(139, 92, 246, 0.4);
 }
 
 /* Loading Animation - Simplified */
@@ -3564,7 +3601,7 @@ img#nostr-social {
 }
 
 .services-header {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .services-title {
@@ -3585,17 +3622,18 @@ img#nostr-social {
     margin: 0 auto;
 }
 
+/* Grid Layout para Servicios - 2 filas de 3 columnas */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos específicos para Servicios - Ahora usa estructura P2P */
 .bitcoin-card {
-    background: linear-gradient(145deg, #ffffff, #f8f9fa);
-    border-radius: 20px;
-    border: 0;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.08),
-        0 4px 15px rgba(244, 147, 28, 0.05);
-    overflow: hidden;
-    position: relative;
-    height: 100%;
+    /* Dejado vacío, ahora usa .p2p-item */
 }
 
 .bitcoin-card::before {
@@ -3604,151 +3642,330 @@ img#nostr-social {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 3px;
     background: linear-gradient(90deg, var(--cuba-blue), var(--cuba-gold), var(--cuba-red));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.bitcoin-card:hover::before {
     opacity: 1;
 }
 
 .bitcoin-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 
-        0 25px 60px rgba(0, 0, 0, 0.15),
-        0 15px 35px rgba(244, 147, 28, 0.15),
-        0 5px 15px rgba(220, 37, 43, 0.1);
-    background: linear-gradient(145deg, #ffffff, #fdfdfd);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 1);
 }
 
-.bitcoin-card .card-body {
-    padding: 2.5rem 2rem;
+.bitcoin-card-body {
+    padding: 1.5rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     height: 100%;
+    gap: 1rem;
+}
+
+/* Logo Wrapper - Libre como P2P/Ofertas */
+.service-logo-wrapper {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    flex-shrink: 0;
 }
 
 .service-logo {
-    width: 100px;
-    height: 100px;
+    max-width: 95%;
+    max-height: 95%;
+    width: auto;
+    height: auto;
     object-fit: contain;
-    border-radius: 50%;
-    background: linear-gradient(145deg, #ffffff, #f8f9fa);
-    border: 4px solid rgba(244, 147, 28, 0.2);
-    padding: 20px;
-    margin-bottom: 1.5rem;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 
-        0 8px 25px rgba(0, 0, 0, 0.1),
-        inset 0 2px 4px rgba(255, 255, 255, 0.8);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+/* Logo pequeño específico para LNbits */
+.service-logo-small {
+    max-width: 75%;
+    max-height: 75%;
 }
 
 .bitcoin-card:hover .service-logo {
-    transform: scale(1.2) rotate(360deg);
-    background: linear-gradient(145deg, #ffffff, #f8f9fa);
-    border-color: var(--cuba-gold);
-    box-shadow: 
-        0 20px 50px rgba(244, 147, 28, 0.3),
-        0 15px 30px rgba(244, 147, 28, 0.2),
-        inset 0 2px 4px rgba(255, 255, 255, 0.9);
-    filter: drop-shadow(0 0 20px rgba(244, 147, 28, 0.4));
+    transform: scale(1.05);
 }
 
-.bitcoin-card h5 {
-    color: #2c3e50;
+.bitcoin-card:hover .service-logo-small {
+    transform: scale(1.05);
+}
+
+.bitcoin-card-title {
+    color: #2d2d2d;
     font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
 }
 
-.bitcoin-card:hover h5 {
-    color: var(--cuba-gold);
-}
-
-.bitcoin-card .text-muted {
-    color: #6c757d !important;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+.bitcoin-card-description {
+    color: #4a4a4a;
+    font-size: 0.95rem;
+    line-height: 1.5;
     flex-grow: 1;
-    font-weight: 300;
-    padding: 1rem;
-    border-radius: 15px;
-    transition: all 0.4s ease;
-}
-
-.bitcoin-card:hover .text-muted {
-    background: var(--cuba-gold);
-    color: #ffffff !important;
     font-weight: 400;
-    box-shadow: 0 4px 15px rgba(244, 147, 28, 0.3);
+    margin: 0;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.bitcoin-card .mt-auto {
+.bitcoin-card-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
     justify-content: center;
     margin-top: auto;
+    padding-top: 0.25rem;
 }
 
 /* Enhanced Badge Styles */
 .badge-lightning {
-    background: var(--cuba-gradient-secondary);
-    color: white !important;
+    background: linear-gradient(135deg, #FFD700, #FFAA00);
+    color: #000 !important;
     font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 .badge-lightning:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.badge-billetera {
+    background: linear-gradient(135deg, #00BFFF, #0099CC);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(0, 191, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-billetera:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+}
+
+.badge-android {
+    background: linear-gradient(135deg, #3DDC84, #2CAF5C);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(61, 220, 132, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-android:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(61, 220, 132, 0.3);
+}
+
+.badge-web {
+    background: linear-gradient(135deg, #607D8B, #546E7A);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(96, 125, 139, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-web:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(96, 125, 139, 0.3);
+}
+
+.badge-pasarela {
+    background: linear-gradient(135deg, #00E676, #00C853);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(0, 230, 118, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-pasarela:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3);
+}
+
+.badge-comercio {
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-comercio:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.badge-ecash {
+    background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(156, 39, 176, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-ecash:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}
+
+.badge-sin-conexion {
+    background: linear-gradient(135deg, #455A64, #37474F);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(69, 90, 100, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-sin-conexion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(69, 90, 100, 0.3);
+}
+
+.badge-educacion {
+    background: linear-gradient(135deg, #1976D2, #1565C0);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(25, 118, 210, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-educacion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.badge-seguridad {
+    background: linear-gradient(135deg, #FF5722, #E64A19);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(255, 87, 34, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-seguridad:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+}
+
+.badge-mining {
+    background: linear-gradient(135deg, #F7931A, #E67E00);
+    color: white !important;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(247, 147, 26, 0.2);
+    transition: all 0.3s ease;
+}
+
+.badge-mining:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(247, 147, 26, 0.3);
 }
 
 .badge-telegram {
-    background: var(--cuba-gradient-cards);
+    background: linear-gradient(135deg, #0088cc, #006699);
     color: white !important;
     font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(0, 136, 204, 0.2);
     transition: all 0.3s ease;
 }
 
 .badge-telegram:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 136, 204, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
 }
 
 .badge-nostr {
-    background: var(--cuba-gradient-primary);
+    background: linear-gradient(135deg, #9C27B0, #7B1FA2);
     color: white !important;
     font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+    padding: 0.25rem 0.65rem;
+    border-radius: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(156, 39, 176, 0.2);
     transition: all 0.3s ease;
 }
 
 .badge-nostr:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}
+
+.badge-service {
+     background: linear-gradient(135deg, #4a5568, #2d3748);
+     color: white !important;
+     font-weight: 600;
+     padding: 0.25rem 0.65rem;
+     border-radius: 14px;
+     font-size: 0.7rem;
+     letter-spacing: 0.2px;
+     box-shadow: 0 2px 6px rgba(74, 85, 104, 0.2);
+     transition: all 0.3s ease;
+ }
+
+.badge-service:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 85, 104, 0.3);
 }
 
 .badge-success {
@@ -3786,51 +4003,216 @@ img#nostr-social {
 }
 
 /* Responsive Design for Services */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        max-width: 400px;
+    }
+
     .services-title {
         font-size: 2rem;
     }
-    
+
     .services-subtitle {
         font-size: 1.1rem;
     }
-    
-    .service-logo {
-        width: 100px;
-        height: 100px;
-        padding: 12px;
+
+    .p2p-item {
+        min-height: 300px;
     }
-    
-    .bitcoin-card .card-body {
-        padding: 2rem 1.5rem;
+
+    .p2p-logo-wrapper {
+        height: 110px;
+        padding: 0.6rem;
     }
-    
-    .bitcoin-card h5 {
-        font-size: 1.2rem;
+
+    .p2p-item-content {
+        padding: 0 1rem 1rem;
+        gap: 0.85rem;
+    }
+
+    .p2p-description {
+        font-size: 0.82rem;
+        min-height: 50px;
+    }
+
+    /* Título responsive */
+    .p2p-card-title {
+        font-size: 1.1rem;
+    }
+
+    .badge-lightning,
+    .badge-telegram,
+    .badge-nostr,
+    .badge-service {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.7rem;
     }
 }
 
 @media (max-width: 576px) {
+    .services-grid {
+        gap: 1rem;
+    }
+
     .services-title {
         font-size: 1.8rem;
     }
-    
+
     .services-subtitle {
         font-size: 1rem;
     }
-    
-    .service-logo {
-        width: 90px;
-        height: 90px;
-        padding: 10px;
+
+    .p2p-item {
+        min-height: 280px;
     }
-    
-    .bitcoin-card .card-body {
-        padding: 1.5rem 1rem;
+
+    .p2p-logo-wrapper {
+        height: 130px;
+        padding: 0.75rem;
     }
-    
-    .bitcoin-card h5 {
+
+    .p2p-item-content {
+        padding: 0 0.9rem 0.9rem;
+        gap: 0.75rem;
+    }
+
+    .p2p-description {
+        font-size: 0.88rem;
+        min-height: 50px;
+    }
+
+    /* Título en móvil */
+    .p2p-card-title {
         font-size: 1.1rem;
+    }
+
+    .badge-lightning,
+    .badge-telegram,
+    .badge-nostr,
+    .badge-service {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.65rem;
+    }
+
+    /* Logo rounded en móvil */
+    .p2p-grid-logo-rounded {
+        padding: 6px;
+        border-radius: 15px;
+    }
+}
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        max-width: 400px;
+    }
+
+    .services-title {
+        font-size: 2rem;
+    }
+
+    .services-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .bitcoin-card {
+        min-height: 280px;
+    }
+
+    .p2p-logo-wrapper {
+        height: 110px;
+        padding: 0.6rem;
+    }
+
+    .service-logo-wrapper {
+        height: 150px;
+        padding: 0.4rem;
+    }
+
+    .bitcoin-card-body {
+        padding: 1.25rem 1rem;
+        gap: 0.85rem;
+    }
+
+    .bitcoin-card-title {
+        font-size: 1.2rem;
+    }
+
+    .bitcoin-card-description {
+        font-size: 0.9rem;
+        min-height: 55px;
+    }
+
+    .service-logo-small {
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid {
+        gap: 1rem;
+    }
+
+    .services-title {
+        font-size: 1.8rem;
+    }
+
+    .services-subtitle {
+        font-size: 1rem;
+    }
+
+    .bitcoin-card {
+        min-height: 280px;
+    }
+
+    .service-logo-wrapper {
+        height: 130px;
+        padding: 0.35rem;
+    }
+
+    .bitcoin-card-body {
+        padding: 1rem 0.85rem;
+        gap: 0.75rem;
+    }
+
+    .bitcoin-card-title {
+        font-size: 1.15rem;
+    }
+
+    .bitcoin-card-description {
+        font-size: 0.88rem;
+        min-height: 50px;
+    }
+
+    .badge-lightning,
+    .badge-telegram,
+    .badge-nostr,
+    .badge-service {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    /* Logo rounded en móvil pequeño */
+    .p2p-grid-logo-rounded {
+        padding: 4px;
+        border-radius: 12px;
+    }
+
+    .service-logo-small {
+        max-width: 65%;
+        max-height: 65%;
     }
 }
 
@@ -3936,11 +4318,16 @@ img#nostr-social {
   .hero-actions {
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
   }
-  
+
   .hero-btn {
-    width: 250px;
-    margin-bottom: 0.5rem;
+    width: auto;
+    min-width: 220px;
+    max-width: 300px;
+    margin: 0 !important;
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.85rem;
   }
   
   .hero-caption {
@@ -3959,10 +4346,13 @@ img#nostr-social {
   }
   
   .hero-btn {
-    width: 100%;
-    max-width: 280px;
+    width: auto;
+    min-width: 200px;
+    max-width: 260px;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem;
   }
-  
+
   /* Service Logo Responsive */
   .service-logo {
     width: 80px;
@@ -4408,4 +4798,1002 @@ img#nostr-social {
     .rate-unit {
         font-size: 1.3rem;
     }
+}
+
+/* ==================================================
+   COTIZACIÓN COMPACTA - VERSIÓN SIMPLIFICADA
+   ================================================== */
+
+.cotizacion-section-compact {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cotizacion-section-compact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(244, 147, 28, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(28, 98, 176, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cotizacion-title-compact {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--cuba-gold), var(--cuba-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+}
+
+.cotizacion-subtitle-compact {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+.cotizacion-card-compact {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.cotizacion-card-compact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.cotizacion-display-compact {
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive para Cotización Compacta */
+@media (max-width: 768px) {
+    .cotizacion-title-compact {
+        font-size: 1.8rem;
+    }
+
+    .cotizacion-subtitle-compact {
+        font-size: 1rem;
+    }
+
+    .cotizacion-card-compact {
+        padding: 1.5rem;
+    }
+}
+
+/* ==================================================
+   COMPRA P2P GRID - ESTILO OFERTAS ESPECIALES
+   ================================================== */
+
+.compra-p2p-grid-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.compra-p2p-grid-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(244, 147, 28, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(28, 98, 176, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.compra-p2p-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--cuba-gold), var(--cuba-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+}
+
+.compra-p2p-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+/* Grid Layout */
+.compra-p2p-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+    P2P CARDS - DISEÑO NORMALIZADO Y PROFESIONAL
+    ======================================== */
+
+/* Desktop grande - limitar ancho del grid */
+@media (min-width: 992px) {
+    .compra-p2p-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+    }
+
+    /* Para servicios-grid, mantener 3 columnas pero ajustar */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1400px;
+    }
+}
+
+/* Card Base */
+.p2p-item {
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* Altura fija para alineación uniforme */
+    min-height: 240px;
+}
+
+.p2p-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(244, 147, 28, 0.25);
+    background: #ffffff;
+    border-color: rgba(244, 147, 28, 0.4);
+}
+
+/* Header (zona para badges) */
+.p2p-item-header {
+    min-height: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0.2rem 0.6rem 0;
+    position: relative;
+}
+
+/* Logo Wrapper - ÁREA FIJA (CLAVE) */
+.p2p-logo-wrapper {
+    width: 100%;
+    /* Altura fija para alineación uniforme */
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* Logo Image - NO escalamos directamente, usamos max constraints */
+.p2p-grid-logo {
+    /* Máximo 95% del contenedor para logos más grandes */
+    max-width: 95%;
+    max-height: 95%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.p2p-item:hover .p2p-grid-logo {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 12px rgba(244, 147, 28, 0.3));
+}
+
+/* Logo pequeño - LNbits */
+.p2p-grid-logo-small {
+    max-width: 60% !important;
+    max-height: 60% !important;
+}
+
+.p2p-item:hover .p2p-grid-logo-small {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 12px rgba(244, 147, 28, 0.3));
+}
+
+/* Logo con bordes redondeados - LaChispa */
+.p2p-grid-logo-rounded {
+    border-radius: 20px;
+    padding: 8px;
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.p2p-item:hover .p2p-grid-logo-rounded {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(244, 147, 28, 0.2);
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+/* Logo grande - Cashu, Tutoriales, Pool Mining */
+.p2p-grid-logo-large {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.p2p-item:hover .p2p-grid-logo-large {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 12px rgba(244, 147, 28, 0.3));
+}
+
+/* Título de la tarjeta - Nuevo para jerarquía */
+.p2p-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2d2d2d;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0.25rem;
+}
+
+/* Content Area (descripción + badges) */
+.p2p-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 1rem 1rem;
+    gap: 0.5rem;
+}
+
+/* Variante: Cuba LNp2p - Logo más grande */
+.p2p-item-large .p2p-logo-wrapper {
+    height: 150px;
+}
+
+.p2p-item-large .p2p-grid-logo {
+    max-width: 100%;
+    max-height: 140px;
+    transform: scale(1.15);
+}
+
+.p2p-item-large:hover .p2p-grid-logo {
+    transform: scale(1.25);
+}
+
+    /* Logos específicos en pantalla pequeña */
+    .p2p-grid-logo-small {
+        max-width: 60% !important;
+        max-height: 60% !important;
+    }
+
+    .p2p-grid-logo-large {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    .p2p-grid-logo-rounded {
+        padding: 5px;
+        border-radius: 12px;
+    }
+
+/* Estado: Deshabilitado (Próximamente) */
+.p2p-item-disabled {
+    cursor: default;
+    opacity: 0.75;
+    background: #f8f9fa;
+}
+
+.p2p-item-disabled:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
+}
+
+.p2p-grid-logo-disabled {
+    filter: grayscale(100%);
+    opacity: 0.4;
+}
+
+/* Título deshabilitado */
+.p2p-item-disabled .p2p-card-title {
+    color: #888;
+}
+
+/* Descripción deshabilitada */
+.p2p-item-disabled .p2p-description {
+    color: #999;
+}
+
+/* Badge Próximamente - Overlay absoluto (más profesional) */
+.p2p-badge-proximamente {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    background: linear-gradient(135deg, var(--cuba-gold), var(--cuba-red));
+    color: white;
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(244, 147, 28, 0.4);
+    z-index: 10;
+}
+
+/* Descripción - altura fija para alineación */
+.p2p-description {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 400;
+    line-height: 1.4;
+    /* Altura mínima ajustada para descripciones cortas */
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+
+/* Badges - siempre al fondo del card */
+.p2p-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 0.25rem;
+}
+
+/* ========================================
+   RESPONSIVE - Sistema normalizado en todos los tamaños
+   ======================================== */
+
+@media (max-width: 768px) {
+    .compra-p2p-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 0 1rem;
+        max-width: 400px;
+    }
+
+    .compra-p2p-title {
+        font-size: 1.8rem;
+    }
+
+    .compra-p2p-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Altura mínima ajustada para móvil */
+    .p2p-item {
+        min-height: 290px;
+    }
+
+    .p2p-item-header {
+        min-height: 20px;
+        padding: 0.25rem 0.6rem 0;
+    }
+
+    /* Logo wrapper ajustado para móvil */
+    .p2p-logo-wrapper {
+        height: 110px;
+        padding: 0.6rem;
+    }
+
+    /* Logos ajustados para móvil */
+    .p2p-grid-logo {
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    /* Logos específicos en móvil */
+    .p2p-grid-logo-small {
+        max-width: 65% !important;
+        max-height: 65% !important;
+    }
+
+    .p2p-grid-logo-large {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    .p2p-grid-logo-rounded {
+        padding: 6px;
+        border-radius: 15px;
+    }
+
+    /* Cuba LNp2p ajustado para móvil */
+    .p2p-item-large .p2p-logo-wrapper {
+        height: 170px;
+    }
+
+    .p2p-item-large .p2p-grid-logo {
+        max-width: 98%;
+        max-height: 98%;
+    }
+
+    .p2p-item-content {
+        padding: 0 1rem 1rem;
+        gap: 0.7rem;
+    }
+
+    .p2p-description {
+        font-size: 0.95rem;
+        min-height: 40px;
+    }
+
+    .p2p-badge-proximamente {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.75rem;
+        top: 0.6rem;
+        right: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Cards más compactos pero manteniendo proporciones */
+    .p2p-item {
+        min-height: 250px;
+    }
+
+    .p2p-item-header {
+        min-height: 18px;
+        padding: 0.2rem 0.6rem 0;
+    }
+
+    .p2p-logo-wrapper {
+        height: 100px;
+        padding: 0.6rem;
+    }
+
+    .p2p-item-large .p2p-logo-wrapper {
+        height: 160px;
+    }
+
+    .p2p-item-large .p2p-grid-logo {
+        max-width: 98%;
+        max-height: 98%;
+    }
+
+    .p2p-item-content {
+        padding: 0 0.9rem 0.9rem;
+        gap: 0.6rem;
+    }
+
+    .p2p-description {
+        font-size: 0.8rem;
+        min-height: 48px;
+    }
+
+    /* Título en móvil */
+    .p2p-card-title {
+        font-size: 1.05rem;
+    }
+
+    .p2p-badge-proximamente {
+        font-size: 0.6rem;
+        padding: 0.25rem 0.65rem;
+    }
+}
+
+/* ==================================================
+   OFERTAS ESPECIALES - GRID SIMPLE (FLAT DESIGN)
+   ================================================== */
+
+.ofertas-grid-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertas-grid-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(244, 147, 28, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(28, 98, 176, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ofertas-grid-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--cuba-gold), var(--cuba-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+}
+
+.ofertas-grid-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+/* Grid Layout */
+.ofertas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Oferta Item - Flat Design */
+.oferta-item {
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 0.85rem 0.9rem;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    position: relative;
+    min-height: 220px;
+}
+
+.oferta-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(244, 147, 28, 0.25);
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(244, 147, 28, 0.4);
+}
+
+.oferta-item-builders:hover {
+    box-shadow: 0 15px 40px rgba(244, 147, 28, 0.25);
+    border-color: rgba(244, 147, 28, 0.4);
+}
+
+/* Logo Wrapper */
+.oferta-logo-wrapper {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+}
+
+.oferta-grid-logo {
+    max-width: 100%;
+    max-height: 85px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.oferta-item:hover .oferta-grid-logo {
+    transform: scale(1.05);
+}
+
+/* Logos cuadrados - The Solo Mining */
+.oferta-grid-logo-square {
+    max-height: 125px;
+    max-width: 125px;
+}
+
+/* Logos horizontales anchos - Blockstream, Bitrefill */
+.oferta-grid-logo-wide {
+    max-width: 95%;
+    max-height: 120px;
+}
+
+/* LilyGO específico - más grande */
+.oferta-item-lilygo .oferta-grid-logo {
+    max-height: 130px;
+    max-width: 130px;
+}
+
+/* Discount Badge */
+.oferta-discount {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--cuba-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.oferta-discount-top {
+    color: #ff6b35;
+}
+
+.oferta-discount-builders {
+    color: var(--cuba-blue);
+    font-size: 1.1rem;
+}
+
+.oferta-discount-service {
+    color: #28a745;
+    font-size: 1.1rem;
+}
+
+.oferta-discount-placeholder {
+    display: none;
+}
+
+/* Code Text */
+.oferta-code {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.oferta-code strong {
+    color: #2d2d2d;
+    font-weight: 700;
+    background: rgba(244, 147, 28, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .ofertas-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+
+    .ofertas-grid-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ofertas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .ofertas-grid-title {
+        font-size: 1.8rem;
+    }
+
+    .ofertas-grid-subtitle {
+        font-size: 1rem;
+    }
+
+    .oferta-item {
+        padding: 0.9rem 0.65rem 0.85rem;
+        min-height: 180px;
+    }
+
+    .oferta-logo-wrapper {
+        height: 75px;
+        margin-bottom: 0.2rem;
+    }
+
+    .oferta-grid-logo {
+        max-height: 60px;
+    }
+
+    .oferta-grid-logo-square {
+        max-height: 75px;
+        max-width: 75px;
+    }
+
+    .oferta-grid-logo-wide {
+        max-height: 65px;
+    }
+
+    .oferta-item-lilygo .oferta-logo-wrapper {
+        height: 80px;
+    }
+
+    .oferta-item-lilygo .oferta-grid-logo {
+        max-height: 75px;
+        max-width: 75px;
+    }
+
+    .oferta-discount {
+        font-size: 1rem;
+        min-height: 28px;
+    }
+
+    .oferta-code {
+        font-size: 0.85rem;
+    }
+
+    .oferta-code-wrapper {
+        padding-top: 0.75rem;
+        gap: 0.4rem;
+    }
+
+    .oferta-code-value {
+        font-size: 1.1rem;
+        padding: 5px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ofertas-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+
+    .oferta-item {
+        padding: 0.85rem 0.6rem 0.8rem;
+        min-height: 170px;
+    }
+
+    .oferta-logo-wrapper {
+        height: 70px;
+        margin-bottom: 0.2rem;
+    }
+
+    .oferta-grid-logo {
+        max-height: 55px;
+    }
+
+    .oferta-grid-logo-square {
+        max-height: 65px;
+        max-width: 65px;
+    }
+
+    .oferta-grid-logo-wide {
+        max-height: 55px;
+    }
+
+    .oferta-item-lilygo .oferta-logo-wrapper {
+        height: 75px;
+    }
+
+    .oferta-item-lilygo .oferta-grid-logo {
+        max-height: 70px;
+        max-width: 70px;
+    }
+
+    .oferta-discount {
+        font-size: 0.95rem;
+        min-height: 26px;
+    }
+}
+/* ==================================================
+   NOSTR COMPACT SECTION STYLES
+   ================================================== */
+
+.nostr-compact-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    position: relative;
+}
+
+.nostr-compact-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nostr-compact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.2);
+}
+
+.nostr-compact-icon {
+    font-size: 4rem;
+    color: #8a2be2;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(138, 43, 226, 0.05));
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.nostr-compact-card:hover .nostr-compact-icon {
+    transform: rotate(360deg);
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(138, 43, 226, 0.1));
+}
+
+.nostr-compact-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2d2d2d;
+    margin-bottom: 0.5rem;
+}
+
+.nostr-compact-subtitle {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.nostr-compact-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.nostr-feature-badge {
+    background: rgba(138, 43, 226, 0.1);
+    color: #8a2be2;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-nostr-primary {
+    background: linear-gradient(135deg, #8a2be2, #9370db);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.btn-nostr-primary:hover {
+    background: linear-gradient(135deg, #9370db, #8a2be2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
+    color: white;
+}
+
+.btn-nostr-secondary {
+    background: white;
+    color: #8a2be2;
+    border: 2px solid #8a2be2;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.btn-nostr-secondary:hover {
+    background: #8a2be2;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ofertas-title {
+        font-size: 2rem;
+    }
+    
+    .oferta-card {
+        min-height: auto;
+    }
+    
+    .discount-badge,
+    .builders-badge {
+        top: 10px;
+        right: 10px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .nostr-compact-card {
+        padding: 1.5rem;
+    }
+    
+    .nostr-compact-icon {
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+    
+    .nostr-compact-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn-nostr-primary,
+    .btn-nostr-secondary {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Nombre de la tienda */
+.oferta-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d2d2d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0.5rem 0;
+}
+
+/* Wrapper para el área del código */
+.oferta-code-wrapper {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+/* Código Label y Value - Nuevos estilos */
+.oferta-code-label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 400;
+    margin: 0;
+}
+
+.oferta-code-value {
+    font-size: 1.3rem;
+    color: #2d2d2d;
+    font-weight: 800;
+    background: rgba(244, 147, 28, 0.1);
+    padding: 6px 14px;
+    border-radius: 6px;
+    display: inline-block;
+    word-break: break-word;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Ajuste específico para Solo Mining */
+.oferta-item-solomining .oferta-grid-logo {
+    max-height: 125px;
+    max-width: 125px;
 }
