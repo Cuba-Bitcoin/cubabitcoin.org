@@ -5797,3 +5797,44 @@ img#nostr-social {
     max-height: 125px;
     max-width: 125px;
 }
+
+
+/* ===================================
+   Language Switcher Styles
+   =================================== */
+
+/* Dropdown del selector de idioma */
+.navbar .dropdown-menu-dark {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 140px;
+}
+
+.navbar .dropdown-item {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: rgba(255, 78, 22, 0.2);
+}
+
+.navbar .dropdown-item.active {
+    background-color: #ff4e16;
+    color: white;
+}
+
+/* Icono del globo */
+.navbar .bi-globe2 {
+    font-size: 1.1rem;
+}
+
+/* Responsive: ocultar texto en móvil, solo mostrar icono */
+@media (max-width: 991px) {
+    .navbar .dropdown-toggle {
+        padding: 0.5rem;
+    }
+}
+
