@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "lang": "es",
+    "locale": "es_ES",
+    "dir": "ltr"
+  },
+  "navbar": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "buy": "Compra BTC",
+    "offers": "Ofertas",
+    "pow": "POW",
+    "donate": "Dona",
+    "media": "Multimedia",
+    "connect": "Conecta",
+    "contact": "Contacto"
+  },
+  "buttons": {
+    "explore_services": "Explorar Servicios",
+    "join_community": "Únete a la Comunidad",
+    "support": "Apoya a Cuba Bitcoin",
+    "view_tutorials": "Ver Tutoriales",
+    "our_achievements": "Nuestros Logros",
+    "view_videos": "Ver Videos",
+    "view_events": "Ver Eventos",
+    "contact": "Contactar",
+    "use_services": "Usar Servicios",
+    "donate_bitcoin": "Donar Bitcoin",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "view_more": "Ver más",
+    "learn_more": "Saber más",
+    "view_channel": "Ver Canal de YouTube",
+    "view_details": "Ver detalles en Amboss",
+    "need_help": "¿Necesitas ayuda?",
+    "view_directory": "Ver Directorio de la Comunidad",
+    "get_nip05": "Obtener NIP05 Personalizado",
+    "view_history": "Ver historial completo de eventos"
+  },
+  "badges": {
+    "wallet": "Billetera",
+    "lightning": "Lightning",
+    "android": "Android",
+    "web": "Web",
+    "gateway": "Pasarela",
+    "commerce": "Comercio",
+    "ecash": "Ecash",
+    "offline": "Sin Conexión",
+    "education": "Educación",
+    "mining": "Mining",
+    "security": "Seguridad",
+    "telegram": "Telegram",
+    "nostr": "Nostr",
+    "coming_soon": "Próximamente"
+  },
+  "sections": {
+    "services": {
+      "title": "Servicios comunitarios",
+      "subtitle": "Herramientas al servicio de la comunidad para facilitar el uso de Bitcoin en Cuba mediante soluciones libres, soberanas y accesibles para todos."
+    },
+    "cotizacion": {
+      "title": "Cotización CUP",
+      "subtitle": "Precio actual del Peso Cubano en Sats",
+      "loading": "Cargando...",
+      "error": "Error al cargar cotización",
+      "cup_label": "1 CUP",
+      "equals": "=",
+      "sats": "sats"
+    },
+    "buy": {
+      "title": "Compra Bitcoin sin KYC",
+      "subtitle": "Plataformas peer-to-peer para comprar Bitcoin de forma privada"
+    },
+    "offers": {
+      "title": "Ofertas Exclusivas",
+      "subtitle": "Descuentos exclusivos para la comunidad",
+      "save": "AHORRA",
+      "code": "Código:",
+      "link": "Link:"
+    },
+    "pow": {
+      "title": "Proof of Work",
+      "impact_title": "Impacto de la Comunidad",
+      "impact_subtitle": "Nuestro trabajo no se mide en palabras, sino en acciones. Este es el resultado del esfuerzo colectivo."
+    },
+    "lightning": {
+      "title": "Únete con Cuba Bitcoin a través de Lightning",
+      "subtitle": "¿Tienes un nodo Lightning? Únete a nuestra red abriendo un canal directo con el nodo de Cuba Bitcoin. Al conectarte, contribuyes a fortalecer la infraestructura de Bitcoin en Cuba y mejoras la conectividad de la Lightning Network.",
+      "benefits_title": "Beneficios de abrir un canal:",
+      "benefit_1": "Mejora la liquidez y rutas de pago",
+      "benefit_2": "Apoya el crecimiento de Bitcoin en Cuba",
+      "benefit_3": "Forma parte de una red descentralizada y resistente",
+      "benefit_4": "Facilita transacciones rápidas y económicas",
+      "node_info": "Información del nodo:",
+      "node_uri": "Node URI:",
+      "alias": "Alias:"
+    },
+    "donations": {
+      "title": "Apoya la comunidad",
+      "subtitle": "Si valoras nuestro trabajo educativo y comunitario, puedes contribuir con una donación. Todo se gestiona a través de nuestro BTCPay Server, sin intermediarios.",
+      "secure": "Transacción segura y transparente",
+      "impact_title": "Tu donación nos ayuda a:",
+      "impact_1": "Organizar eventos y espacios de formación gratuitos",
+      "impact_2": "Mantener servicios: LNbits, BTCPay Server, Cashu Mint y nodo Lightning",
+      "impact_3": "Desarrollar herramientas para la comunidad",
+      "impact_4": "Crear tutoriales y guías educativas",
+      "impact_5": "Llevar Bitcoin a toda Cuba",
+      "gratitude": "Con tu apoyo, seguimos sembrando libertad financiera y empoderando a más personas.",
+      "thanks": "¡Gracias por ser parte de este movimiento!"
+    },
+    "multimedia": {
+      "title": "Multimedia",
+      "subtitle": "Contenido educativo exclusivo producido por Cuba Bitcoin para promover la adopción de Bitcoin",
+      "channel_title": "Nuestro Canal de YouTube",
+      "playlists": "Playlists",
+      "videos": "Videos",
+      "free": "Gratuito",
+      "description": "Documentales, entrevistas, cursos educativos y podcasts que promueven la adopción y el conocimiento de Bitcoin en Cuba y el mundo.",
+      "subscribe": "¡Suscríbete y activa las notificaciones!",
+      "playlist_1": "Bitcoin Fácil",
+      "playlist_2": "Run With Bitcoin",
+      "playlist_3": "Documentales",
+      "playlist_4": "Entrevistas",
+      "playlist_5": "Eventos"
+    },
+    "nostr": {
+      "title": "Conecta con Cuba Bitcoin en Nostr",
+      "subtitle": "Únete al protocolo descentralizado de comunicación y síguenos en la red social del futuro",
+      "badge": "Protocolo Descentralizado",
+      "what_is": "¿Qué es Nostr?",
+      "description": "Nostr es un protocolo simple y abierto que permite crear redes sociales verdaderamente descentralizadas, resistentes a la censura y controladas por los usuarios.",
+      "feature_1_title": "Sin Censura:",
+      "feature_1_desc": "Nadie puede bloquear tu contenido",
+      "feature_2_title": "Tú Controlas:",
+      "feature_2_desc": "Tu identidad, tus datos, tus conexiones",
+      "feature_3_title": "Descentralizado:",
+      "feature_3_desc": "Sin servidores centrales",
+      "feature_4_title": "Bitcoin Native:",
+      "feature_4_desc": "Pagos integrados con Lightning",
+      "nip05_title": "Obtén tu identidad verificada",
+      "nip05_desc": "Consigue tu NIP05 personalizado con el dominio",
+      "nip05_domain": "@cubabitcoin.org",
+      "nip05_cta": "y forma parte oficial de la comunidad.",
+      "members": "Miembros Activos",
+      "decentralized": "Descentralizado"
+    }
+  },
+  "stats": {
+    "graduates": "Graduados de cursos de Bitcoin en Cuba y el mundo",
+    "reached": "Personas alcanzadas a través de la educación y redes",
+    "meetups": "Encuentros educativos organizados por la comunidad",
+    "businesses": "Negocios que aceptan Bitcoin en Cuba",
+    "tools": "Herramientas soberanas activas para el uso de Bitcoin",
+    "btcpay_users": "Negocios usando BTCPay Server en Cuba",
+    "teachers": "Profesores cubanos formados en educación sobre Bitcoin",
+    "provinces": "Provincias con eventos presenciales realizados",
+    "years": "Años promoviendo el uso de Bitcoin en Cuba y el mundo"
+  },
+  "services_cards": {
+    "lachispa": {
+      "title": "LaChispa",
+      "description": "Paga y recibe en segundos. ¡Sats en tu bolsillo sin complicaciones!"
+    },
+    "lnbits": {
+      "title": "LNbits",
+      "description": "Acepta pagos, crea subcuentas y gestiona todo desde la web."
+    },
+    "btcpay": {
+      "title": "BTCPay Server",
+      "description": "Tu tienda propia, acepta Bitcoin y lanza campañas. 100% control."
+    },
+    "cashu": {
+      "title": "Mint de Cashu",
+      "description": "Envía sats y USD incluso sin internet. Privacidad y resiliencia máxima."
+    },
+    "tutoriales": {
+      "title": "Tutoriales",
+      "description": "Domina Bitcoin desde cero con nuestras herramientas. ¡Toma el control!"
+    },
+    "mining": {
+      "title": "Pool de Minería",
+      "description": "Mina solo con la infraestructura de la comunidad. ¡Recompensa completa si ganas el bloque!"
+    }
+  },
+  "p2p": {
+    "cuba_lnp2p": {
+      "description": "Bot de intercambios Lightning en Telegram"
+    },
+    "mostro": {
+      "description": "Intercambio P2P sobre Nostr"
+    }
+  },
+  "footer": {
+    "tagline": "Comunidad comprometida con la educación sobre Bitcoin en Cuba.",
+    "social_title": "Accede a contenido 100% gratuito",
+    "social_subtitle": "Únete a nuestras comunidades",
+    "copyright": "© 2026 cubabitcoin.org",
+    "mission": "Promoviendo la educación y el uso de Bitcoin en nuestra Patria",
+    "twitter_title": "Síguenos en X (Twitter)",
+    "telegram_title": "Únete a nuestro Telegram",
+    "youtube_title": "Suscríbete a nuestro canal",
+    "github_title": "Contribuye en GitHub",
+    "nostr_title": "Síguenos en Nostr"
+  },
+  "accessibility": {
+    "toggle_nav": "Toggle navigation",
+    "previous": "Previous",
+    "next": "Next",
+    "slide": "Slide"
+  }
+}

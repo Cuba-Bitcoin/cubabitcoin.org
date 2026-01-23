@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "lang": "en",
+    "locale": "en_US",
+    "dir": "ltr"
+  },
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "buy": "Buy BTC",
+    "offers": "Deals",
+    "pow": "POW",
+    "donate": "Donate",
+    "media": "Media",
+    "connect": "Connect",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "explore_services": "Explore Services",
+    "join_community": "Join the Community",
+    "support": "Support Cuba Bitcoin",
+    "view_tutorials": "View Tutorials",
+    "our_achievements": "Our Achievements",
+    "view_videos": "Watch Videos",
+    "view_events": "View Events",
+    "contact": "Contact Us",
+    "use_services": "Use Services",
+    "donate_bitcoin": "Donate Bitcoin",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "view_more": "View more",
+    "learn_more": "Learn more",
+    "view_channel": "Visit YouTube Channel",
+    "view_details": "View details on Amboss",
+    "need_help": "Need help?",
+    "view_directory": "View Community Directory",
+    "get_nip05": "Get Custom NIP05",
+    "view_history": "View complete event history"
+  },
+  "badges": {
+    "wallet": "Wallet",
+    "lightning": "Lightning",
+    "android": "Android",
+    "web": "Web",
+    "gateway": "Gateway",
+    "commerce": "Commerce",
+    "ecash": "Ecash",
+    "offline": "Offline",
+    "education": "Education",
+    "mining": "Mining",
+    "security": "Security",
+    "telegram": "Telegram",
+    "nostr": "Nostr",
+    "coming_soon": "Coming Soon"
+  },
+  "sections": {
+    "services": {
+      "title": "Community Services",
+      "subtitle": "Tools serving the community to facilitate Bitcoin usage in Cuba through free, sovereign, and accessible solutions for everyone."
+    },
+    "cotizacion": {
+      "title": "CUP Rate",
+      "subtitle": "Current Cuban Peso price in Sats",
+      "loading": "Loading...",
+      "error": "Failed to load rate",
+      "cup_label": "1 CUP",
+      "equals": "=",
+      "sats": "sats"
+    },
+    "buy": {
+      "title": "Buy Bitcoin without KYC",
+      "subtitle": "Peer-to-peer platforms to buy Bitcoin privately"
+    },
+    "offers": {
+      "title": "Exclusive Deals",
+      "subtitle": "Exclusive discounts for the community",
+      "save": "SAVE",
+      "code": "Code:",
+      "link": "Link:"
+    },
+    "pow": {
+      "title": "Proof of Work",
+      "impact_title": "Community Impact",
+      "impact_subtitle": "Our work is measured in actions, not words. This is the result of our collective effort."
+    },
+    "lightning": {
+      "title": "Connect with Cuba Bitcoin through Lightning",
+      "subtitle": "Have a Lightning node? Join our network by opening a direct channel with the Cuba Bitcoin node. By connecting, you help strengthen Bitcoin infrastructure in Cuba and improve Lightning Network connectivity.",
+      "benefits_title": "Benefits of opening a channel:",
+      "benefit_1": "Improve liquidity and payment routes",
+      "benefit_2": "Support Bitcoin growth in Cuba",
+      "benefit_3": "Be part of a decentralized and resilient network",
+      "benefit_4": "Enable fast and low-cost transactions",
+      "node_info": "Node information:",
+      "node_uri": "Node URI:",
+      "alias": "Alias:"
+    },
+    "donations": {
+      "title": "Support the Community",
+      "subtitle": "If you value our educational and community work, you can contribute with a donation. Everything is managed through our BTCPay Server, with no intermediaries.",
+      "secure": "Secure and transparent transaction",
+      "impact_title": "Your donation helps us:",
+      "impact_1": "Organize free events and training spaces",
+      "impact_2": "Maintain services: LNbits, BTCPay Server, Cashu Mint, and Lightning node",
+      "impact_3": "Develop tools for the community",
+      "impact_4": "Create tutorials and educational guides",
+      "impact_5": "Bring Bitcoin to all of Cuba",
+      "gratitude": "With your support, we continue spreading financial freedom and empowering more people.",
+      "thanks": "Thank you for being part of this movement!"
+    },
+    "multimedia": {
+      "title": "Multimedia",
+      "subtitle": "Exclusive educational content produced by Cuba Bitcoin to promote Bitcoin adoption",
+      "channel_title": "Our YouTube Channel",
+      "playlists": "Playlists",
+      "videos": "Videos",
+      "free": "Free",
+      "description": "Documentaries, interviews, educational courses, and podcasts promoting Bitcoin adoption and knowledge in Cuba and worldwide.",
+      "subscribe": "Subscribe and turn on notifications!",
+      "playlist_1": "Bitcoin Made Easy",
+      "playlist_2": "Run With Bitcoin",
+      "playlist_3": "Documentaries",
+      "playlist_4": "Interviews",
+      "playlist_5": "Events"
+    },
+    "nostr": {
+      "title": "Connect with Cuba Bitcoin on Nostr",
+      "subtitle": "Join the decentralized communication protocol and follow us on the social network of the future",
+      "badge": "Decentralized Protocol",
+      "what_is": "What is Nostr?",
+      "description": "Nostr is a simple and open protocol that enables truly decentralized social networks, censorship-resistant and user-controlled.",
+      "feature_1_title": "Censorship-Free:",
+      "feature_1_desc": "No one can block your content",
+      "feature_2_title": "You Control:",
+      "feature_2_desc": "Your identity, your data, your connections",
+      "feature_3_title": "Decentralized:",
+      "feature_3_desc": "No central servers",
+      "feature_4_title": "Bitcoin Native:",
+      "feature_4_desc": "Built-in Lightning payments",
+      "nip05_title": "Get your verified identity",
+      "nip05_desc": "Get your custom NIP05 with the domain",
+      "nip05_domain": "@cubabitcoin.org",
+      "nip05_cta": "and become an official community member.",
+      "members": "Active Members",
+      "decentralized": "Decentralized"
+    }
+  },
+  "stats": {
+    "graduates": "Bitcoin course graduates in Cuba and worldwide",
+    "reached": "People reached through education and networks",
+    "meetups": "Educational meetups organized by the community",
+    "businesses": "Businesses accepting Bitcoin in Cuba",
+    "tools": "Active sovereign tools for Bitcoin usage",
+    "btcpay_users": "Businesses using BTCPay Server in Cuba",
+    "teachers": "Cuban teachers trained in Bitcoin education",
+    "provinces": "Provinces with in-person events held",
+    "years": "Years promoting Bitcoin usage in Cuba and worldwide"
+  },
+  "services_cards": {
+    "lachispa": {
+      "title": "LaChispa",
+      "description": "Pay and receive in seconds. Sats in your pocket, hassle-free!"
+    },
+    "lnbits": {
+      "title": "LNbits",
+      "description": "Accept payments, create sub-accounts, and manage everything from the web."
+    },
+    "btcpay": {
+      "title": "BTCPay Server",
+      "description": "Your own store, accept Bitcoin and launch campaigns. 100% control."
+    },
+    "cashu": {
+      "title": "Cashu Mint",
+      "description": "Send sats and USD even without internet. Maximum privacy and resilience."
+    },
+    "tutoriales": {
+      "title": "Tutorials",
+      "description": "Master Bitcoin from scratch with our tools. Take control!"
+    },
+    "mining": {
+      "title": "Mining Pool",
+      "description": "Solo mine with community infrastructure. Full reward if you win the block!"
+    }
+  },
+  "p2p": {
+    "cuba_lnp2p": {
+      "description": "Lightning exchange bot on Telegram"
+    },
+    "mostro": {
+      "description": "P2P exchange on Nostr"
+    }
+  },
+  "footer": {
+    "tagline": "Community committed to Bitcoin education in Cuba.",
+    "social_title": "Access 100% free content",
+    "social_subtitle": "Join our communities",
+    "copyright": "© 2026 cubabitcoin.org",
+    "mission": "Promoting Bitcoin education and adoption in Cuba",
+    "twitter_title": "Follow us on X (Twitter)",
+    "telegram_title": "Join our Telegram",
+    "youtube_title": "Subscribe to our channel",
+    "github_title": "Contribute on GitHub",
+    "nostr_title": "Follow us on Nostr"
+  },
+  "accessibility": {
+    "toggle_nav": "Toggle navigation",
+    "previous": "Previous",
+    "next": "Next",
+    "slide": "Slide"
+  }
+}
