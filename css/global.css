@@ -3574,11 +3574,16 @@ img#nostr-social {
 
 /* Grid Layout para Servicios - 2 filas de 3 columnas */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.services-grid > * {
+    flex: 0 1 calc((100% - 3rem) / 3);
 }
 
 .bitcoin-card::before {
@@ -3949,15 +3954,21 @@ img#nostr-social {
 
 /* Responsive Design for Services */
 @media (max-width: 1200px) {
+    .services-grid > * {
+        flex: 0 1 calc((100% - 1.5rem) / 2);
+    }
+
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
 }
 
 @media (max-width: 768px) {
+    .services-grid > * {
+        flex: 0 1 100%;
+    }
+
     .services-grid {
-        grid-template-columns: 1fr;
         gap: 1.25rem;
         max-width: 400px;
     }
@@ -4057,8 +4068,11 @@ img#nostr-social {
 }
 
 @media (max-width: 768px) {
+    .services-grid > * {
+        flex: 0 1 100%;
+    }
+
     .services-grid {
-        grid-template-columns: 1fr;
         gap: 1.25rem;
         max-width: 400px;
     }
@@ -4892,8 +4906,11 @@ img#nostr-social {
     }
 
     /* Para servicios-grid, mantener 3 columnas pero ajustar */
+    .services-grid > * {
+        flex: 0 1 calc((100% - 3rem) / 3);
+    }
+
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
         max-width: 1400px;
     }
 }
