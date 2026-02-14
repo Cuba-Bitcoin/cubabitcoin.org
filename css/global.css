@@ -4836,6 +4836,25 @@ img#nostr-social {
     overflow: hidden;
 }
 
+/* Tarjetas oscuras solo en sección Compra P2P */
+.compra-p2p-grid-section .p2p-item {
+    background: #1e1e2e;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.compra-p2p-grid-section .p2p-item:hover {
+    background: #252538;
+    border-color: rgba(244, 147, 28, 0.4);
+}
+
+.compra-p2p-grid-section .p2p-card-title {
+    color: #f0f0f0;
+}
+
+.compra-p2p-grid-section .p2p-description {
+    color: #b0b0b0;
+}
+
 .compra-p2p-grid-section::before {
     content: '';
     position: absolute;
@@ -5304,6 +5323,61 @@ img#nostr-social {
     z-index: 1;
 }
 
+/* Category Layout */
+.ofertas-category {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.ofertas-category:last-child {
+    margin-bottom: 0;
+}
+
+.ofertas-category-title {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.ofertas-category-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* Fila de categorías de 1 item lado a lado */
+.ofertas-category-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 300px));
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.ofertas-category-row .ofertas-category {
+    margin-bottom: 0;
+}
+
+/* 1 item → columna única centrada */
+.ofertas-category-grid-1 {
+    grid-template-columns: minmax(0, 300px);
+}
+
+/* 3 items → 3 columnas */
+.ofertas-category-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 300px));
+}
+
 /* Oferta Item - Flat Design */
 .oferta-item {
     text-align: center;
@@ -5363,6 +5437,11 @@ img#nostr-social {
     max-width: 125px;
 }
 
+/* Logos con bordes redondeados */
+.oferta-grid-logo-rounded {
+    border-radius: 20px;
+}
+
 /* Logos horizontales anchos - Blockstream, Bitrefill */
 .oferta-grid-logo-wide {
     max-width: 95%;
@@ -5404,7 +5483,7 @@ img#nostr-social {
 }
 
 .oferta-discount-placeholder {
-    display: none;
+    visibility: hidden;
 }
 
 /* Code Text */
@@ -5438,6 +5517,23 @@ img#nostr-social {
     .ofertas-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+
+    .ofertas-category-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .ofertas-category-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .ofertas-category-row .ofertas-category {
+        margin-bottom: 0;
+    }
+
+    .ofertas-category {
+        margin-bottom: 1.5rem;
     }
 
     .ofertas-grid-title {

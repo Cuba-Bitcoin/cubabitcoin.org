@@ -443,14 +443,17 @@
         <!-- end section -->
 
         <!-- Cotización CUP/Sats - Compacta -->
-        <section class="py-5 cotizacion-section-compact" id="scrollspycotizacion">
-            <div class="container-xl px-5">
+        <!-- Compra P2P - Grid Style (Estilo Ofertas Especiales) -->
+        <div id="scrollspybuy" style="position: relative; top: -100px;"></div>
+        <div id="scrollspycotizacion" style="position: relative; top: -100px;"></div>
+        <section class="py-4 compra-p2p-grid-section">
+            <div class="container-xl px-4">
                 <div class="text-center mb-4">
-                    <h2 class="cotizacion-title-compact text-uppercase mb-3">Cotización CUP</h2>
-                    <p class="cotizacion-subtitle-compact">Precio actual del Peso Cubano en Sats</p>
+                    <h2 class="compra-p2p-title text-uppercase mb-2">⚡ Compra Bitcoin sin KYC</h2>
+                    <p class="compra-p2p-subtitle">Plataformas peer-to-peer para comprar Bitcoin de forma privada</p>
                 </div>
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center mb-4">
                     <div class="col-lg-8 col-xl-6">
                         <div class="cotizacion-card-compact text-center">
                             <div class="cotizacion-display-compact">
@@ -471,31 +474,32 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Compra P2P - Grid Style (Estilo Ofertas Especiales) -->
-        <div id="scrollspybuy" style="position: relative; top: -100px;"></div>
-        <section class="py-4 compra-p2p-grid-section">
-            <div class="container-xl px-4">
-                <div class="text-center mb-4">
-                    <h2 class="compra-p2p-title text-uppercase mb-2">⚡ Compra Bitcoin sin KYC</h2>
-                    <p class="compra-p2p-subtitle">Plataformas peer-to-peer para comprar Bitcoin de forma privada</p>
-                </div>
 
                 <div class="compra-p2p-grid">
 
-                    <!-- Cuba LNp2p -->
-                    <a href="https://t.me/CUBA_lnp2p" target="_blank" rel="noopener noreferrer" class="p2p-item p2p-item-large">
-                        <!-- Header vacío para simetría -->
+                    <!-- Kmbalache -->
+                    <a href="https://cuba-bitcoin.github.io/tutoriales/" target="_blank" rel="noopener noreferrer" class="p2p-item p2p-item-large">
                         <div class="p2p-item-header"></div>
 
-                        <!-- Logo área fija -->
+                        <div class="p2p-logo-wrapper">
+                            <img src="img/5t.png" alt="Kmbalache Logo" class="p2p-grid-logo" loading="lazy">
+                        </div>
+
+                        <div class="p2p-item-content">
+                            <p class="p2p-description">Instancia de Mostro de la comunidad. Intercambia Bitcoin P2P sobre Nostr.</p>
+                            <div class="p2p-badges">
+                                <span class="badge badge-nostr">Nostr</span>
+                                <span class="badge badge-lightning">Lightning</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Cuba LNp2p -->
+                    <a href="https://t.me/CUBA_lnp2p" target="_blank" rel="noopener noreferrer" class="p2p-item p2p-item-large">
+                        <div class="p2p-item-header"></div>
                         <div class="p2p-logo-wrapper">
                             <img src="img/cuba_lnp2p.png" alt="Cuba LNp2p Logo" class="p2p-grid-logo" loading="lazy">
                         </div>
-
-                        <!-- Content: descripción + badges -->
                         <div class="p2p-item-content">
                             <p class="p2p-description">Bot de intercambios Lightning en Telegram</p>
                             <div class="p2p-badges">
@@ -504,29 +508,6 @@
                             </div>
                         </div>
                     </a>
-
-                    <!-- Mostro -->
-                    <div class="p2p-item p2p-item-disabled">
-                        <!-- Badge como overlay absoluto -->
-                        <div class="p2p-badge-proximamente">Próximamente</div>
-
-                        <!-- Header (espacio para badge) -->
-                        <div class="p2p-item-header"></div>
-
-                        <!-- Logo área fija -->
-                        <div class="p2p-logo-wrapper">
-                            <img src="img/mostrologo.png" alt="Mostro Logo" class="p2p-grid-logo p2p-grid-logo-disabled" loading="lazy">
-                        </div>
-
-                        <!-- Content: descripción + badges -->
-                        <div class="p2p-item-content">
-                            <p class="p2p-description">Intercambio P2P sobre Nostr</p>
-                            <div class="p2p-badges">
-                                <span class="badge badge-nostr">Nostr</span>
-                                <span class="badge badge-lightning">Lightning</span>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -541,68 +522,97 @@
                     <p class="ofertas-grid-subtitle">Descuentos exclusivos para la comunidad</p>
                 </div>
 
-                <div class="ofertas-grid">
+                <!-- Categoría: Mineria -->
+                <div class="ofertas-category">
+                    <h3 class="ofertas-category-title">Mineria</h3>
+                    <div class="ofertas-category-grid ofertas-category-grid-3">
+                        <!-- Solo Satoshi -->
+                        <a href="https://www.solosatoshi.com/aff/5666/" target="_blank" rel="noopener noreferrer" class="oferta-item">
+                            <div class="oferta-logo-wrapper">
+                                <img src="img/solosatoshilogo2.png" alt="Solo Satoshi Logo" class="oferta-grid-logo" loading="lazy">
+                            </div>
+                            <div class="oferta-discount">AHORRA 6.5%</div>
+                            <div class="oferta-code-wrapper">
+                                <div class="oferta-code-label">Link:</div>
+                                <div class="oferta-code-value">/aff/5666</div>
+                            </div>
+                        </a>
 
-                    <!-- Blockstream -->
-                    <a href="https://store.blockstream.com/?code=cubabitcoin" target="_blank" rel="noopener noreferrer" class="oferta-item">
-                        <div class="oferta-logo-wrapper">
-                            <img src="img/blockstreamlogotransparente.png" alt="Blockstream Logo" class="oferta-grid-logo oferta-grid-logo-wide" loading="lazy">
-                        </div>
-                        <div class="oferta-discount">AHORRA 10%</div>
-                        <div class="oferta-code-wrapper">
-                            <div class="oferta-code-label">Código:</div>
-                            <div class="oferta-code-value">cubabitcoin</div>
-                        </div>
-                    </a>
+                        <!-- The Solo Mining -->
+                        <a href="https://www.thesolomining.co/aff/36/" target="_blank" rel="noopener noreferrer" class="oferta-item oferta-item-solomining">
+                            <div class="oferta-logo-wrapper">
+                                <img src="img/thesolomininglogo2.png" alt="The Solo Mining Logo" class="oferta-grid-logo oferta-grid-logo-square" loading="lazy">
+                            </div>
+                            <div class="oferta-discount oferta-discount-top">AHORRA 15%</div>
+                            <div class="oferta-code-wrapper">
+                                <div class="oferta-code-label">Link:</div>
+                                <div class="oferta-code-value">/aff/36</div>
+                            </div>
+                        </a>
 
-                    <!-- Solo Satoshi -->
-                    <a href="https://www.solosatoshi.com/aff/5666/" target="_blank" rel="noopener noreferrer" class="oferta-item">
-                        <div class="oferta-logo-wrapper">
-                            <img src="img/solosatoshilogo2.png" alt="Solo Satoshi Logo" class="oferta-grid-logo" loading="lazy">
-                        </div>
-                        <div class="oferta-discount">AHORRA 6.5%</div>
-                        <div class="oferta-code-wrapper">
-                            <div class="oferta-code-label">Link:</div>
-                            <div class="oferta-code-value">/aff/5666</div>
-                        </div>
-                    </a>
+                        <!-- Bitronics -->
+                        <a href="https://bitronics.store?ref=4790" target="_blank" rel="noopener noreferrer" class="oferta-item">
+                            <div class="oferta-logo-wrapper">
+                                <img src="img/bitronics.jpg" alt="Bitronics Logo" class="oferta-grid-logo oferta-grid-logo-square oferta-grid-logo-rounded" loading="lazy">
+                            </div>
+                            <div class="oferta-discount oferta-discount-placeholder"></div>
+                            <div class="oferta-code-wrapper">
+                                <div class="oferta-code-label">Link:</div>
+                                <div class="oferta-code-value">ref/4790</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-                    <!-- The Solo Mining -->
-                    <a href="https://www.thesolomining.co/aff/36/" target="_blank" rel="noopener noreferrer" class="oferta-item oferta-item-solomining">
-                        <div class="oferta-logo-wrapper">
-                            <img src="img/thesolomininglogo2.png" alt="The Solo Mining Logo" class="oferta-grid-logo oferta-grid-logo-square" loading="lazy">
-                        </div>
-                        <div class="oferta-discount oferta-discount-top">AHORRA 15%</div>
-                        <div class="oferta-code-wrapper">
-                            <div class="oferta-code-label">Link:</div>
-                            <div class="oferta-code-value">/aff/36</div>
-                        </div>
-                    </a>
+                <!-- Fila: HW Wallets + Vive con Bitcoin + Hardware DIY -->
+                <div class="ofertas-category-row">
+                    <!-- Categoría: Hardware Wallets -->
+                    <div class="ofertas-category">
+                        <h3 class="ofertas-category-title">Hardware Wallets</h3>
+                        <!-- Blockstream -->
+                        <a href="https://rewards.blockstream.com/cubabitcoin" target="_blank" rel="noopener noreferrer" class="oferta-item">
+                            <div class="oferta-logo-wrapper">
+                                <img src="img/blockstreamlogotransparente.png" alt="Blockstream Logo" class="oferta-grid-logo oferta-grid-logo-wide" loading="lazy">
+                            </div>
+                            <div class="oferta-discount">AHORRA 10%</div>
+                            <div class="oferta-code-wrapper">
+                                <div class="oferta-code-label">Código:</div>
+                                <div class="oferta-code-value">cubabitcoin</div>
+                            </div>
+                        </a>
+                    </div>
 
-                    <!-- LilyGO -->
-                    <a href="https://www.lilygo.cc/cubabitcoin" target="_blank" rel="noopener noreferrer" class="oferta-item oferta-item-lilygo">
-                        <div class="oferta-logo-wrapper">
-                            <img src="img/lilygologo_transparent_strong.png" alt="LilyGO Logo" class="oferta-grid-logo oferta-grid-logo-square" loading="lazy">
-                        </div>
-                        <div class="oferta-discount oferta-discount-placeholder"></div>
-                        <div class="oferta-code-wrapper">
-                            <div class="oferta-code-label">Código:</div>
-                            <div class="oferta-code-value">cubabitcoin</div>
-                        </div>
-                    </a>
+                    <!-- Categoría: Vive con Bitcoin -->
+                    <div class="ofertas-category">
+                        <h3 class="ofertas-category-title">Vive con Bitcoin</h3>
+                        <!-- Bitrefill -->
+                        <a href="https://bitrefill.com/invite/cubabitcoin" target="_blank" rel="noopener noreferrer" class="oferta-item">
+                            <div class="oferta-logo-wrapper">
+                                <img src="img/Bitrefill-Brand-Kit/Logo/SVG/03-LOGOTYPE-BITREFILL-BLACK-RGB.svg" alt="Bitrefill Logo" class="oferta-grid-logo oferta-grid-logo-wide" loading="lazy">
+                            </div>
+                            <div class="oferta-discount oferta-discount-placeholder"></div>
+                            <div class="oferta-code-wrapper">
+                                <div class="oferta-code-label">Código:</div>
+                                <div class="oferta-code-value">cubabitcoin</div>
+                            </div>
+                        </a>
+                    </div>
 
-                    <!-- Bitrefill -->
-                    <a href="https://bitrefill.com/invite/cubabitcoin" target="_blank" rel="noopener noreferrer" class="oferta-item">
-                        <div class="oferta-logo-wrapper">
-                            <img src="img/Bitrefill-Brand-Kit/Logo/SVG/03-LOGOTYPE-BITREFILL-BLACK-RGB.svg" alt="Bitrefill Logo" class="oferta-grid-logo oferta-grid-logo-wide" loading="lazy">
-                        </div>
-                        <div class="oferta-discount oferta-discount-placeholder"></div>
-                        <div class="oferta-code-wrapper">
-                            <div class="oferta-code-label">Código:</div>
-                            <div class="oferta-code-value">cubabitcoin</div>
-                        </div>
-                    </a>
-
+                    <!-- Categoría: Hardware DIY -->
+                    <div class="ofertas-category">
+                        <h3 class="ofertas-category-title">Hardware DIY</h3>
+                        <!-- LilyGO -->
+                        <a href="https://www.lilygo.cc/cubabitcoin" target="_blank" rel="noopener noreferrer" class="oferta-item oferta-item-lilygo">
+                            <div class="oferta-logo-wrapper">
+                                <img src="img/lilygologo_transparent_strong.png" alt="LilyGO Logo" class="oferta-grid-logo oferta-grid-logo-square" loading="lazy">
+                            </div>
+                            <div class="oferta-discount oferta-discount-placeholder"></div>
+                            <div class="oferta-code-wrapper">
+                                <div class="oferta-code-label">Código:</div>
+                                <div class="oferta-code-value">cubabitcoin</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
