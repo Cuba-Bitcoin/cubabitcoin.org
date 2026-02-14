@@ -11,8 +11,6 @@ Allow: /img/
 Allow: /assets/
 
 # Bloquear archivos que no aportan valor SEO
-Disallow: /*.json$
-Disallow: /*.xml$
 Disallow: /assets/favicon.ico
 
 # Sitemap
