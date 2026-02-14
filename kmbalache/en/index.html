@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Kmbalache is the Mostro P2P instance by Cuba Bitcoin. Trade Bitcoin peer-to-peer over Nostr with no intermediaries and no custody.">
+    <meta name="keywords" content="Kmbalache, Mostro, P2P, Bitcoin Cuba, Nostr, Lightning Network, Bitcoin exchange, peer-to-peer">
+    <meta name="author" content="Cuba Bitcoin">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cubabitcoin.org/kmbalache/en/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="es" href="https://cubabitcoin.org/kmbalache/">
+    <link rel="alternate" hreflang="en" href="https://cubabitcoin.org/kmbalache/en/">
+    <link rel="alternate" hreflang="x-default" href="https://cubabitcoin.org/kmbalache/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kmbalache - P2P Trading over Nostr | Cuba Bitcoin">
+    <meta property="og:description" content="Trade Bitcoin peer-to-peer over Nostr with Kmbalache, the Mostro instance by Cuba Bitcoin.">
+    <meta property="og:image" content="https://cubabitcoin.org/kmbalache/img/kmbalache-logo-light.png">
+    <meta property="og:url" content="https://cubabitcoin.org/kmbalache/en/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cuba Bitcoin">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Cuba_BTC">
+    <meta name="twitter:title" content="Kmbalache - P2P Trading over Nostr | Cuba Bitcoin">
+    <meta name="twitter:description" content="Trade Bitcoin peer-to-peer over Nostr with Kmbalache, the Mostro instance by Cuba Bitcoin.">
+    <meta name="twitter:image" content="https://cubabitcoin.org/kmbalache/img/kmbalache-logo-light.png">
+
+    <meta name="theme-color" content="#7dff00">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/kmbalache-icon-dark-100.png">
+
+    <title>Kmbalache - P2P Trading over Nostr | Cuba Bitcoin</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/global.css" rel="stylesheet">
+    <link href="../kmbalache.css" rel="stylesheet">
+  </head>
+  <body class="kmb-body">
+
+    <!-- Background Orbs -->
+    <div class="kmb-orb kmb-orb--1"></div>
+    <div class="kmb-orb kmb-orb--2"></div>
+    <div class="kmb-orb kmb-orb--3"></div>
+
+    <!-- Language Selector -->
+    <nav class="kmb-lang">
+      <a href="../index.html" class="kmb-lang-link">ES</a>
+      <span class="kmb-lang-sep">|</span>
+      <span class="kmb-lang-active">EN</span>
+    </nav>
+
+    <!-- HERO -->
+    <section class="kmb-hero">
+      <canvas id="matrix-rain" class="kmb-matrix"></canvas>
+      <div class="container text-center" style="position:relative;z-index:2;">
+        <img src="../img/kmbalache-logo-light.png" alt="Kmbalache Logo" class="kmb-hero-logo">
+        <h1 class="kmb-hero-title">Trade Bitcoin P2P over Nostr</h1>
+        <p class="kmb-hero-subtitle">No intermediaries. No custody. Just Bitcoin and freedom.</p>
+        <a href="https://github.com/MostroP2P/mobile/releases/" target="_blank" rel="noopener noreferrer" class="kmb-btn">
+          <i class="bi bi-download"></i> Download Mostro
+        </a>
+      </div>
+    </section>
+
+    <!-- WHAT IS KMBALACHE -->
+    <section class="kmb-section">
+      <div class="container">
+        <h2 class="kmb-section-title">What is Kmbalache?</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p class="kmb-text">
+              <strong>Kmbalache</strong> is a <a href="https://mostro.network/" target="_blank" rel="noopener noreferrer" class="kmb-link">Mostro</a> instance operated by the <a href="https://cubabitcoin.org" class="kmb-link">Cuba Bitcoin</a> community.
+            </p>
+            <p class="kmb-text">
+              Mostro is a P2P exchange protocol that runs over <strong>Nostr</strong>, designed to enable buying and selling Bitcoin in a decentralized way, with no custody, no intermediaries and no KYC, preserving user privacy.
+            </p>
+            <p class="kmb-text">
+              With Kmbalache you can trade sats for local currency directly with other people, using Lightning Network for fast, efficient and low-cost transactions.
+            </p>
+            <p class="kmb-text">
+              Just like Bitcoin, Kmbalache has no borders: anyone, from anywhere in the world, can buy or sell Bitcoin using their local currency. We invite you to use our Mostro instance and become part of a truly free market.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTANCE ID -->
+    <section class="kmb-section">
+      <div class="container text-center">
+        <h2 class="kmb-section-title">Instance ID</h2>
+        <p class="kmb-text">If you need to add the instance manually, copy the following npub:</p>
+        <div class="kmb-instance-id-wrapper">
+          <div class="kmb-instance-id">
+            <code id="npub-text">npub1qqqqqyd2wuah7xepsz4ut40tf5hxayqmsrzy4d63vvnrfmrscaxq6hesrt</code>
+            <button class="kmb-copy-btn" onclick="copyNpub()" title="Copy npub">
+              <i class="bi bi-clipboard" id="copy-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP BY STEP GUIDE -->
+    <section class="kmb-section">
+      <div class="container">
+        <h2 class="kmb-section-title">Step-by-step guide</h2>
+        <p class="text-center kmb-text mb-4">Set up Kmbalache as your Mostro instance in just 8 steps:</p>
+        <div class="kmb-steps-grid">
+
+          <div class="kmb-step-card">
+            <div class="kmb-step-number">1</div>
+            <img src="../img/1.jpg" alt="Step 1: Open Mostro and go to the side menu" class="kmb-step-img" loading="lazy">
+            <p class="kmb-step-text">Open Mostro and go to the side menu</p>
+          </div>
+
+          <div class="kmb-step-card">
+            <div class="kmb-step-number">2</div>
+            <img src="../img/2.jpg" alt="Step 2: Select Settings" class="kmb-step-img" loading="lazy">
+            <p class="kmb-step-text">Select "Settings"</p>
+          </div>
+
+          <div class="kmb-step-card">
+            <div class="kmb-step-number">3</div>
+            <img src="../img/3.jpg" alt="Step 3: Find the Mostro section at the bottom" class="kmb-step-img" loading="lazy">
+            <p class="kmb-step-text">Find the "Mostro" section at the bottom</p>
+          </div>
+
+          <div class="kmb-step-card">
+            <div class="kmb-step-number">4</div>
+            <img src="../img/4.jpg" alt="Step 4: Tap Select Mostro node" class="kmb-step-img" loading="lazy">
+            <p class="kmb-step-text">Tap "Select Mostro node"</p>
+          </div>
+
+          <div class="kmb-step-card">
+            <div class="kmb-step-number">5</div>
+            <img src="../img/5.jpg" alt="Step 5: Find Kmbalache in the list" class="kmb-step-img" loading="lazy">
+            <p class="kmb-step-text">Find "Kmbalache" in the list</p>
+          </div>
+
+          <div class="kmb-step-card">
+            <div class="kmb-step-number">6</div>
+            <img src="../img/6.jpg" alt="Step 6: Confirm the Kmbalache selection" class="kmb-step-img" loading="lazy">
+            <p class="kmb-step-text">Confirm the Kmbalache selection</p>
+          </div>
+
+          <div class="kmb-step-card">
+            <div class="kmb-step-number">7</div>
+            <img src="../img/7.jpg" alt="Step 7: Verify that Kmbalache is active" class="kmb-step-img" loading="lazy">
+            <p class="kmb-step-text">Verify that Kmbalache is active</p>
+          </div>
+
+          <div class="kmb-step-card">
+            <div class="kmb-step-number">8</div>
+            <img src="../img/8.jpg" alt="Step 8: Done! Start trading on Kmbalache" class="kmb-step-img" loading="lazy">
+            <p class="kmb-step-text">Done! Start trading on Kmbalache</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO TUTORIAL -->
+    <section class="kmb-section">
+      <div class="container text-center">
+        <h2 class="kmb-section-title">Video Tutorial</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="kmb-video-wrapper">
+              <video class="kmb-video" controls preload="metadata" poster="../img/kmbalache-logo-light.png">
+                <source src="../img/videomostro.mp4" type="video/mp4">
+                Your browser does not support video playback.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="kmb-footer">
+      <div class="container text-center">
+        <div class="kmb-footer-powered">
+          <a href="https://mostro.network/" target="_blank" rel="noopener noreferrer" class="kmb-footer-partner">
+            <img src="../img/mostrologo.svg" alt="Mostro P2P">
+          </a>
+          <a href="https://cubabitcoin.org" class="kmb-footer-partner">
+            <img src="../img/CubaBitcoin - Hztal BLANCO-transp.png" alt="Cuba Bitcoin">
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+      function copyNpub() {
+        const npubText = document.getElementById('npub-text').textContent;
+        navigator.clipboard.writeText(npubText).then(function() {
+          const icon = document.getElementById('copy-icon');
+          icon.className = 'bi bi-clipboard-check';
+          setTimeout(function() {
+            icon.className = 'bi bi-clipboard';
+          }, 2000);
+        });
+      }
+
+      // Matrix Rain - Bitcoin themed
+      (function() {
+        var canvas = document.getElementById('matrix-rain');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var chars = '₿⚡01abcdef0123456789SATOSHI'.split('');
+        var fontSize = 14;
+        var columns;
+        var drops;
+
+        function resize() {
+          var hero = canvas.parentElement;
+          canvas.width = hero.offsetWidth;
+          canvas.height = hero.offsetHeight;
+          columns = Math.floor(canvas.width / fontSize);
+          drops = [];
+          for (var i = 0; i < columns; i++) {
+            drops[i] = Math.random() * -100;
+          }
+        }
+
+        function draw() {
+          ctx.fillStyle = 'rgba(10, 14, 23, 0.15)';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.font = fontSize + 'px monospace';
+
+          for (var i = 0; i < columns; i++) {
+            var char = chars[Math.floor(Math.random() * chars.length)];
+            var x = i * fontSize;
+            var y = drops[i] * fontSize;
+
+            if (Math.random() > 0.5) {
+              ctx.fillStyle = 'rgba(125, 255, 0, 0.9)';
+            } else {
+              ctx.fillStyle = 'rgba(125, 255, 0, 0.3)';
+            }
+            ctx.fillText(char, x, y);
+
+            if (y > canvas.height && Math.random() > 0.975) {
+              drops[i] = 0;
+            }
+            drops[i]++;
+          }
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+        setInterval(draw, 60);
+      })();
+    </script>
+  </body>
+</html>

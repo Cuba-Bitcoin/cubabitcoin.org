@@ -1,0 +1,409 @@
+/* ===========================
+   Kmbalache Landing Page CSS
+   =========================== */
+
+/* --- Base --- */
+.kmb-body {
+  background-color: #0a0e17;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --- Grid Background --- */
+.kmb-body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(125, 255, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 255, 0, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Floating Orbs --- */
+.kmb-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+  animation: kmb-float 20s ease-in-out infinite;
+}
+
+.kmb-orb--1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(125, 255, 0, 0.18);
+  top: -100px;
+  right: -100px;
+  animation-duration: 25s;
+}
+
+.kmb-orb--2 {
+  width: 300px;
+  height: 300px;
+  background: rgba(125, 255, 0, 0.14);
+  bottom: 20%;
+  left: -80px;
+  animation-duration: 30s;
+  animation-delay: -10s;
+}
+
+.kmb-orb--3 {
+  width: 250px;
+  height: 250px;
+  background: rgba(125, 255, 0, 0.12);
+  top: 50%;
+  right: 10%;
+  animation-duration: 22s;
+  animation-delay: -5s;
+}
+
+@keyframes kmb-float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-30px) translateX(15px); }
+  50% { transform: translateY(15px) translateX(-20px); }
+  75% { transform: translateY(-20px) translateX(-10px); }
+}
+
+/* --- Content above effects --- */
+.kmb-hero,
+.kmb-section,
+.kmb-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Language Selector --- */
+.kmb-lang {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 10;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.kmb-lang-link {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.kmb-lang-link:hover {
+  color: #7dff00;
+}
+
+.kmb-lang-active {
+  color: #7dff00;
+}
+
+.kmb-lang-sep {
+  color: #333;
+  margin: 0 0.4rem;
+}
+
+/* --- Matrix Rain --- */
+.kmb-matrix {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- Hero --- */
+.kmb-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 1rem 3rem;
+  background: radial-gradient(ellipse at center top, rgba(125, 255, 0, 0.06) 0%, transparent 60%),
+              #0a0e17;
+}
+
+.kmb-hero-logo {
+  max-width: 340px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 25px rgba(125, 255, 0, 0.35));
+}
+
+.kmb-hero-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.kmb-hero-subtitle {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+}
+
+/* --- Buttons --- */
+.kmb-btn {
+  display: inline-block;
+  background-color: #7dff00;
+  color: #0a0e17;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(125, 255, 0, 0.3);
+}
+
+.kmb-btn:hover {
+  background-color: #5cb800;
+  color: #0a0e17;
+  box-shadow: 0 0 25px rgba(125, 255, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* --- Sections --- */
+.kmb-section {
+  padding: 4rem 1rem;
+}
+
+.kmb-section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #7dff00;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.kmb-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #c8c8c8;
+}
+
+.kmb-link {
+  color: #7dff00;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.kmb-link:hover {
+  color: #5cb800;
+  text-decoration: underline;
+}
+
+/* --- Video --- */
+.kmb-video-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(125, 255, 0, 0.15);
+  background: #111827;
+}
+
+.kmb-video {
+  width: 100%;
+  max-height: 500px;
+  display: block;
+  object-fit: contain;
+  background: #000;
+  margin: 0 auto;
+}
+
+/* --- Steps Grid --- */
+.kmb-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.kmb-step-card {
+  text-align: center;
+  position: relative;
+}
+
+.kmb-step-number {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #0a0e17;
+  background: #7dff00;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  margin: 0 auto 0.75rem;
+  box-shadow: 0 0 12px rgba(125, 255, 0, 0.4);
+}
+
+.kmb-step-img {
+  max-width: 260px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kmb-step-card:hover .kmb-step-img {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(125, 255, 0, 0.15);
+}
+
+.kmb-step-text {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+/* --- Instance ID --- */
+.kmb-instance-id-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.kmb-instance-id {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #111827;
+  border: 1px solid rgba(125, 255, 0, 0.2);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.kmb-instance-id code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #7dff00;
+  word-break: break-all;
+}
+
+.kmb-copy-btn {
+  background: none;
+  border: 1px solid rgba(125, 255, 0, 0.3);
+  color: #7dff00;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.kmb-copy-btn:hover {
+  background: rgba(125, 255, 0, 0.1);
+  border-color: #7dff00;
+}
+
+/* --- Footer --- */
+.kmb-footer {
+  padding: 3rem 1rem 2rem;
+  position: relative;
+}
+
+.kmb-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #7dff00, transparent);
+  box-shadow: 0 0 15px rgba(125, 255, 0, 0.4);
+}
+
+.kmb-footer-powered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.kmb-footer-partner {
+  display: inline-block;
+  transition: filter 0.3s ease;
+}
+
+.kmb-footer-partner:hover {
+  filter: drop-shadow(0 0 8px rgba(125, 255, 0, 0.3));
+}
+
+.kmb-footer-partner img {
+  height: 80px;
+  width: auto;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .kmb-hero {
+    padding: 3.5rem 1rem 2rem;
+  }
+
+  .kmb-hero-logo {
+    max-width: 260px;
+  }
+
+  .kmb-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .kmb-section {
+    padding: 3rem 0.75rem;
+  }
+
+  .kmb-section-title {
+    font-size: 1.35rem;
+  }
+
+  .kmb-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kmb-instance-id code {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .kmb-hero {
+    padding: 2.5rem 0.75rem 1.5rem;
+  }
+
+  .kmb-hero-title {
+    font-size: 1.3rem;
+  }
+
+  .kmb-hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .kmb-btn {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .kmb-step-card {
+    padding: 1.25rem;
+  }
+
+  .kmb-section {
+    padding: 2.5rem 0.5rem;
+  }
+}
