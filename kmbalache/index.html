@@ -107,13 +107,78 @@
     <section class="kmb-section">
       <div class="container text-center">
         <h2 class="kmb-section-title">ID de la Instancia</h2>
-        <p class="kmb-text">Si necesitas agregar la instancia manualmente, copia el siguiente npub:</p>
+        <p class="kmb-text">Para agregar Kmbalache manualmente, pega la siguiente clave en la app de Mostro:</p>
         <div class="kmb-instance-id-wrapper">
           <div class="kmb-instance-id">
-            <code id="npub-text">npub1qqqqqyd2wuah7xepsz4ut40tf5hxayqmsrzy4d63vvnrfmrscaxq6hesrt</code>
+            <code id="npub-text">00000235a3e904cfe1213a8a54d6f1ec1bef7cc6bfaabd6193e82931ccf1366a</code>
             <button class="kmb-copy-btn" onclick="copyNpub()" title="Copiar npub">
               <i class="bi bi-clipboard" id="copy-icon"></i>
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALLES DE LA INSTANCIA -->
+    <section class="kmb-section">
+      <div class="container">
+        <h2 class="kmb-section-title">Detalles de Kmbalache</h2>
+        <div class="kmb-details-list">
+          <div class="kmb-detail-item">
+            <i class="bi bi-arrow-left-right"></i>
+            <span class="kmb-detail-label">Límites de intercambio</span>
+            <span class="kmb-detail-value">Mín 100 — Máx 250000 Sats</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-hourglass-split"></i>
+            <span class="kmb-detail-label">Duración de una orden en el libro de órdenes</span>
+            <span class="kmb-detail-value">24 horas</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-clock-history"></i>
+            <span class="kmb-detail-label">Tiempo para responder al tomar o recibir una orden</span>
+            <span class="kmb-detail-value">15 min (si no, se cancela)</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-percent"></i>
+            <span class="kmb-detail-label">Comisión</span>
+            <span class="kmb-detail-value">Comprador 0.25% / Vendedor 0.25%</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-shield-lock"></i>
+            <span class="kmb-detail-label">Vencimiento hold invoice</span>
+            <span class="kmb-detail-value">24 horas</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-lightning-charge"></i>
+            <span class="kmb-detail-label">Cadena</span>
+            <span class="kmb-detail-value">Bitcoin Lightning Network</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-layers"></i>
+            <span class="kmb-detail-label">Capa</span>
+            <span class="kmb-detail-value">Mainnet</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-currency-exchange"></i>
+            <span class="kmb-detail-label">Monedas fiat aceptadas</span>
+            <div class="kmb-detail-badges">
+              <span class="kmb-detail-badge">USD</span>
+              <span class="kmb-detail-badge">EUR</span>
+              <span class="kmb-detail-badge">ARS</span>
+              <span class="kmb-detail-badge">CUP</span>
+              <span class="kmb-detail-badge">COP</span>
+              <span class="kmb-detail-badge">BOB</span>
+              <span class="kmb-detail-badge">MXN</span>
+            </div>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-broadcast-pin"></i>
+            <span class="kmb-detail-label">Relays</span>
+            <span class="kmb-detail-value">
+              <code>wss://relay.mostro.network</code>
+              <code>wss://nos.lol</code>
+            </span>
           </div>
         </div>
       </div>

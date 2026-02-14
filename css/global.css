@@ -105,6 +105,7 @@ img#nostr-social {
 .hero-slide {
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .hero-slide img {
@@ -136,12 +137,14 @@ img#nostr-social {
   z-index: 2;
   width: 90%;
   max-width: 800px;
+  max-height: calc(100vh - 10rem);
+  overflow: hidden;
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #ffffff;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9),
                1px 1px 3px rgba(0, 0, 0, 0.8);
   font-weight: 900;
   letter-spacing: 2px;
@@ -155,11 +158,11 @@ img#nostr-social {
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #f8f9fa;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
   font-weight: 500;
 }
 
@@ -4368,26 +4371,7 @@ img#nostr-social {
     display: none;
   }
   
-  /* Navbar mejor en móviles */
-  .navbar-nav {
-    text-align: center;
-  }
-  
-  .navbar-nav .nav-link {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  
-  .navbar-nav .nav-link:last-child {
-    border-bottom: none;
-  }
-  
-  .navbar-collapse {
-    background-color: rgba(0,0,0,0.95);
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-    padding: 1rem;
-  }
+  /* Navbar styles moved to @media (max-width: 1399px) below */
   
   /* Multimedia section responsive */
   #playlistCarousel iframe {
@@ -5889,8 +5873,28 @@ img#nostr-social {
     font-size: 1.1rem;
 }
 
-/* Responsive: ocultar texto en móvil, solo mostrar icono */
-@media (max-width: 991px) {
+/* Navbar colapsado para pantallas menores a xxl */
+@media (max-width: 1399px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(0,0,0,0.95);
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
     .navbar .dropdown-toggle {
         padding: 0.5rem;
     }
