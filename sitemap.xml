@@ -7,9 +7,17 @@
 <!-- Página principal -->
 <url>
     <loc>https://cubabitcoin.org/</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+</url>
+
+<!-- English version -->
+<url>
+    <loc>https://cubabitcoin.org/en/</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
 </url>
 
 </urlset>
