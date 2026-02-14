@@ -107,13 +107,78 @@
     <section class="kmb-section">
       <div class="container text-center">
         <h2 class="kmb-section-title">Instance ID</h2>
-        <p class="kmb-text">If you need to add the instance manually, copy the following npub:</p>
+        <p class="kmb-text">To add Kmbalache manually, paste the following key in the Mostro app:</p>
         <div class="kmb-instance-id-wrapper">
           <div class="kmb-instance-id">
-            <code id="npub-text">npub1qqqqqyd2wuah7xepsz4ut40tf5hxayqmsrzy4d63vvnrfmrscaxq6hesrt</code>
+            <code id="npub-text">00000235a3e904cfe1213a8a54d6f1ec1bef7cc6bfaabd6193e82931ccf1366a</code>
             <button class="kmb-copy-btn" onclick="copyNpub()" title="Copy npub">
               <i class="bi bi-clipboard" id="copy-icon"></i>
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTANCE DETAILS -->
+    <section class="kmb-section">
+      <div class="container">
+        <h2 class="kmb-section-title">Kmbalache Details</h2>
+        <div class="kmb-details-list">
+          <div class="kmb-detail-item">
+            <i class="bi bi-arrow-left-right"></i>
+            <span class="kmb-detail-label">Trade limits</span>
+            <span class="kmb-detail-value">Min 100 — Max 250000 Sats</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-hourglass-split"></i>
+            <span class="kmb-detail-label">Order duration in the order book</span>
+            <span class="kmb-detail-value">24 hours</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-clock-history"></i>
+            <span class="kmb-detail-label">Time to respond when taking or receiving an order</span>
+            <span class="kmb-detail-value">15 min (otherwise cancelled)</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-percent"></i>
+            <span class="kmb-detail-label">Fee</span>
+            <span class="kmb-detail-value">Buyer 0.25% / Seller 0.25%</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-shield-lock"></i>
+            <span class="kmb-detail-label">Hold invoice expiration</span>
+            <span class="kmb-detail-value">24 hours</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-lightning-charge"></i>
+            <span class="kmb-detail-label">Chain</span>
+            <span class="kmb-detail-value">Bitcoin Lightning Network</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-layers"></i>
+            <span class="kmb-detail-label">Layer</span>
+            <span class="kmb-detail-value">Mainnet</span>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-currency-exchange"></i>
+            <span class="kmb-detail-label">Accepted fiat currencies</span>
+            <div class="kmb-detail-badges">
+              <span class="kmb-detail-badge">USD</span>
+              <span class="kmb-detail-badge">EUR</span>
+              <span class="kmb-detail-badge">ARS</span>
+              <span class="kmb-detail-badge">CUP</span>
+              <span class="kmb-detail-badge">COP</span>
+              <span class="kmb-detail-badge">BOB</span>
+              <span class="kmb-detail-badge">MXN</span>
+            </div>
+          </div>
+          <div class="kmb-detail-item">
+            <i class="bi bi-broadcast-pin"></i>
+            <span class="kmb-detail-label">Relays</span>
+            <span class="kmb-detail-value">
+              <code>wss://relay.mostro.network</code>
+              <code>wss://nos.lol</code>
+            </span>
           </div>
         </div>
       </div>
