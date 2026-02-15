@@ -418,6 +418,16 @@
   width: auto;
 }
 
+.kmb-footer-tagline {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #7dff00;
+  margin-top: 1.5rem;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
