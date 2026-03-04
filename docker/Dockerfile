@@ -1,17 +1,3 @@
-# Build stage
-FROM node:22-alpine AS builder
-
-WORKDIR /app
-
-# Copy package files if they exist
-COPY package*.json ./
-
-# Install dependencies if package.json exists
-RUN if [ -f package.json ]; then npm install; fi
-
-# Copy source files (from project root)
-COPY . .
-
 # Production stage
 FROM nginx:alpine
 
@@ -26,11 +12,11 @@ RUN rm /etc/nginx/conf.d/default.conf
 RUN mkdir -p /usr/share/nginx/html /var/cache/nginx/client_temp && \
     chown -R userapp:userapp /usr/share/nginx/html /var/cache/nginx
 
-# Copy custom nginx config
-COPY --chown=userapp:userapp nginx.conf /etc/nginx/conf.d/
+# Copy custom nginx config (from docker directory)
+COPY docker/nginx.conf /etc/nginx/conf.d/
 
-# Copy static files from builder
-COPY --from=builder --chown=userapp:userapp /app /usr/share/nginx/html
+# Copy static files
+COPY --chown=userapp:userapp . /usr/share/nginx/html/
 
 # Switch to non-privileged user
 USER userapp
