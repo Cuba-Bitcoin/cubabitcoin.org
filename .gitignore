@@ -23,8 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Docker configuration (stored in docker/ directory)
-docker/
-!docker/README.md
+
 
 # Deploy scripts
 deploy.sh
