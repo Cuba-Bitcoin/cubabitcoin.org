@@ -8,14 +8,12 @@ RUN addgroup -g 1000 -S userapp && \
 # Remove default nginx config
 RUN rm /etc/nginx/conf.d/default.conf
 
-COPY docker/nginx.conf /etc/nginx/conf.d/nginx.conf
-
 # Create directories with proper permissions
 RUN mkdir -p /usr/share/nginx/html /var/cache/nginx/client_temp && \
     chown -R userapp:userapp /usr/share/nginx/html /var/cache/nginx
 
 # Copy custom nginx config (from docker directory)
-COPY docker/nginx.conf /etc/nginx/conf.d/
+COPY nginx.conf /etc/nginx/conf.d/
 
 # Copy static files
 COPY --chown=userapp:userapp . /usr/share/nginx/html/
