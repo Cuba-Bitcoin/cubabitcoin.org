@@ -1,11 +1,11 @@
 # Git
 .git
-.gitignore
 
 # Docker
-Dockerfile
-Dockerfile.dev
-docker-compose*.yml
+docker/Dockerfile
+docker/Dockerfile.dev
+docker/docker-compose*.yml
+docker/.dockerignore
 
 # IDE
 .vscode
@@ -17,7 +17,7 @@ docker-compose*.yml
 .DS_Store
 Thumbs.db
 
-# Documentation
+# Documentation and scripts
 README*.md
 LICENSE
 CLAUDE.md
@@ -28,6 +28,9 @@ deploy.sh
 node_modules
 dist
 build
+
+# GitHub
+.github
 
 # SSL certificates
 ssl/
