@@ -13,7 +13,7 @@ RUN mkdir -p /usr/share/nginx/html /var/cache/nginx/client_temp && \
     chown -R userapp:userapp /usr/share/nginx/html /var/cache/nginx
 
 # Copy custom nginx config (from docker directory)
-COPY nginx.conf /etc/nginx/conf.d/
+COPY docker/nginx.conf /etc/nginx/conf.d/
 
 # Copy static files
 COPY --chown=userapp:userapp . /usr/share/nginx/html/
