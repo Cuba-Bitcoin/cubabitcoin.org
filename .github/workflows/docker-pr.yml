@@ -1,0 +1,89 @@
+name: Docker Build (PR)
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**.html'
+      - '**.css'
+      - '**.js'
+      - 'img/**'
+      - 'docker/**'
+      - '!docker/ssl/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: docker/Dockerfile
+          load: true
+          tags: cubabitcoin:pr-${{ github.event.pull_request.number }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run container health check
+        run: |
+          docker run -d --name test-container cubabitcoin:pr-${{ github.event.pull_request.number }}
+          sleep 5
+          if docker inspect --format='{{.State.Health.Status}}' test-container | grep -q "healthy"; then
+            echo "Container is healthy"
+          elif docker inspect --format='{{.State.Running}}' test-container | grep -q "true"; then
+            echo "Container is running (no healthcheck defined)"
+          else
+            echo "Container failed to start"
+            docker logs test-container
+            exit 1
+          fi
+          docker rm -f test-container
+
+      - name: Verify HTML content
+        run: |
+          docker run --rm cubabitcoin:pr-${{ github.event.pull_request.number }} cat /usr/share/nginx/html/index.html > /tmp/index.html
+          if grep -q "Cuba Bitcoin" /tmp/index.html; then
+            echo "HTML content verified successfully"
+          else
+            echo "Error: Cuba Bitcoin not found in HTML"
+            exit 1
+          fi
+
+      - name: Image digest
+        run: |
+          echo "Image built successfully"
+          docker images cubabitcoin:pr-${{ github.event.pull_request.number }} --format "{{.Repository}}:{{.Tag}} @ {{.ID}}"
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run HTML validator
+        run: |
+          # Check for basic HTML structure
+          if grep -q '<!doctype html>' index.html && grep -q '</html>' index.html; then
+            echo "HTML structure: OK"
+          else
+            echo "HTML structure: Invalid"
+            exit 1
+          fi
+
+      - name: Check for broken links in critical files
+        run: |
+          # Check that key resources exist
+          [ -f css/global.css ] && echo "CSS file: OK"
+          [ -d img ] && echo "Images directory: OK"
+          [ -f robots.txt ] && echo "Robots.txt: OK"
