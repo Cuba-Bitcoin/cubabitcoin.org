@@ -1,12 +1,6 @@
 # Git
 .git
 
-# Docker
-docker/Dockerfile
-docker/Dockerfile.dev
-docker/docker-compose*.yml
-docker/.dockerignore
-
 # IDE
 .vscode
 .idea
@@ -21,16 +15,14 @@ Thumbs.db
 README*.md
 LICENSE
 CLAUDE.md
-Makefile
-deploy.sh
 
 # Build outputs
 node_modules
 dist
 build
 
-# GitHub
-.github
+# GitHub workflows (optional - uncomment if you want to include in image)
+# .github
 
 # SSL certificates
 ssl/
