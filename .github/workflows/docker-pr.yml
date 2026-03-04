@@ -26,7 +26,7 @@ jobs:
       - name: Build Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./docker
+          context: .
           file: ./docker/Dockerfile
           load: true
           tags: cubabitcoin:pr-${{ github.event.pull_request.number }}
@@ -73,7 +73,6 @@ jobs:
 
       - name: Run HTML validator
         run: |
-          # Check for basic HTML structure
           if grep -q '<!doctype html>' index.html && grep -q '</html>' index.html; then
             echo "HTML structure: OK"
           else
@@ -83,7 +82,6 @@ jobs:
 
       - name: Check for broken links in critical files
         run: |
-          # Check that key resources exist
           [ -f css/global.css ] && echo "CSS file: OK"
           [ -d img ] && echo "Images directory: OK"
           [ -f robots.txt ] && echo "Robots.txt: OK"
