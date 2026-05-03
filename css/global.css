@@ -585,22 +585,17 @@ img#nostr-social {
 
 /* Donation Section Styling */
 .donation-section {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  background: #f7f5f2;
   position: relative;
   overflow: hidden;
 }
 
 .donation-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(244, 147, 28, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(255, 165, 0, 0.08) 0%, transparent 50%);
-  pointer-events: none;
+  display: none;
+}
+
+.donation-divider {
+  border-top-color: #e0dbd5;
 }
 
 .donation-icon {
@@ -633,14 +628,14 @@ img#nostr-social {
 }
 
 .donation-title {
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: #111111;
+  text-shadow: none;
   position: relative;
   z-index: 2;
 }
 
 .donation-subtitle {
-  color: #e0e0e0;
+  color: #555555;
   font-size: 1.2rem;
   position: relative;
   z-index: 2;
@@ -3082,23 +3077,13 @@ img#nostr-social {
 
 /* POW Section Dark Theme */
 .pow-section {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    background: #f7f5f2;
     position: relative;
     overflow: hidden;
 }
 
 .pow-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 30% 20%, rgba(28, 98, 176, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 80%, rgba(244, 147, 28, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(220, 37, 43, 0.06) 0%, transparent 50%);
-    pointer-events: none;
+    display: none;
 }
 
 .pow-section .container-xl {
@@ -3107,12 +3092,18 @@ img#nostr-social {
 }
 
 .pow-section .lead {
-    color: #e0e0e0 !important;
+    color: #555555 !important;
 }
 
 .pow-section p:not(.lead) {
-    color: #cccccc;
+    color: #444444;
 }
+
+.pow-section .services-title {
+    color: #111111;
+    text-shadow: none;
+}
+
 
 /* Timeline Dark Theme Overrides for POW Section */
 .pow-section .main-timeline::after {
@@ -3562,8 +3553,21 @@ img#nostr-social {
     font-weight: 800;
     font-size: 2.5rem;
     letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#scrollspytools .services-title {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.wallets-section {
+    background: #f7f5f2;
+}
+
+.wallets-section::before {
+    display: none;
 }
 
 .services-subtitle {
@@ -4834,15 +4838,103 @@ img#nostr-social {
     overflow: hidden;
 }
 
-/* Tarjetas oscuras solo en sección Compra P2P */
+.compra-p2p-grid-section .services-title-new {
+    color: #ffffff;
+}
+
+.compra-divider-dark {
+    border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.compra-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.compra-rate-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.compra-rate-text {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.compra-rate-label {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+
+.compra-rate-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f4931c;
+}
+
+.compra-p2p-grid-section #sats-amount {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #f4931c;
+    background-clip: unset;
+    text-shadow: none;
+    animation: none;
+}
+
+.compra-rate-unit {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+
+@media (max-width: 576px) {
+    .compra-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.compra-p2p-grid-section .p2p-tags span {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.compra-p2p-grid-section .p2p-tag-dot {
+    color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.compra-p2p-grid-section .p2p-card-footer {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.compra-p2p-grid-section .p2p-arrow-circle {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* Tarjetas compra - sin fondo, con líneas divisoras */
 .compra-p2p-grid-section .p2p-item {
-    background: #1e1e2e;
-    border-color: rgba(255, 255, 255, 0.08);
+    background: transparent;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 280px;
 }
 
 .compra-p2p-grid-section .p2p-item:hover {
-    background: #252538;
-    border-color: rgba(244, 147, 28, 0.4);
+    background: rgba(244, 147, 28, 0.07);
+    transform: none;
+    box-shadow: none;
 }
 
 .compra-p2p-grid-section .p2p-card-title {
@@ -4850,7 +4942,24 @@ img#nostr-social {
 }
 
 .compra-p2p-grid-section .p2p-description {
-    color: #b0b0b0;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.compra-p2p-grid-section .p2p-tags span {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.compra-p2p-grid-section .p2p-tag-dot {
+    color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.compra-p2p-grid-section .p2p-card-footer {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.compra-p2p-grid-section .p2p-arrow-circle {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.35);
 }
 
 .compra-p2p-grid-section::before {
@@ -4886,26 +4995,28 @@ img#nostr-social {
     z-index: 1;
 }
 
-/* Grid Layout */
+/* Grid Layout - divider lines */
 .compra-p2p-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    max-width: 700px;
+    gap: 0;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* ========================================
     P2P CARDS - DISEÑO NORMALIZADO Y PROFESIONAL
     ======================================== */
 
-/* Desktop grande - limitar ancho del grid */
+/* Desktop grande */
 @media (min-width: 992px) {
     .compra-p2p-grid {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 600px;
+        max-width: 1200px;
     }
 
     /* Para servicios-grid, mantener 3 columnas pero ajustar */
@@ -5145,8 +5256,8 @@ img#nostr-social {
 @media (max-width: 768px) {
     .compra-p2p-grid {
         grid-template-columns: 1fr;
-        gap: 1.25rem;
-        padding: 0 1rem;
+        gap: 0;
+        padding: 0;
         max-width: 400px;
     }
 
@@ -5281,17 +5392,56 @@ img#nostr-social {
 }
 
 .ofertas-grid-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 30%, rgba(244, 147, 28, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(28, 98, 176, 0.06) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 0;
+    display: none;
+}
+
+.ofertas-grid-section .services-title-new {
+    color: #ffffff;
+}
+
+.ofertas-grid-section .services-divider {
+    border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.ofertas-divider-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ofertas-divider-grid .p2p-item {
+    background: transparent;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 280px;
+}
+
+.ofertas-divider-grid .p2p-item:hover {
+    background: rgba(244, 147, 28, 0.07);
+    transform: none;
+    box-shadow: none;
+}
+
+.ofertas-divider-grid .p2p-card-title { color: #f0f0f0; }
+.ofertas-divider-grid .p2p-description { color: rgba(255, 255, 255, 0.82); font-size: 0.95rem; }
+.ofertas-divider-grid .p2p-description strong { color: #f4931c; }
+.ofertas-divider-grid .p2p-tags span { color: rgba(255, 255, 255, 0.4); }
+.ofertas-divider-grid .p2p-tag-dot { color: rgba(255, 255, 255, 0.2) !important; }
+.ofertas-divider-grid .p2p-card-footer { border-top-color: rgba(255, 255, 255, 0.08); }
+.ofertas-divider-grid .p2p-arrow-circle { border-color: rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.35); }
+
+@media (max-width: 768px) {
+    .ofertas-divider-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .ofertas-divider-grid { grid-template-columns: 1fr; }
 }
 
 .ofertas-grid-title {
@@ -5897,6 +6047,371 @@ img#nostr-social {
 
     .navbar .dropdown-toggle {
         padding: 0.5rem;
+    }
+}
+
+/* ==========================================
+   SERVICES SECTION - EDITORIAL DESIGN
+   ========================================== */
+
+/* Light background */
+#scrollspytools.services-section {
+    background: #f7f5f2;
+}
+
+#scrollspytools.services-section::before {
+    display: none;
+}
+
+
+.services-header {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.services-section-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #f4931c;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.75rem;
+}
+
+.services-title-new {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: #111111;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    letter-spacing: -1px;
+}
+
+.services-title-accent {
+    color: #f4931c;
+}
+
+.services-subtitle-editorial {
+    font-size: 1.15rem;
+    color: #555555;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0.75rem 0 1.25rem;
+}
+
+.services-divider {
+    border: none;
+    border-top: 1px solid #e0dbd5;
+    margin: 0 0 2.5rem;
+    opacity: 1;
+}
+
+/* Left-align items inside the editorial services grid */
+.services-grid .p2p-item {
+    text-align: left;
+}
+
+/* === WALLETS: GRID CON LÍNEAS DIVISORAS === */
+.wallets-section .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wallets-section .services-grid .p2p-item {
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 280px;
+}
+
+.wallets-section .services-grid .p2p-item:hover {
+    background: rgba(244, 147, 28, 0.07);
+    transform: none;
+    box-shadow: none;
+}
+
+/* Text colors for light background */
+.wallets-section .services-title-new {
+    color: #111111;
+}
+
+.wallets-section .services-grid {
+    border-top-color: #e0dbd5;
+    border-left-color: #e0dbd5;
+}
+
+.wallets-section .services-grid .p2p-item {
+    border-right-color: #e0dbd5;
+    border-bottom-color: #e0dbd5;
+}
+
+.wallets-section .services-grid .p2p-item-header {
+    padding: 1rem 1.25rem 0;
+}
+
+.wallets-section .services-grid .p2p-item-content {
+    padding: 0.5rem 1.25rem 1.25rem;
+}
+
+@media (max-width: 480px) {
+    .wallets-section .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === GRID CON LÍNEAS DIVISORAS (sin cards) === */
+#scrollspytools .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid #e0dbd5;
+    border-left: 1px solid #e0dbd5;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#scrollspytools .services-grid .p2p-item {
+    background: transparent;
+    border: none;
+    border-right: 1px solid #e0dbd5;
+    border-bottom: 1px solid #e0dbd5;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 280px;
+}
+
+#scrollspytools .services-grid .p2p-item:hover {
+    background: rgba(244, 147, 28, 0.05);
+    transform: none;
+    box-shadow: none;
+}
+
+#scrollspytools .services-grid .p2p-item-header {
+    padding: 1rem 1.25rem 0;
+}
+
+#scrollspytools .services-grid .p2p-item-content {
+    padding: 0.5rem 1.25rem 1.25rem;
+}
+
+@media (max-width: 768px) {
+    #scrollspytools .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #scrollspytools .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Number badge: 01 / 05 */
+.p2p-num-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.18rem 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #aaaaaa;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background: transparent;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* Header row: num badge left, optional badge right */
+.services-grid .p2p-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0.85rem 0;
+    min-height: auto;
+}
+
+/* Override proximamente badge to sit inline in the header */
+.services-grid .p2p-item-header .p2p-badge-proximamente {
+    position: static;
+    top: auto;
+    right: auto;
+    box-shadow: none;
+    font-size: 0.65rem;
+    padding: 0.2rem 0.6rem;
+}
+
+/* Content area */
+.services-grid .p2p-item-content {
+    padding: 0.4rem 0.85rem 0.85rem;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-grid .p2p-item-content .p2p-description {
+    flex: 1;
+}
+
+.services-grid .p2p-card-title {
+    text-align: left;
+    font-size: 1.15rem;
+}
+
+.services-grid .p2p-description {
+    text-align: left;
+    justify-content: flex-start;
+    min-height: auto;
+}
+
+/* Card footer: tags left, arrow right */
+.p2p-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.p2p-tags {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.p2p-tags span {
+    font-size: 0.67rem;
+    font-weight: 600;
+    color: #aaaaaa;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.p2p-tag-dot {
+    color: #cccccc !important;
+    font-weight: 400 !important;
+}
+
+/* Arrow circle */
+.p2p-arrow-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bbbbbb;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.p2p-item:hover .p2p-arrow-circle {
+    background: #f4931c;
+    border-color: #f4931c;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .services-title-new {
+        font-size: 1.9rem;
+        letter-spacing: -0.5px;
+    }
+    .services-grid .p2p-item-content {
+        padding: 0.4rem 0.75rem 0.75rem;
+    }
+}
+
+.pow-subtitle-inline {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.timeline-toggle-btn {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    letter-spacing: 0.2px;
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* === STATS GRID CON LÍNEAS DIVISORAS === */
+.stats-divider-section {
+    background: #f7f5f2;
+    width: 100%;
+    padding: 0 !important;
+    position: relative;
+    z-index: 2;
+}
+
+.stats-divider-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid #e0dbd5;
+    border-left: 1px solid #e0dbd5;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats-divider-grid .stat-card {
+    background: transparent;
+    border: none;
+    border-right: 1px solid #e0dbd5;
+    border-bottom: 1px solid #e0dbd5;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 2rem 1.5rem;
+    animation: statFadeIn 0.6s ease forwards;
+}
+
+.stats-divider-grid .stat-card:hover {
+    background: rgba(244, 147, 28, 0.05);
+    transform: none;
+    box-shadow: none;
+    border-color: #e0dbd5;
+}
+
+.stats-divider-grid .stat-card:hover .stat-number {
+    color: #f4931c;
+    transform: none;
+    text-shadow: none;
+}
+
+.stats-divider-grid .stat-card:hover .stat-label {
+    color: #6c757d;
+    transform: none;
+}
+
+.stats-divider-grid .stat-card:hover .stat-icon {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .stats-divider-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-divider-grid {
+        grid-template-columns: 1fr;
     }
 }
 
