@@ -48,7 +48,7 @@
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
 
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="../css/global.css" as="style">
+    <link rel="preload" href="../css/global.css?v=2" as="style">
     <link rel="preload" href="../img/CubaBitcoin-Hztal-BLANCO-transp.png" as="image">
     <link rel="preload" href="../img/MyFirstBitcoin03.jpg" as="image">
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
@@ -57,12 +57,10 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/9379559305.js" crossorigin="anonymous"></script>
-    <!-- Rive Runtime -->
-    <script src="https://unpkg.com/@rive-app/canvas@latest/rive.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS-->
-    <link href="../css/global.css" rel="stylesheet" />
+    <link href="../css/global.css?v=2" rel="stylesheet" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -2038,92 +2036,6 @@
                 document.body.removeChild(textArea);
             }
 
-            
-            document.addEventListener('DOMContentLoaded', function() {
-                console.log('DOM cargado'); // Para debug
-                
-                // Inicializar las 3 animaciones Rive del carrusel Jade
-                const riveAnimations = [
-                    {
-                        canvasId: 'riveCanvas1',
-                        src: 'https://public.rive.app/hosted/113763/215935/qSxq9PN5l02UuMeboD4r3A.riv'
-                    },
-                    {
-                        canvasId: 'riveCanvas2', 
-                        src: 'https://public.rive.app/hosted/113763/204494/x_p3SWr0pkinJa9cB2U2cg.riv'
-                    },
-                    {
-                        canvasId: 'riveCanvas3',
-                        src: 'https://cdn.rive.app/hosted/113763/207459/t8nsRYRIYEWUUhkZ__chfQ.riv'
-                    }
-                ];
-                
-                riveAnimations.forEach(animation => {
-                    const canvas = document.getElementById(animation.canvasId);
-                    if (canvas) {
-                        console.log('Inicializando canvas:', animation.canvasId);
-                        
-                        // Configurar canvas más grande
-                        canvas.width = 600;
-                        canvas.height = 600;
-                        
-                        console.log('Intentando cargar:', animation.src);
-                        
-                        const riveInstance = new rive.Rive({
-                            src: animation.src,
-                            canvas: canvas,
-                            autoplay: true,
-                            fit: rive.Fit.Contain,
-                            alignment: rive.Alignment.Center,
-                            onLoad: () => {
-                                console.log('✅ Rive cargado y visible:', animation.canvasId);
-                                // NO llamar resizeDrawingSurfaceToCanvas() aquí
-                            },
-                            onLoadError: (error) => {
-                                console.error('❌ Error cargando Rive:', animation.canvasId, error);
-                                
-                                // Si es la tercera animación, intentar URL alternativa
-                                if (animation.canvasId === 'riveCanvas3') {
-                                    console.log('🔄 Intentando URL alternativa para riveCanvas3...');
-                                    const alternativeUrl = 'https://public.rive.app/hosted/113763/207459/t8nsRYRIYEWUUhkZ__chfQ.riv';
-                                    
-                                    const retryInstance = new rive.Rive({
-                                        src: alternativeUrl,
-                                        canvas: canvas,
-                                        autoplay: true,
-                                        fit: rive.Fit.Contain,
-                                        alignment: rive.Alignment.Center,
-                                        onLoad: () => {
-                                            console.log('✅ Rive alternativo cargado y visible:', animation.canvasId);
-                                        },
-                                        onLoadError: (retryError) => {
-                                            console.error('❌ URL alternativa también falló:', retryError);
-                                            const ctx = canvas.getContext('2d');
-                                            ctx.fillStyle = '#f0f0f0';
-                                            ctx.fillRect(0, 0, canvas.width, canvas.height);
-                                            ctx.fillStyle = '#666';
-                                            ctx.font = '16px Arial';
-                                            ctx.textAlign = 'center';
-                                            ctx.fillText('Animation unavailable', canvas.width/2, canvas.height/2);
-                                        }
-                                    });
-                                } else {
-                                    const ctx = canvas.getContext('2d');
-                                    ctx.fillStyle = '#f0f0f0';
-                                    ctx.fillRect(0, 0, canvas.width, canvas.height);
-                                    ctx.fillStyle = '#666';
-                                    ctx.font = '16px Arial';
-                                    ctx.textAlign = 'center';
-                                    ctx.fillText('Error loading animation', canvas.width/2, canvas.height/2);
-                                }
-                            }
-                        });
-                    } else {
-                        console.error('Canvas no encontrado:', animation.canvasId);
-                    }
-                });
-            });
-        
         </script>
 
   </body>
